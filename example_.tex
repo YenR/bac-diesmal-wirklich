@@ -129,12 +129,36 @@
 \addtitlepage{english} % English title page.
 \addstatementpage
 
-\begin{danksagung*}
-\todo{Ihr Text hier.}
-\end{danksagung*}
+%\begin{danksagung*}
+%\todo{Ihr Text hier.}
+%\end{danksagung*}
 
 \begin{acknowledgements*}
 \todo{Enter your text here.}
+Thanks to the team of project INTER SPACE
+
+development team inside of the room
+Christina Jauernik
+Simon Oberhammer
+Martin Perktold
+Christian Freude
+
+Wolfgang Tschapeller
+Esther Balfe
+
+Michael Wimmer
+
+Michael Thielscher
+for helping us getting started with Jason as an agent development platform
+
+Paolo Petta 
+for encouraging our team in various ways when we were having trouble advancing
+for
+
+All of my friends family, 
+special shoutouts to my dog and my father
+
+
 \end{acknowledgements*}
 
 \begin{kurzfassung}
@@ -143,6 +167,11 @@
 
 \begin{abstract}
 \todo{Enter your text here.}
+
+Should answer concisely three questions, Which problem did you solve, How did you solve the problem (high level specifics of a technique for example); What results did you achieve (“Our technique is now 1000\% faster than...”)
+Abstract is NOT an introduction; Abstract is NOT a summary
+
+
 \end{abstract}
 
 % Select the language of the thesis, e.g., english or naustrian.
@@ -153,6 +182,51 @@
 
 % Switch to arabic numbering and start the enumeration of chapters in the table of content.
 \mainmatter
+
+\newacronym{ia}{IA}{Intelligent Agent}
+\newacronym{bson}{BSON}{Binary JSON}
+\newacronym{json}{JSON}{JavaScript Object Notation}
+\newacronym{as}{AS}{AgentSpeak}
+\newacronym{mas}{MAS}{Multi-agent system}
+\newacronym{fwf}{FWF}{Fonds zur Förderung der wissenschaftlichen Forschung (Austrian Science Fund)}
+\newacronym{ai}{AI}{Artificial Intelligence}
+\newacronym{cartago}{CArtAgO}{Common ARTifact infrastructure for AGents Open environments}
+\newacronym{bpnn}{BPNN}{Back-Propagation Neural Networks}
+\newacronym{fubi}{FUBI}{Full Body Interaction Framework}
+\newacronym{bdi}{BDI}{Belief-Desire-Intention}
+\newacronym{udp}{UDP}{User Datagram Protocol}
+
+\newglossaryentry{agent figure}
+{
+  name={agent figure},
+  description={Also virtual agent figure. Refers to the agent controlled figure on the screen.}
+}
+\newglossaryentry{Jason agent}
+{
+  name={Jason agent},
+  description={The agent program controlling the agent figure.}
+}
+\newglossaryentry{visitor}
+{
+  name={visitor},
+  description={Active user of the INTRA SPACE installation.}
+}
+\newglossaryentry{screen}
+{
+  name={screen},
+  description={Refers to the mid-air suspended canvas used as a screen for the installation. Functions as a window to the virtual space of the agent figures. Illuminated from the back by a projector.}
+}
+\newglossaryentry{live}
+{
+  name={live},
+  description={Also live state. Refers to the agent's state, in which it mirrors the movements of the visitor it was assigned to.}
+}
+\newglossaryentry{island system}
+{
+  name={Island System},
+  description={A concept similar to finite-state machines, used to visualize and model Jason agents. Described more closely in \autoref{chap:finalapproach}.}
+}
+
 
 \chapter{Introduction}
 \label{chap:introduction}
@@ -209,7 +283,7 @@ Implementation was based on independent stories, which were to be told by the ag
 Stories would sometimes feature branching paths depending on visitor behavior, or would not follow a time line at all, but rather be purely reactive in nature. 
 Early agent stories were mostly based either on animalistic behavior, such as that of a bat or an octopus, or on goals to be reached – for example getting the visitor to perform a certain action, such as waving towards the agent. 
 Some of the stories are explained in detail in \autoref{chap:implementation}. \\
-Pre-recorded motions from the motion-capture software CapturyLive were used as basic building blocks for agent behaviour. 
+Pre-recorded motions from the motion-capture software The Captury Live~\cite{capturyLive} were used as basic building blocks for agent behaviour. 
 These motions could either be of continuous nature, such as walking or standing animation cycles, or isolated actions, such as hand gestures. 
 Certain actions would leave the agent in a different state then before. 
 For example, sitting down on the floor or getting up, would switch between the states of standing and sitting, thus enabling the agent to perform different actions from before. 
@@ -886,7 +960,7 @@ Explicitly, Concurrent MetateM~\cite{Barringer1995} was recommended, which is a 
 It would allow agents to act in less obviously formulaic ways, as plans would be automatically and incrementally constructed based on temporal logic rules within the agent program. 
 This would allow agents more flexibility for varying actions under the same circumstances as well. \\
 However, because of the late stage during the project it was decided to not switch to MetateM, as embedding it into the current environment, learning the appropriate usage of the language and the different way of thinking in regards to temporal logic would take too long for the project to be finished in time. 
-Instead, a new way of implementing agents in Jason was inspired by MetateM, which was referred to as the “Island System” within the project team. 
+Instead, a new way of implementing agents in Jason was inspired by MetateM, which was referred to as the \gls{island system} within the project team. 
 It was based on an approach to cause more indeterministic and emergent behavior amongst agents, as was requested before. 
 Agents are supposed to decide on their next actions on their own, instead of only reacting to the visitor, but actions of the visitor would also influence which actions agents could take next, in addition to direct reactions to certain visitor behavior. \\
 The general concept is based on a graph similar to a state machine, but with no direct transitions leading from one state to another. 

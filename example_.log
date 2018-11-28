@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.20)  28 NOV 2018 22:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.20)  28 NOV 2018 23:26
 entering extended mode
 **./example_.tex
 (example_.tex
@@ -1562,6 +1562,7 @@ LaTeX Info: Redefining \nameref on input line 122.
 \@outlinefile=\write9
 \openout9 = `example_.out'.
 
+ (example_.glsdefs)
 \c@lstlisting=\count346
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -1773,7 +1774,7 @@ Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 129.
 
 ]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 133.
+ine 137.
  [7
 
 ] [8
@@ -1787,11 +1788,11 @@ ine 133.
 
 ] [12
 
-] [13
+] (example_.toc [13]) [14]
+\@gls@deffile=\write10
+\openout10 = `example_.glsdefs'.
 
-] [14
-
-] (example_.toc [15]) [16] [1
+ [1
 
 
 ]
@@ -1799,33 +1800,33 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
  [2]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 200.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 278.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 200.
-<graphics/fig1_overview.png, id=293, 420.06938pt x 538.26094pt>
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 278.
+<graphics/fig1_overview.png, id=284, 420.06938pt x 538.26094pt>
 File: graphics/fig1_overview.png Graphic file (type png)
 <use graphics/fig1_overview.png>
-Package pdftex.def Info: graphics/fig1_overview.png  used on input line 219.
+Package pdftex.def Info: graphics/fig1_overview.png  used on input line 297.
 (pdftex.def)             Requested size: 418.25368pt x 535.93529pt.
-<graphics/fig2.png, id=294, 1039.63406pt x 691.83469pt>
+<graphics/fig2.png, id=285, 1039.63406pt x 691.83469pt>
 File: graphics/fig2.png Graphic file (type png)
 <use graphics/fig2.png>
-Package pdftex.def Info: graphics/fig2.png  used on input line 225.
+Package pdftex.def Info: graphics/fig2.png  used on input line 303.
 (pdftex.def)             Requested size: 418.25368pt x 278.323pt.
-<graphics/fig3.png, id=296, 1038.88126pt x 705.38531pt>
+<graphics/fig3.png, id=287, 1038.88126pt x 705.38531pt>
 File: graphics/fig3.png Graphic file (type png)
 <use graphics/fig3.png>
-Package pdftex.def Info: graphics/fig3.png  used on input line 231.
+Package pdftex.def Info: graphics/fig3.png  used on input line 309.
 (pdftex.def)             Requested size: 418.25368pt x 283.97888pt.
-<graphics/fig4.jpg, id=297, 4914.36pt x 2358.8125pt>
+<graphics/fig4.jpg, id=288, 4914.36pt x 2358.8125pt>
 File: graphics/fig4.jpg Graphic file (type jpg)
 <use graphics/fig4.jpg>
-Package pdftex.def Info: graphics/fig4.jpg  used on input line 237.
+Package pdftex.def Info: graphics/fig4.jpg  used on input line 315.
 (pdftex.def)             Requested size: 418.25368pt x 200.73036pt.
 
 
@@ -1850,10 +1851,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [11] [12
 
 ]
-<graphics/fig5.png, id=423, 1806.75pt x 1220.56pt>
+<graphics/fig5.png, id=415, 1806.75pt x 1220.56pt>
 File: graphics/fig5.png Graphic file (type png)
 <use graphics/fig5.png>
-Package pdftex.def Info: graphics/fig5.png  used on input line 354.
+Package pdftex.def Info: graphics/fig5.png  used on input line 432.
 (pdftex.def)             Requested size: 418.25368pt x 282.54807pt.
 
 
@@ -1863,41 +1864,41 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14 <./graphics/fig5.png>]
-<graphics/fig6.png, id=444, 1040.38687pt x 696.35156pt>
+<graphics/fig6.png, id=435, 1040.38687pt x 696.35156pt>
 File: graphics/fig6.png Graphic file (type png)
 <use graphics/fig6.png>
-Package pdftex.def Info: graphics/fig6.png  used on input line 401.
+Package pdftex.def Info: graphics/fig6.png  used on input line 479.
 (pdftex.def)             Requested size: 418.25368pt x 279.93825pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<graphics/fig7-1.jpg, id=446, 451.6875pt x 569.12625pt>
+<graphics/fig7-1.jpg, id=437, 451.6875pt x 569.12625pt>
 File: graphics/fig7-1.jpg Graphic file (type jpg)
 <use graphics/fig7-1.jpg>
-Package pdftex.def Info: graphics/fig7-1.jpg  used on input line 429.
+Package pdftex.def Info: graphics/fig7-1.jpg  used on input line 507.
 (pdftex.def)             Requested size: 228.57292pt x 288.01004pt.
-<graphics/fig7-2.jpg, id=447, 298.11375pt x 466.74374pt>
+<graphics/fig7-2.jpg, id=438, 298.11375pt x 466.74374pt>
 File: graphics/fig7-2.jpg Graphic file (type jpg)
 <use graphics/fig7-2.jpg>
-Package pdftex.def Info: graphics/fig7-2.jpg  used on input line 433.
+Package pdftex.def Info: graphics/fig7-2.jpg  used on input line 511.
 (pdftex.def)             Requested size: 183.61142pt x 287.46945pt.
 [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16 <./graphics/fig6.png>] [17 <./graphics/fig7-1.jpg> <./graphics/fig7-2.jpg>
 ]
-<graphics/fig7-3.png, id=475, 538.26094pt x 307.1475pt>
+<graphics/fig7-3.png, id=466, 538.26094pt x 307.1475pt>
 File: graphics/fig7-3.png Graphic file (type png)
 <use graphics/fig7-3.png>
-Package pdftex.def Info: graphics/fig7-3.png  used on input line 471.
+Package pdftex.def Info: graphics/fig7-3.png  used on input line 549.
 (pdftex.def)             Requested size: 418.25368pt x 238.66954pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [18] [19 <./graphics/fig7-3.png>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 520.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 598.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1915,15 +1916,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
 [26]
-<graphics/fig8.png, id=535, 563.10374pt x 280.04625pt>
+<graphics/fig8.png, id=526, 563.10374pt x 280.04625pt>
 File: graphics/fig8.png Graphic file (type png)
 <use graphics/fig8.png>
-Package pdftex.def Info: graphics/fig8.png  used on input line 716.
+Package pdftex.def Info: graphics/fig8.png  used on input line 794.
 (pdftex.def)             Requested size: 418.25368pt x 208.00868pt.
-<graphics/fig9.png, id=536, 457.71pt x 426.09187pt>
+<graphics/fig9.png, id=527, 457.71pt x 426.09187pt>
 File: graphics/fig9.png Graphic file (type png)
 <use graphics/fig9.png>
-Package pdftex.def Info: graphics/fig9.png  used on input line 722.
+Package pdftex.def Info: graphics/fig9.png  used on input line 800.
 (pdftex.def)             Requested size: 418.25368pt x 389.37611pt.
  [27
 
@@ -1935,10 +1936,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29 <./graphics/fig9.png>] [30] [31] [32]
-<graphics/fig10.jpg, id=576, 1053.9375pt x 700.6175pt>
+<graphics/fig10.jpg, id=567, 1053.9375pt x 700.6175pt>
 File: graphics/fig10.jpg Graphic file (type jpg)
 <use graphics/fig10.jpg>
-Package pdftex.def Info: graphics/fig10.jpg  used on input line 876.
+Package pdftex.def Info: graphics/fig10.jpg  used on input line 954.
 (pdftex.def)             Requested size: 418.25368pt x 278.03978pt.
  [33]
 
@@ -1951,10 +1952,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 2042) has occurred while \output is active []
 
  [35 <./graphics/fig10.jpg>] [36] [37] [38]
-<graphics/fig11.png, id=629, 621.82312pt x 357.58594pt>
+<graphics/fig11.png, id=622, 621.82312pt x 357.58594pt>
 File: graphics/fig11.png Graphic file (type png)
 <use graphics/fig11.png>
-Package pdftex.def Info: graphics/fig11.png  used on input line 997.
+Package pdftex.def Info: graphics/fig11.png  used on input line 1075.
 (pdftex.def)             Requested size: 418.25368pt x 240.5198pt.
  [39 <./graphics/fig11.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1994,46 +1995,49 @@ m /
 
 [62] [63]) [64]
 No complaints by nag.
-\tf@toc=\write10
-\openout10 = `example_.toc'.
+\tf@toc=\write11
+\openout11 = `example_.toc'.
 
-\tf@lof=\write11
-\openout11 = `example_.lof'.
+\tf@lof=\write12
+\openout12 = `example_.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2680.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2680.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2758.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2758.
 (example_.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2680.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2680.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2758.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2758.
 
 Package rerunfilecheck Info: File `example_.out' has not changed.
-(rerunfilecheck)             Checksum: 038DB0054CBA5DB5898C8583C9C37549;1991.
+(rerunfilecheck)             Checksum: 8E5F170ED7BBEBBB318B75034D3D4B5A;1990.
  ) 
 Here is how much of TeX's memory you used:
- 35142 strings out of 492965
- 622899 string characters out of 3135727
- 1026406 words of memory out of 3000000
- 37987 multiletter control sequences out of 15000+200000
+ 35674 strings out of 492965
+ 631691 string characters out of 3135727
+ 1024406 words of memory out of 3000000
+ 38520 multiletter control sequences out of 15000+200000
  120933 words of font info for 158 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,94p,1976b,1921s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
-/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmri8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
-helvetic/uhvr8a.pfb>
-Output written on example_.pdf (80 pages, 9730000 bytes).
+pdfTeX warning (dest): name{glo:island\040system} has been referenced but doe
+s not exist, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiK
+TeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvip
+s/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}<C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
+mr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmri8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/he
+lvetic/uhvr8a.pfb>
+Output written on example_.pdf (78 pages, 9729393 bytes).
 PDF statistics:
- 870 PDF objects out of 1000 (max. 8388607)
- 207 named destinations out of 1000 (max. 500000)
+ 861 PDF objects out of 1000 (max. 8388607)
+ 204 named destinations out of 1000 (max. 500000)
  30560 words of extra memory for PDF output out of 35830 (max. 10000000)
 
