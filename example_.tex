@@ -1,0 +1,1066 @@
+% Copyright (C) 2014-2017 by Thomas Auzinger <thomas@auzinger.name>
+
+\documentclass[draft,final]{vutinfth} % Remove option 'final' to obtain debug information.
+
+% Load packages to allow in- and output of non-ASCII characters.
+\usepackage{lmodern}        % Use an extension of the original Computer Modern font to minimize the use of bitmapped letters.
+\usepackage[T1]{fontenc}    % Determines font encoding of the output. Font packages have to be included before this line.
+\usepackage[utf8]{inputenc} % Determines encoding of the input. All input files have to use UTF8 encoding.
+
+% Extended LaTeX functionality is enables by including packages with \usepackage{...}.
+\usepackage{amsmath}    % Extended typesetting of mathematical expression.
+\usepackage{amssymb}    % Provides a multitude of mathematical symbols.
+\usepackage{mathtools}  % Further extensions of mathematical typesetting.
+\usepackage{microtype}  % Small-scale typographic enhancements.
+\usepackage[inline]{enumitem} % User control over the layout of lists (itemize, enumerate, description).
+\usepackage{multirow}   % Allows table elements to span several rows.
+\usepackage{booktabs}   % Improves the typesettings of tables.
+\usepackage{subcaption} % Allows the use of subfigures and enables their referencing.
+\usepackage[ruled,linesnumbered,algochapter]{algorithm2e} % Enables the writing of pseudo code.
+\usepackage[usenames,dvipsnames,table]{xcolor} % Allows the definition and use of colors. This package has to be included before tikz.
+\usepackage{nag}       % Issues warnings when best practices in writing LaTeX documents are violated.
+\usepackage{todonotes} % Provides tooltip-like todo notes.
+\usepackage{hyperref}  % Enables cross linking in the electronic document version. This package has to be included second to last.
+\usepackage[acronym,toc]{glossaries} % Enables the generation of glossaries and lists fo acronyms. This package has to be included last.
+
+% Define convenience functions to use the author name and the thesis title in the PDF document properties.
+\newcommand{\authorname}{Tom Tucek} % The author name without titles.
+\newcommand{\thesistitle}{INTRA SPACE Agent – An agent-based architecture for an artistic real-time installation} % The title of the thesis. The English version should be used, if it exists.
+
+% Set PDF document properties
+\hypersetup{
+    pdfpagelayout   = TwoPageRight,           % How the document is shown in PDF viewers (optional).
+    linkbordercolor = {Melon},                % The color of the borders of boxes around crosslinks (optional).
+    pdfauthor       = {\authorname},          % The author's name in the document properties (optional).
+    pdftitle        = {\thesistitle},         % The document's title in the document properties (optional).
+    pdfsubject      = {Subject},              % The document's subject in the document properties (optional).
+    pdfkeywords     = {a, list, of, keywords} % The document's keywords in the document properties (optional).
+}
+
+\setpnumwidth{2.5em}        % Avoid overfull hboxes in the table of contents (see memoir manual).
+\setsecnumdepth{subsection} % Enumerate subsections.
+
+\nonzeroparskip             % Create space between paragraphs (optional).
+\setlength{\parindent}{0pt} % Remove paragraph identation (optional).
+
+\makeindex      % Use an optional index.
+\makeglossaries % Use an optional glossary.
+%\glstocfalse   % Remove the glossaries from the table of contents.
+
+% Set persons with 4 arguments:
+%  {title before name}{name}{title after name}{gender}
+%  where both titles are optional (i.e. can be given as empty brackets {}).
+\setauthor{}{\authorname}{}{male}
+\setadvisor{MSc}{Christian Freude}{}{male}
+
+% For bachelor and master theses:
+%\setfirstassistant{Pretitle}{Forename Surname}{Posttitle}{male}
+%\setsecondassistant{Pretitle}{Forename Surname}{Posttitle}{male}
+%\setthirdassistant{Pretitle}{Forename Surname}{Posttitle}{male}
+
+% For dissertations:
+%\setfirstreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
+%\setsecondreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
+
+% For dissertations at the PhD School and optionally for dissertations:
+%\setsecondadvisor{Pretitle}{Forename Surname}{Posttitle}{male} % Comment to remove.
+
+% Required data.
+\setaddress{Kanalstrasse 8/2; 1220 Vienna; Austria}
+\setregnumber{01325775}
+\setdate{29}{11}{2018} % Set date with 3 arguments: {day}{month}{year}.
+\settitle{\thesistitle}{INTRA SPACE Agent} % Sets English and German version of the title (both can be English or German). If your title contains commas, enclose it with additional curvy brackets (i.e., {{your title}}) or define it as a macro as done with \thesistitle.
+\setsubtitle{An agent-based architecture for an artistic real-time installation}{An agent-based architecture for an artistic real-time installation} % Sets English and German version of the subtitle (both can be English or German).
+
+% Select the thesis type: bachelor / master / doctor / phd-school.
+% Bachelor:
+\setthesis{bachelor}
+%
+% Master:
+%\setthesis{master}
+%\setmasterdegree{dipl.} % dipl. / rer.nat. / rer.soc.oec. / master
+%
+% Doctor:
+%\setthesis{doctor}
+%\setdoctordegree{rer.soc.oec.}% rer.nat. / techn. / rer.soc.oec.
+%
+% Doctor at the PhD School
+%\setthesis{phd-school} % Deactivate non-English title pages (see below)
+
+% For bachelor and master:
+\setcurriculum{Media Informatics and Visual Computing}{Medieninformatik und Visual Computing} % Sets the English and German name of the curriculum.
+
+% For dissertations at the PhD School:
+%\setfirstreviewerdata{Affiliation, Country}
+%\setsecondreviewerdata{Affiliation, Country}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+
+\begin{document}
+
+\frontmatter % Switches to roman numbering.
+% The structure of the thesis has to conform to
+%  http://www.informatik.tuwien.ac.at/dekanat
+
+\addtitlepage{naustrian} % German title page (not for dissertations at the PhD School).
+\addtitlepage{english} % English title page.
+\addstatementpage
+
+\begin{danksagung*}
+\todo{Ihr Text hier.}
+\end{danksagung*}
+
+\begin{acknowledgements*}
+\todo{Enter your text here.}
+\end{acknowledgements*}
+
+\begin{kurzfassung}
+\todo{Ihr Text hier.}
+\end{kurzfassung}
+
+\begin{abstract}
+\todo{Enter your text here.}
+\end{abstract}
+
+% Select the language of the thesis, e.g., english or naustrian.
+\selectlanguage{english}
+
+% Add a table of contents (toc).
+\tableofcontents % Starred version, i.e., \tableofcontents*, removes the self-entry.
+
+% Switch to arabic numbering and start the enumeration of chapters in the table of content.
+\mainmatter
+
+\chapter{Introduction}
+\label{chap:introduction}
+
+This work describes the process and challenges of developing an agent-based system for an artistic real-time installation called INTRA SPACE. 
+The installation, which was being developed as an artistic research project by the academy of fine arts in Vienna, had the goal of exploring and deconstructing interactions between humans and so-called nonhumans. 
+The main idea of the installation was to offer visitors the chance to interact with a virtual figure on a wide screen in front of them. 
+The virtual figures would guide visitors through certain procedures, mimic them, interact with them, as well as follow their own goals. \\
+The virtual figures were to be controlled by an independently running agent-system, which would have access to information regarding the visitors’ behavior, and should thus determine the actions of one or more characters on the screen. 
+Furthermore, the agents’ course of action had been predefined by various stories, written by the research group. 
+Converting these stories into AgentSpeak using Jason was the first main goal of the task. Caused by the constantly developing environment of the project, development of the agent system faced various dynamic goals as well.
+The research question of this work is thus “How can an agent system be developed and embedded into an installation with dynamic requirements?”. 
+This document describes the project’s vision and set-up, followed by a detailed description of the process of developing, implementing, and embedding an agent system into the artistic real-time installation of the project. \\
+This work is generally structured chronologically, as implementations are presented in the order they were developed. 
+However, alternatives and other additional information are sometimes based more on hindsight and reflection. 
+After the installation is described and explained, an overview of related works is presented as well. The aforementioned research question and resulting sub-questions are presented with multiple possible approaches, as well as detailed descriptions of the paths which were actually chosen and implemented. 
+Concluding remarks include reflections on the project, problems, possible solutions and approaches, discussion, and further work.
+
+\section{About Project INTRA SPACE}
+\label{chap:about}
+
+Project INTRA SPACE was an artistic research project by the academy of fine arts in Vienna, which ran from April 2015 until June 2017, with involvement of the author of this work starting in August 2016. 
+It was funded by the Austrian Science Fund (FWF).
+\begin{quote}
+	``\emph{INTRA SPACE: The reformulation of architectural space as a dialogical aesthetic} explores how interactions between, across and beyond humans and nonhumans can be experimentally embodied, aesthetically reformulated and theoretically challenged in their spatial, temporal and transversally entangled spheres.''~\cite{intraspaceAbout}
+\end{quote}
+Visitors were able to experience the finished product either by themselves, or watch performers interact with it. 
+Although the installation was considered mobile and has been rebuilt at another location for presentation purposes, its development, testing, and presentation during the author’s involvement were conducted within a single room. 
+The layout of the room was changed multiple times during development, with the final layout being presented as a schematic overview in Figure~\ref{fig:fig1_overview}, as well as a picture, taken from the screen’s side opposing the motion-capture space, in Figure~\ref{fig:fig2_installation}. \\
+The layout seen in Figure~\ref{fig:fig1_overview} can be separated into a motion-capture space, a back-projection space, as well as two work spaces. 
+Computers running necessary software or used for development were placed in the work spaces. 
+The two most notable computers were called the “Render Node” and the “Captury Node”. 
+First of which was connected to the projector and responsible for agents appearing on screen, as well as hosting the agent system. 
+The second PC called “Captury Node” was connected to the cameras tracking the visitor within the motion-capture space.
+This machine was responsible for processing live picture data fed to it via Ethernet, discerning relevant information, such as the tracked person’s position and movements, and finally sending the pre-processed data to the “Render Node”. \\
+The installation before the introduction of artificial intelligence (AI) was comparable to~\cite{10.1007/978-3-319-09767-1_7} with the agent on the screen mirroring the visitors movements in real time. 
+After a short “donning” phase (explained further in \autoref{chap:donning}), the visitor’s movements were entirely recreated by the agent figure on the screen (see Figure~\ref{fig:fig3_action}). 
+As seen in Figure~\ref{fig:fig2_installation} and Figure~\ref{fig:fig3_action}, agent figures were not rendered in a photorealistic way during the final phases of the project, but instead were chosen to be represented by monochromatic, sexually ambiguous models. 
+There were several models in use, as can be seen in Figure~\ref{fig:fig4_models}, and a common characteristic was the high polygon count for the figures faces and hands, while their bodies were made of a noticeably lesser amount of polygons.\\
+The goal of adding an agent system to the project was for the agent figure to “emancipate” and disconnect from the visitor, realizing its own motions and behavior, thus allowing, even provoking, more interaction between the visitor and the figure. 
+The initial vision consisted of the agent figure copying the visitor’s movements for a random, but limited amount of time, before slowly starting to act on its own. 
+The visitor was supposed to gradually realize the emancipation of the figure, and move on from one-way interaction by being replicated, to two-way interaction by gesture-based dialogue.
+The agent system containing the required AI initially had to meet the following requirements:
+\begin{itemize}
+	\item Communicate with the already installed system by sending and receiving information via a defined interface
+	\item Run isolated and independently from the rendering engine, be fault tolerant and stable
+	\item Take control over the agent figures’ actions at appropriate times
+	\item Incorporate pre-written stories into interactions with visitors
+	\item Make decisions based on the information it is presented in real time (information may be incomplete or faulty)
+\end{itemize}
+During development additional requirements emerged, such as non-deterministic behavior and visitor guidance, which are further explored in later chapters. \\
+Development of the agent system took place in a period of about six months, using iterations and continuous feedback from project staff, experts, and visitors. 
+Implementation was based on independent stories, which were to be told by the agent figures’ actions. 
+Stories would sometimes feature branching paths depending on visitor behavior, or would not follow a time line at all, but rather be purely reactive in nature. 
+Early agent stories were mostly based either on animalistic behavior, such as that of a bat or an octopus, or on goals to be reached – for example getting the visitor to perform a certain action, such as waving towards the agent. 
+Some of the stories are explained in detail in \autoref{chap:Implementation}. \\
+Pre-recorded motions from the motion-capture software CapturyLive were used as basic building blocks for agent behaviour. 
+These motions could either be of continuous nature, such as walking or standing animation cycles, or isolated actions, such as hand gestures. 
+Certain actions would leave the agent in a different state then before. 
+For example, sitting down on the floor or getting up, would switch between the states of standing and sitting, thus enabling the agent to perform different actions from before. 
+Because of graphic depictions of such features, stories for the agent system eventually transformed into state machines – a topic which is further discussed in \autoref{chap:Sleeper agent}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig1_overview}
+	\caption{Schematic plan of final setup (Source: Technical Report by Christian Freude)}
+	\label{fig:fig1_overview}
+\end{figure}
+
+\chapter{Related Work}
+\label{chap:relatedwork}
+
+Interactive agents on screens can be found in current research as an approach to entertainment, education, and training. 
+While entertainment and art overlap in many areas, not many such projects have explored the more philosophical side of such an interaction as in INTRA SPACE. 
+But as the main focus of this work is describing the implementation of the implemented agent system, this chapter reviews similar use-cases and installations, as well as general research regarding the topic of interactions between users and agent systems.
+
+\section{User Interaction and Depiction of Agents}
+\label{chap:userinteraction}
+
+Fundamental research on user interactions with virtual agents in both virtual and mixed environments has been conducted in~\cite{10.1007/978-3-540-39396-2_39}, where the difference between such environments is highlighted:
+\begin{quote}
+	``User interaction with virtual agents generally takes place in virtual environments in which there is clear separation between the virtual actors and the user, due to the fact that in most cases, the user is in some way external to the virtual world. In Mixed-Reality Interactive Storytelling, the user’s video image is captured in real time and inserted into a virtual world populated by autonomous synthetic actors with which the user interacts. The user in turn watches the composite world projected on a large screen, following a `magic mirror' metaphor.''~\cite[p.~1]{10.1007/978-3-540-39396-2_39}
+\end{quote}
+The same magic mirror metaphor can be applied to the project described in this work, as visitors’ image data is captured and information gained from it is used to render images onto the screen. 
+However, different from such mixed-reality applications, the mirror does not reflect the world of the user and instead serves as an interface to the world of the virtual agent. \\
+Relevant research can also be found in the field of human-robot interaction, as robots serve as agents, controlled by artificial intelligence as well. 
+While robots have a physical body and agents of this project do not, many problems apply to both alike, such as appearing human or human-like to users. 
+In~\cite{stenzel2012humanoid}, it is described when and how humans view robots as robots or not, whereas~\cite{suzuki1998intelligent} describes human-robot interaction with agents using artificial emotions including learning and self-adaption features, similar to the agents in this project. 
+Emotions are exhibited by visuals, lights, music, movement, behavior, etc. – methods that have been tried to represent INTRA SPACE’s agents’ emotions as well. 
+In~\cite{suzuki1998intelligent}, humans interact with the robot without wearing any sensors, as the robot uses ultrasound sensor and cameras to recognize user actions. 
+Furthermore, the use of the word kansei (sense, sensibility) is suggested, as it describes a field of major research in Japanese robotics – how do robots express emotions? \\
+Similar research can be found in ~\cite{pereira2014improving}, which provides answers to the questions of what makes humans perceive agents as a social presence, and how can it be improved. 
+They conducted a case study, in which a multiplayer board game was played together with a robot. 
+The results of this study led them to establish 5 guidelines, which were a physical body, believable verbal and nonverbal behavior, an emotion system, social memory, and the simulation of social roles.
+Accordingly, agents controlling robots must adhere to those rules, to be realized as a social presence by humans. 
+The importance of a physical body is especially interesting in the context of this work, as the agents of this project do not possess one to the extent that is considered necessary by ~\cite{pereira2014improving}, but are merely projections on a physical screen. \\
+Depiction of lifelike virtual humans is a topic of research for various applications, as is described in~\cite{mcdonnell2012render}. 
+Such depictions find use in movies, games, interactive dramas, therapy, training, and marketing (see also~\cite{gratch2002creating}). 
+Realistic rendering oftentimes causes a negative reaction among viewers, caused by the famous uncanny valley phenomena. 
+~\cite{mcdonnell2012render} also goes into detail on motion capture and eye tracking, and presents an evaluation on the eleven different rendering styles which have been tried out over the course of their research. \\
+Other topics relevant to the project and AI development, even if not directly the focus of this work, include research on motion capture of humans, such as~\cite{moeslund2006survey}, which dictates four major steps which were used in the project of this work as well – initialization, tracking, pose estimation, and recognition. 
+Tracking human gestures is a field of study that ties into various applications within modern computer science, as~\cite{wachs2011vision} argues that future human-computer interaction will enable more natural, intuitive communication resembling human-human communication by employing gesture tracking.
+
+\section{Similar Installations}
+\label{chap:similarinstallations}
+
+FlurMax – an installation very similar to the one described in this work, containing an interactive virtual agent in a hallway to entertain visitors, is described in~\cite{10.1007/978-3-540-39396-2_5}. 
+Another example for conversational agents can be found in web-based Eliza from~\cite{llorach2017say}. 
+Such agents focus on conversation in natural human language, whereas the agents described in this work are, with a few exceptions, only able to understand and communicate via gestures. \\
+More focused on the artistic side and thus more similar installations can be found in~\cite{bevacqua2014effects}, in which the effects of human-virtual agent body interaction are explored by conducting an experiment on user experience. 
+The results show that the most obvious dimension to users is the so called dimension of “coupling”, which measures the level of connection between the user and the virtual agent, and is considered necessary for users to feel engaged.
+\begin{quote}
+	``Coupling is the continuous mutual influence between two individuals, and has a dynamic specific to the dyad. It possesses the capability to resist disturbance, and compensates by evolving the interaction. Disturbances come from both the environment and from within the individuals, depending on how they perceive the interaction.''~\cite[p.~1]{bevacqua2014effects}
+\end{quote}
+In the experiment, the virtual on-screen agent mirrors the user’s movements and actions, while the wizard of Oz (a person hidden from user) is able to manipulate agent actions directly, to cause disturbances within the interaction. 
+The study claims that a 0.5 second delay on mirroring – meaning that 0.5 seconds would pass before the virtual agent enacts the same movement as the user did before – was found out to be the best value to cause the agent to seem less automated and more natural or intelligent. \\
+A follow-up experiment is described in~\cite{bevacqua2015gestural}, which focuses once again on coupling between humans and virtual characters in an artistic context of imitation. 
+It features a very similar set-up, in which the user and the agent figure mirror one another. 
+The whole experience is defined as a “game”, in which the user can “fail”, by losing the virtual figures interest, caused by a lack of interaction. 
+This second installation is even more similar to the one described in this work, as it features agent behavior, goals, and artificial intelligence in order to shape the interaction between the agent and the user. 
+It is however notable, that the interaction with the virtual agent in INTRA SPACE was explicitly stated not to be seen as a game and thus differentiates itself from the research found in~\cite{bevacqua2015gestural}. \\
+In~\cite{pugliese2011framework}, research was conducted on motion-based bodily interactions with virtual characters and methodology based on the findings is proposed. 
+The experiments used a similar set-up as well, and furthermore also used pre-recorded animations in combination with real-time captured animations to bring the agents to life.
+
+\section{Jason and Alternatives}
+\label{chap:jasonandalternatives}
+
+Jason~\cite{bordini2004jason}~\cite{Bordini:2007:PMS:1197104} is used as a platform to develop agent systems in various different contexts. 
+Because of its portability by being implemented completely in Java, as well as being based on the agent programming language AgentSpeak (AS)~\cite{rao1996agentspeak} which is in turn based on the belief-desire-intention model (BDI), agents in Jason can fulfill the role of an agent system for a myriad of requirements. 
+The platform works as an interpreter for an extended version of AS, a BDI agent-oriented logic programming language. 
+Because it allows multi-agent system to be distributed over a network, its primary usage lies within distributed multi agent systems.
+It offers speech-act based inter-agent communication, as well as annotations on plans. 
+Users can customize features such as trust functions, selection functions, and internal actions. 
+The environment, in which the agents act, can also be implemented and customized in Java. 
+It is considered easy to learn and has good scalability, user friendly GUI features, good performance, and high stability. 
+Finally, it is free and open source. More details on Jason, as well as an explanation why it was chosen for the project, can be found in Chapter \autoref{chap:Jason}. \\
+An example for relevant agent systems implementations using Jason can be found in~\cite{ranathunga2011interfacing}, in which Jason is used for an agent platform to act within the online game Second Life and has to rely on unreliable sensor data. 
+The game Second Life is generally often used as a platform for virtual agents and agent systems to act within (see also~\cite{bogdanovych2010authentic}). 
+Another example is the system described in~\cite{boissier2013multi}, in which Jason is used in conjunction with Moise for agent organization and CArtAgO for shared environments. 
+CArtAgO (Common ARTifact infrastructure for AGents Open environments)~\cite{ricci2006cartago} is a framework designed to extend multi-agent systems (MAS) with artifact based working environments. 
+CArtAgO in combination with Jason is furthermore also used in~\cite{ricci2011environment}, which implement artifacts as abstract entities in an environment, for agents to interact with. \\
+As there is already a large amount of different agent platforms available to develop agent systems with, choosing the right one for a project can be a difficult task. 
+Furthermore, the wrong choice of an agent platform can lead to unnecessary work or unsatisfying results. 
+In~\cite{kravari2015survey}, a vast amount of agent platform options is presented, compared, and reviewed, to help making informed decisions on which platform to use. 
+Similarly, \cite{oliveira1999multi} presents an overview of what kind of research can be used for which applications in regards to multi-agent systems. \\
+An alternative to using Jason can be found in JACK~\cite{Winikoff2005}, which is considered to be the leading commercial BDI-agent toolkit, extending Java intuitively and thus being easily portable, same as Jason. 
+Another Java-based alternative would be JADE~\cite{bellifemine1999jade}, which is considered the most popular platform in the industry and academic community. 
+JADE focuses on distributed applications. 
+NetLogo~\cite{tisue2004netlogo} offers a multi agent modeling environment, designed after the Logo programming language, and is considered the most popular in education and research, as it is designed to be used without beforehand knowledge about programming. \\
+Concurrent MetateM~\cite{Barringer1995} offers a unique language based on temporal logic for modeling reactive systems. 
+It was suggested as an alternative during the development process of INTRA SPACE, and although the language itself ended up not being used, various ideas and concepts of the language were adopted and used to develop the project in the end. \\
+Other approaches have agents learning from scratch to solve problems or act on their desires.
+Examples include the use of back-propagation neural networks (BPNN) to create intelligent agents in intelligent virtual environments, such as in~\cite{jia2007entertainment}, in which a self-learning AI uses BPNN to navigate a maze-like game. \\
+In~\cite{salichs2012new}, a biologically inspired decision making system is implemented, which uses emotions, such as happiness, sadness, and fear to help the artificial intelligence to learn how to act from scratch.
+Similarly, in~\cite{grand1998creatures}, artificial animals using neural networks are implemented using genetics, breeding, and a biochemical system. 
+They interact with humans and each other, and results show that creatures appear to learn and display emergent social behavior. 
+More research on artificial life can be found in~\cite{maes1995artificial}, which ``models life as it could be, so as to understand life as we know it".
+
+\section{Story-telling}
+\label{chap:storytelling}
+
+Software agents can be used in various ways, such as a mechanism to help computer users with work and information overload, but also purely for arts and entertainment, as interactive artificial agents are already a big part of the modern entertainment industry. 
+Telling stories using agent systems is a research topic that ties closely to this work, as the virtual agents try to communicate with visitor’s based on predefined stories. 
+~\cite{brenner2010creating} presents a dynamic story based on a multi-agent system, in which beliefs, sentiments, and goals change all the time. 
+They employ plot graphs using events, temporal and causal links, beliefs, etc. to visualize stories and argue that generation of dynamic plots has not been studied sufficiently.
+~\cite{10.1007/11944577_1} aims for believable agents for interactive storytelling, constructing a coherent narrative combined with user agency, by employing a drama manager (an automated story director) to orchestrate and guide agents within their system. 
+A summarizing work regarding interactive narrative research can be found in~\cite{riedl2012interactive}, which describes its uses in entertainment, education, and training. 
+They describe interactive narrative as a digital interactive experience with user influence, which creates a dramatic storyline. 
+However, users must believe that their actions can significantly alter the direction or outcome of the story, meaning they must receive feedback to their actions and be able to comprehend the consequences, as opposed to being shown scripted stories which do not involve them. 
+This problem was also encountered during this work’s project (see \autoref{chap:Sleeper agent}).
+
+\chapter{The System}
+\label{chap:thesystem}
+
+As described in \autoref{chap:about} and seen in Figure~\ref{fig:fig1_overview}, the physical set-up can be divided into multiple spaces. 
+In this chapter, the spaces’ separate entities and their connections are further described and explained. 
+In Figure~\ref{fig:fig5_informationflow}, the flow of data and information within the system is shown. 
+The main focus lies on the agent system which is running independently inside the Render Node, containing a simulated environment and the individual agents. 
+Wrappers and interfaces for communication between entities are not shown in the depiction.
+
+\section{Overview}
+\label{chap:overview}
+
+12 cameras are placed around the motion-capture space to record the visitors’ movements from various angles, enabling the motion-capture software The Captury Live ~\cite{capturyLive} to reconstruct a model corresponding to each visitor. 
+The model’s skeletal data can then be saved as a recording, or sent directly to the render node, which is responsible for drawing the agent figures. 
+The render node utilizes various ways to analyze the received data – such as the full body interaction framework (FUBI ~\cite{fubi}), which is able to recognize pre-defined gestures like waving or sitting. 
+Data on recognized gestures is then processed by the rendering engine and shared with the running instance of the Java Virtual Machine, containing the Jason processes. 
+Data communication between Java and the rendering engine was handled via UDP, by sending packets of information encoded in BSON, which is a binary data interchange format based on JSON. \\
+The Java thread receiving the packets processes the information and feeds it into the simulated environment, which is part of the Jason architecture. 
+Agents within the environment are able to perceive it and changes within it, thus being able to react accordingly to new information. 
+The Jason agents are able to control the agent figures within the rendering engine by sending them commands using Jason’s custom-definable actions. 
+Because of this implementation, it could be said that the actual agents within the Jason platform are not in absolute control of the on-screen agent figures visible to visitors. 
+A fitting allegory might be puppet masters controlling their puppets using strings, without being able to see exactly what their puppets could see. 
+As such, it is theoretically possible for the agent figures to fail performing commands issued to them by the Jason agents – a problem which had to be considered during development. \\
+The environment is generally considered to be an empty space, causing the simulated environment within the Jason platform to be rarely used. 
+However, interactions with artifacts, such as tangible objects, sources of darkness and light, or cameras, are also possible in some agent stories. 
+In such cases, the artifacts are often-times part of the simulated environment, although related calculations ultimately proved to be more efficiently done directly within the rendering engine. \\
+The rendering engine is responsible for performing calculations, animation, and drawing the agent figures onto the screen. 
+Using orthographic projection and a custom-made projection-mapping component to nullify alignment errors, the picture was drawn onto the screen using a professional projector. 
+Because of physical constraints, the projectors image was reflected by two large-scale mirrors before reaching the screen (see Figure~\ref{fig:fig1_overview}). 
+Finally, the large screen, suspended mid-air, functioned as a window for visitors to see into the world of the virtual agent figures. 
+While visitors got their information about the agents from the screen, the agents got their information about the visitors from the cameras surrounding the visitors, thus completing the circle of information flow and interaction.
+
+\section{The Room}
+\label{chap:theroom}
+
+Most of the project’s later stages were developed and executed within a single room. 
+The layout of said room can be seen in Figure~\ref{fig:fig1_overview}. 
+The room featured white, blank walls and a grey floor, its architecture including large pillars and arcs to support the ceiling and upper floors. 
+The room’s decoration was minimalistic and simple, with notable parts being the large mirrors, some of which were used to refract the light from the projector onto the screen. 
+The room’s small windows were shut during visits, as the ever-changing lighting conditions of sunlight could easily disrupt the tracking software and thus lead to unwanted movements or behavior of the agents. 
+Instead, the room was illuminated by a large spot light, which was also refracted by a mirror suspended in mid-air, which directed it at the ceiling and illuminated the whole motion-capture space (see Figure~\ref{fig:fig1_overview}). \\
+Visitors would enter the room from the other side of the room, unable to see the work spaces and motion-capture space before walking past the screen. 
+The first thing they saw instead, would be the mirrors, the reflections of the agent figure in them, and the screen from behind, which would also show the agent figure. 
+Visitors had to walk through the beams of light emitted from the projector and reflected by the mirrors and would often stop to observe the mirrors on the sides and on the ceiling, before entering the spaces behind the screen. \\
+The motion-capture space was laid out with black flooring, for the purpose of showing visitors what portion of the room was focused on by the cameras, equalling the portion of the room they could freely move in while being tracked. 
+Roughly in the middle of the flooring was a spot marked with a subtle X-symbol, which served the purpose of showing visitors where to stand during the donning phase (see \autoref{chap:donning}), because the motion-capture software required new persons to stand within a predefined position in the room at the start, so as to accurately locate and capture them. 
+Leaving the black flooring would cause some cameras to lose the visitor’s image, thus increasing the likelihood of problems in capturing their motion data. 
+During the final installation, a “bed” akin to an extremely low table covered in pelt and a larger piece of felt fabric, functioning as a potential blanket, were sometimes placed into the motion-capture space prior to the arrival of visitors, which can be seen in Figure~\ref{fig:fig7_mocapspace}. 
+As the final installation used the sleeping agent (see \autoref{chap:Sleeper agent}), these objects could be used as a part of the interaction with said agent.
+
+\section{Donning}
+\label{chap:donning}
+
+Regardless of which version of the project is being used, the visitor has to go through a set of pre-defined motions first, to enable the motion-capture software to estimate body proportions. 
+This process was dubbed ‘donning’, as the visitor could see a visualized skeleton being laid over his own body, akin to clothing or armor, on the Captury Node screen (see Figure~\ref{fig:fig6_skeletons}). 
+Such skeletons had the option to be saved within the software and used again at a later date. 
+This functionality proved to be insufficient however, as the data used to find the corresponding person to each skeleton was based solely on color data delivered by the cameras, thus causing slight changes in color, such as different clothing or even different times of the day, to cause mismatches. 
+It was thus decided, that every visitor had to start with the donning phase before they could interact with the virtual agent figure on the screen. 
+During development, it was tried to have the agents on the screen lead visitors through this phase. 
+This lead to multiple problems, such as visitors realizing the agent figure as autonomous before emancipation has occurred. 
+Furthermore, as the agent figures’ communicative abilities were limited to gestures, it proved hard to understand to first-time visitors, which in turn lead to suboptimal results during the donning phase. 
+The project team realized the importance of this phase being executed as well as possible, as improper results lead to erroneous tracking and thus increased the amount of unwanted behavior by the agent. 
+Thus it was decided to explain the donning phase to visitors using on-screen text and audio-based instructions. \\
+The donning process itself consists of multiple suggested motions and postures, which are supposed to be performed and sometimes repeated by the visitors, to allow the motion-capture software to make accurate estimates of their body proportions. 
+The first pose consists of upright standing, with both arms held about 30 centimeters in front of the chest. 
+Shoulders, elbows, and hands would be roughly on the same level under optimal conditions. 
+After assuming such a pose, visitors are asked to move their upper bodies and turn around on the spot, before having to move their lower bodies and perform stretches and similar motions. 
+Results of the donning process vary greatly and are dependent on various factors, including lighting conditions, the color of worn clothing, time since the last system calibration was performed, as well as the speed in which the aforementioned motions were performed. 
+Most of these factors could be contained by various methods, but unpredictable visitor behavior always represented a risk for problems occurring in the process of donning.
+
+\section{Jason}
+\label{chap:jason}
+
+Jason is an open source software developed by Jomi F. Hübner and Rafael H. Bordini~\cite{bordini2004jason}~\cite{Bordini:2007:PMS:1197104}.
+It offers a development platform for multi-agent systems using an extended version of AgentSpeak (AS), which is an agent-oriented programming language designed by Anand Rao in 1996~\cite{rao1996agentspeak} and based on the belief-desire-intention (BDI) model. 
+This chapter offers a short introduction to the various concepts related to Jason, and shows how AgentSpeak is implemented using the Jason multi-agent system (MAS). \\
+As was explained in \autoref{chap:jasonandalternatives}, Jason is developed in Java and allows for a high degree of customization, although some critical areas are impossible to change without changes in the source code.
+It offers a platform for both developing and executing agent systems, either locally or employing a network, and is further extendible by other agent-system frameworks, such as CArtAgO~\cite{ricci2006cartago} or JADE ~\cite{bellifemine1999jade}. \\
+Jason was chosen because of low complexity and being easy to learn. 
+Furthermore, it fit the project’s requirements and allowed customization in critical areas. 
+It was also recommended by experts in the field of artificial intelligence development. 
+As is further explained in \autoref{chap:problems}, in hindsight, other platforms and approaches might have worked as well, or even better, for the task that was at hand.
+
+\subsection{Agents}
+\label{chap:agents}
+
+Agents in the context of artificial intelligence, often also referred to as intelligent agents (IA), describe autonomous entities, which are able to perceive, as well as interact with their environment. 
+More specifically, IAs perceive the environment through sensors and act through actuators (see Figure~\ref{fig:fig71_agentinteraction}). 
+IAs are rational, which means they must act in ways that maximize their performance and progression towards their goals, based on their currently held knowledge at any time~\cite{russell2016artificial}. 
+Depending on the type of IA, it might use a history of everything it perceived so far, or only beliefs it holds at the moment, to make a decision. \\
+IAs are implemented using agent programs, which are responsible for defining which actions are to be taken after new information is perceived. 
+Agent programs can be implemented by following various design patterns. 
+Jason employs goal-based agents, which use pre-defined plans to reach their active goals. 
+Agent programs are then embedded within a certain architecture, which supplies sensors and actuators.
+Jason offers this architecture in the form of an environment, which is implemented by a customizable Java class. 
+Usually, the architecture functions as the interface to the physical world, in which sensors and actuators are used. 
+In the case of this project however, agents only exist and act within a virtual world, with some sensors providing data from the physical world, while others are targeted at the virtual world. 
+The agents are thus not directly able to interact with the physical world, while perceiving both spaces. 
+For the sake of the abstract model shown in Figure~\ref{fig:fig71_agentinteraction} however, there is no distinction necessary between the physical and the virtual space. 
+Agents are thus defined as the combination of an agent program and an architecture~\cite{russell2016artificial}. 
+
+
+\subsection{Multi-agent Systems}
+\label{chap:mas}
+
+Agent systems, more often multi-agent systems (MAS), are systems consisting of multiple IAs. 
+A MAS is able to host multiple IAs acting independently of each other, which are also being able to communicate and interact with each other, as well as with the environment. 
+Thus MASs offer a distributed system for IAs to work within, allowing for solutions to complex problems which might not be possible by using centralized approaches. 
+Especially if the problem itself is distributed in nature, using a MAS can lead to efficient and easy-to-understand solutions~\cite{ferber1999multi}. 
+
+\subsection{Belief-desire-intention Model}
+\label{chap:bdi}
+
+The belief-desire-intention (BDI) model is based on a psychological model by philosopher Michael E. Bratman, who was also involved in developing the software model. 
+The BDI model separates the concepts of beliefs, desires, and intention within the IAs, to allow them to both choose what to do, as well as follow through with their chosen plans. 
+The plans to be executed by the IAs however are usually not created by the agents themselves, but are designed and implemented by their developers~\cite{rao1996agentspeak}. \\
+Beliefs describe all information an IA has about is environment. 
+They are either perceptions about the environment, introduced via sensor data, or mental notes established by the IAs themselves – as a result of other beliefs, events, or their own actions. 
+Beliefs do not have to be true and can change in the future. 
+In addition, they can also possess a percentage-based truth value to represent the likeliness of being accurate. 
+Adding or removing beliefs from an IA causes respective events to trigger, which in turn may modify other beliefs or trigger plans to be executed. \\
+Desires represent states that individual IAs want to accomplish, regardless of whether they are currently acting towards fulfillment of such states or not. 
+As soon as the IA starts pursuing a desire, it has acquired a new goal. 
+Contrary to desires, goals must be mutually exclusive. 
+This means that IAs may need to make decisions on which single desire to act on, if multiple possible but mutually exclusive desires are present. \\
+Goals are reached by following plans, which consist of multiple actions, which in turn may be represented by other plans. 
+Furthermore, a single goal could also be reachable by multiple plans, which could all be possible to follow at a single point in time. 
+In such cases, the agent is expected to choose only one applicable plan. 
+In the case of the Jason MAS, this can be done in two ways – either by making only one goal viable to be pursued at a time by defining mutually exclusive contexts (pre-conditions), or by using custom selection functions defined within the Java-based environment. 
+If neither are implemented, the default selection function chooses the first applicable plan instead, which may not be the most cost-efficient one. 
+Once the IA has actively started executing such a plan, the desire which caused the plan to be followed is referred to as an intention. Intentions are thus defined as desires an IA has committed to.  
+
+\subsection{AgentSpeak}
+\label{chap:as}
+
+AgentSpeak (AS), formerly called AgentSpeak(L), is a logic-based, agent-oriented programming language, which was originally designed as an abstract language without actual implementation, for the purpose of gaining insight and understanding of the BDI model~\cite{rao1996agentspeak}. 
+The language offers a way of equipping agents with knowledge about certain pre-defined plans, also referred to as know-how, so that agents can make use of those plans to fulfill their goals or react to changes in their environment. 
+AS, as well as Jason, were designed for cooperative agents, focusing on allowing IAs to communicate and interact with each other easily. 
+A brief explanation on AS syntax, as it is used in Jason, can be found in the next subsection.
+
+\subsection{Jason Syntax}
+\label{chap:syntax}
+
+Jason offers an actual implementation of the AS language, while also adding additional functionality – for example in the form of various customizable components within the agent and environment Java classes. 
+Agents within AS are defined by their initial beliefs and their plans. 
+A simple example for this can be seen below.
+\begin{verbatim}
+    alive.
+		
+    +alive 
+	    <-  .print(“Hello World”).
+\end{verbatim}
+The first line specifies an initial belief, which the IA adds to its belief base as soon as it starts being active. 
+The belief is saved as a literal, similar to traditional logic programming languages such as Prolog. 
+Such literals often take the form of predicates, to express properties of certain objects. 
+The literal in this example however, is a so-called atom, which displays no properties except for existing within the belief base. 
+The period following the initial belief functions as a syntactic separator, similar to semicolons in Java. \\
+The second line displays a very simple example of a plan. 
+The first part, \verb|+alive|, defines when the plan is to be executed. 
+The plus symbol represents the addition of a new belief, thus the plan will be executed whenever the belief \verb|alive| is added to the belief base. 
+The arrow operator separates the plan’s head from its body, where instructions can be found. 
+In this case, there is only one instruction, which is an action to be executed as soon as the plan is started. 
+As can be seen in the example, the plan will print out the words \verb|Hello World| into the console, whenever it is triggered. 
+If the agent were to be started now, it would first add a new belief in the form of \verb|alive| to its belief-base, which would cause an event to trigger. 
+This event is represented by \verb|+alive|, which happens to have an applicable plan assigned to it, which is then executed. 
+It is important to note, that the content of the belief is insignificant in this case. 
+Instead of \verb|alive|, other words or expressions could be used in the same way, as long as they start with a lower-case character, which causes them to be recognized as atoms.
+An example for a more complex plan can be seen below.
+\begin{verbatim}
+    +alive 
+        <-  !eat;
+            .print(“I have finished eating”).
+
+    +!eat : not eaten(_)
+        <-  eat_food;
+            +eaten(1);
+            !!eat.
+
+    +!eat : eaten(X) & X < 5
+        <-  eat_food;
+            -+eaten(X+1);
+            !!eat.
+
+    +!eat : eaten(X) & X >= 5 .
+\end{verbatim}
+The first plan looks somewhat similar to the one in the first example. 
+It is triggered with the addition of the belief \verb|alive| and finishes by printing out a message. 
+In between, there is an additional step, which starts with an exclamation mark and ends with a semicolon.
+The latter separates multiple steps of a single plan, as opposed to the period, which concludes plans or initial beliefs, whereas the exclamation mark precedes goals. 
+In this case, a new goal is added, which is \verb|eat|. 
+Only after the goal has been fulfilled, the plan continues being executed, and the message is being printed out on the console. 
+The newly added goal \verb|eat| has three plans associated with its addition, which are marked by \verb|+!eat|. 
+Furthermore, all of those plans have an additional component in their plan head, which is placed in between a colon and the aforementioned arrow operator. 
+This part is called the context, which works like a pre-condition for the plan to be chosen. 
+It must offer a binary result, based on which the plan either becomes viable to be chosen or not. 
+The first context reads \verb|not eaten(_)|, which means the plan can be chosen as long as there is no belief called \verb|eaten| within the IAs belief base, with any value associated to it, as the underscore represents a wildcard. 
+The second context is satisfied as long as the value held within the belief \verb|eaten| is smaller than five, whereas the third context will become satisfied as soon as the same value equals five or higher. 
+This code thus represents an example of three mutually exclusive plans for the same goal, as was discussed in \autoref{chap:bdi}.\\
+The first plan for \verb|+!eat| executes the action \verb|eat_food| as its first step. 
+This action has to be implemented within the Java-based environment class and return a success flag, for the plan to be able to continue. 
+After the action has finished, a new belief is added in the form of \verb|+eaten(1)|, in which the plus represents the addition of the belief that follows after it. 
+The belief adds the attribute of \verb|eaten| to the value of \verb|1|, which could also be an atom, such as \verb|apple| for example. 
+As stated before, the addition of a belief also triggers an event, however there is no plan associated with \verb|+eaten(1)| or \verb|+eaten(_)|, thus no plan is executed. 
+The last step once again causes the agent to pursue the goal of \verb|eat|. 
+The double exclamation mark causes the current plan to continue without waiting for the newly added plan to finish. 
+In this case, it serves only as recursion optimization, as it does not leave the finished \verb|+!eat| plans on the stack. \\
+The second plan is mostly the same, with a difference in the second line. 
+Expressions starting with upper-case characters in AS function as variables, in which other literals can be stored. 
+In this example, \verb|X| is unified with every available value for the attribute of \verb|eaten|, causing it to take the value of \verb|1| the first time it is called. 
+\verb|X| is used again in the expression \verb|-+eaten(X+1)|, which causes all beliefs of \verb|eaten| to be removed from the belief-base first, before adding a new \verb|eaten| belief with the value of \verb|X+1|. 
+The third plan for \verb|+!eat| does not have a body at all, which means that the goal is fulfilled as soon as this plan is chosen. 
+It thus serves as a termination condition for the recursive functionality of the \verb|!eat| goal. \\
+In conclusion, the example code above would cause the agent to \verb|eat_food| five times, before stopping and printing out a message. 
+For this to happen, it would need to start by adding the belief \verb|alive| to its belief-base, for example in the same way as in the first code example.
+
+
+\section{Input Data}
+\label{chap:inputdata}
+
+Input data refers to all data sent from the rendering engine to the Jason MAS. 
+The kinds of information that are transmitted this way can be seen in~\ref{tab:jason_input}.
+\begin{table}
+%	\centering
+	\begin{tabular}{p{0.5\linewidth}|p{0.44\linewidth}}
+		\toprule
+		Information content & Reference within agent source code  \\
+		\midrule
+		Visitors’ gestures recognized by FUBI or by the rendering engine	& actorstate \\ %\hline
+		Visitors’ position within the physical room							& actorposition; actordistancetoscreen \\ %\hline
+		Visitors’ movement speed											& bodymotion \\ %\hline
+		Donning status (percentage; 100\% means donning is finished)		& actorscaling \\ %\hline
+		Information regarding the active camera								& camerapos; cameraborder \\ %\hline
+		Positions of objects or artifacts									& objectposition \\ %\hline
+		Current scenario (story)											& scenario \\ %\hline
+		Agents’ current action (for example: idle, live, mid-animation)		& agentstate \\ %\hline
+		Agents’ position within the virtual room							& agentposition \\ %\hline
+		\bottomrule
+	\end{tabular}
+	\caption{Information transmitted from the rendering engine to the Jason MAS}
+	\label{tab:jason_input}
+\end{table}
+All input data is processed by the Java thread receiving the information via UDP. 
+The thread then introduces the pre-processed data into the simulated environment. 
+If data of the same kind was already available, it is updated instead. 
+For example, positional data of all active agents and visitors is updated periodically. 
+In some cases, the data is instead only removed from the environment, because it is no longer up-to-date. 
+Furthermore, information in the environment can be made visible to all agents or only to specifically chosen ones. 
+A supervisor agent, which does not have a visual representation on the screen and only runs on the Jason platform, is responsible to orchestrate the agents respective to the currently active scenario, telling them when to start and when to stop their performances. 
+As such, some of the data is only made available to the supervisor agent. \\
+All data is sent from the rendering engine, where it was processed from input coming from The Captury, calculated using the physics engine or script functions, or forwarded from FUBI. 
+Use of FUBI was minimized in the later stages of the project, as it oftentimes proved not reliable enough. 
+Instead, custom scripts within the rendering engine were developed to detect specific gestures and send relevant information to the agent system. \\
+During development, some calculations were made within the MAS, by the agents themselves, which proved to be inefficient and oftentimes produced code that was very hard to read and comprehend afterwards. 
+Thus it was changed later and calculations were almost exclusively performed within the rendering engine or within the Java-based environment.  \\
+During development, one of the problems that became clear was latency caused by the communication between the rendering engine and the MAS environment. 
+As both were usually executed on the same machine, network latency did not pose a problem. 
+However, processing of received data on the side of the MAS was handled by multiple queues, as well as Jason’s inherent reasoning cycle, which is responsible for detecting changes in the perceived environment, thus updating the currently held beliefs of all agents, and subsequently triggering all relevant events linked to any changes in beliefs. 
+As it turned out, it was possible for this system to be overloaded with input data, which in turn caused it to lag behind on execution and ultimately caused it to not be able to react in time to any changes. 
+It became apparent, that it was important to control the amount of information sent from the rendering engine to the MAS, so as to ensure flawless execution and timely reactions. 
+Because of this, the rate at which constantly changing information was sent out from the rendering engine had to be limited to a frequency which was less than the frame rate of the rendering engine, whereas one-time changes were always sent out immediately.
+
+\section{Output Data}
+\label{chap:outputdata}
+
+Output data refers to all data sent from the MAS to the rendering engine, which consists mostly of actions the agents wish to take, but also includes meta-information like currently active scenarios and signals regarding the state of the agent system in general, such as whether it is ready to be used. 
+To send out orders to the rendering engine, Jason agents use custom actions, which are defined within the environment class, which is written in Java. 
+The environment class uses threads to communicate with the rendering engine, sending BSON-encoded packets via UDP. \\
+Commands issued by the Jason agents are either related to a pre-recorded animation, a desired state, or both. 
+Examples for animations include gestures like waving or shrugging, as well as general movements like jumping or swooping. 
+States are divided into the three main states, of which only one can be active at a time and which include “idle”, “live”, and “animating”, as well as meta states, which can be active in combination with the main states.
+“Idle” is the default state, in which the agent stands upright and plays a subtle animation loop to appear unengaged. 
+The “live” state causes the agent to mirror the visitor’s movements. 
+Switching into “live” is not always easy however, for reasons which are further explained further below. 
+“Animating” is a common state for all animations, which is used whenever the agent is currently in the middle of executing a pre-recorded animation. 
+Meta states are oftentimes coupled with a certain animation, of which they usually come as a natural result – for example “lying down” causes agents to switch to a “sleeping” state. 
+Furthermore, some states and commands are exclusive to certain scenarios, such as the bat scenario, which included states for the agent appearing upside down on the ceiling of the virtual room within the screen, as well as commands to switch from the ceiling to the floor or vice versa.\\
+Because agents are not directly in control of their actions, as was described in \autoref{chap:overview}, but rather send commands towards the agent figures within the rendering engine, they need to know whether the action was executed and furthermore, if the action caused any changes within the environment. 
+AgentSpeak and Jason generally define every agent action as a process that might be successful or unsuccessful. 
+This implies that agents get feedback whether their actions succeeded or not. 
+If custom actions are implemented using Java, these actions must terminate with return-values indicating success or failure, so that the agent can act accordingly. 
+If a single action takes a while to complete, the agent pauses its currently followed plan and waits for a response on whether the action has succeeded or not. 
+However, this proved to be problematic in the scope of this project for many reasons. 
+One of which was the fact, that agent actions had to be interruptible by the Jason agents themselves, in case the situation changed and the agent had to react. 
+In some cases, single animations spanned timeframes of more than ten seconds, in which agents might have not been able to react to changes. 
+Jason’s framework offers solutions to this problem as well, such as concurrent plans and reactions to new events being able to cancel and discard other currently pursued goals. 
+Such an approach proved to be in need of detailed error-handling, as agents would otherwise cancel their goals too often without replacing them, causing them to lose all active behavior in many cases. 
+Furthermore, it was oftentimes unforeseeable how long certain actions would take. 
+For certain actions, such as synchronizing with the visitor or interacting with an artifact within the virtual room, the virtual agent figure would have to move to a certain position first, before being able to execute the action. 
+Depending on where the agent figure was located before the command was issued, as well as other circumstances, the time needed to complete the action could vary greatly. 
+This makes it harder for the Jason agents to plan beforehand on when to issue follow-up steps or whether or not they are in a position to react to certain events. \\
+Instead, Jason agents in this project were caused to behave differently. 
+External actions, which would be sent out to the rendering engine, always return successes as soon as the packet is sent out. 
+Thus, the agents command flow will not be interrupted and agents can continue on with their plans. 
+However, Jason agents are made to doubt whether their actions are actually successful or not, thus making the agents check the status of their respective visual agents, to determine if the actions have actually been performed after they have sent out the order. 
+For example, whenever the agent would perform a SwitchToLive, it commands the visual agent to synchronize with the visitor and to start copying the visitor’s movements. 
+However, it is not clear beforehand how long the visual agent figure will take until it starts mirroring the visitor, as it has to move to the same position within the mirrored reality before being able to start. 
+The Jason agent is nevertheless able to continue its plan after it sent out the command. 
+It is capable of checking the state of the visual agent, whether it is “live” or not – meaning whether it has successfully started mirroring the visitor, and thus determine when to continue with other parts of the plan that depend on that state. 
+Yet if the Jason agent wants to interrupt the process of the visual agent synchronizing with the visitor, it can do so at any time as well, by sending out a new command. \\
+This behavior could effectively also be performed by multi-threading agents, which would pause one plan while waiting for an action to finish, while concurrently following other goals, which would take over in case the action needed to be stopped. 
+Such a design was also employed whenever the agent needed to react to changes in its environment, as changes were also able to cause the agent to pursue a new goal. 
+For the story-based main goals of this work however, this proved complicated, as splitting them up into multiple goals was not an easy task and proved too complex within the scope of this project.\\
+This decision also made it possible to perform smooth transitions from one pre-recorded animation to the next, as Jason agents were allowed to queue up multiple animations while the visual agent was still mid-animation.
+If Jason agents had to wait for a response from the animation engine to confirm their command has been executed successfully, there would have been a brief window, after the visual agent finished the animation and before a new command was sent out by the Jason agent, in which there were no clear instructions on what the agent within the rendering engine was supposed to do. 
+In this project, the visual agents defaulted to their idle state in such cases, in which they stood upright and performed a looping idle animation. 
+Even if only a fraction of a second passed in between the end of one animation and starting the next one, the idle state would be clearly visible to spectators of the visual agent on the screen, often in the form of quick and erratic movement. 
+To prevent this from happening, Jason agents were given the ability to queue up commands for execution by the visual agents instead. 
+This allows animations to chain into each other without triggering the default idle state, thus creating more natural looking agent movement. \\
+Furthermore, communication between agents, to share beliefs, intentions, or other information is directly supported in Jason. 
+Agents were thus able to warn other agents if they intended to perform certain actions, tell them what to do, or request information or cooperation. 
+This was commonly used while developing multi-agent scenarios including artifacts, so as to not cause both agents to interact with the same artifact if that was not possible. 
+It was also used as a shortcut to add specific new perceptions to other agents, for example if one of the visual agents waved at the other, the waving agent also directly communicated with the other agent at the same time, instead of letting the second agent perceive it via the environment. 
+This is counter to the design philosophy of the agent system, but proved to be adequate.
+A possible scenario, in which differences may occur, would be if the second agent was looking in the opposite direction and would not be able to see the first agent waving at them. 
+However, cases like this could also be handled by polling information about positions and directions of the agent figures directly by the agents themselves.
+
+\chapter{Implementation}
+\label{chap:implementation}
+
+This chapter goes into detail about the process of developing and implementing the agent system using Jason. 
+First, an initial approach is described and explained, which was developed and tested right after work on the agent system has started. 
+Some specific agent stories are highlighted, as well as their results explained. 
+Afterwards, the final approach, which was implemented after multiple discussions within the project team and consulting with experts, is introduced and explained. 
+Finally, this chapter also offers insight into how communication worked within the core team of the project, using visualizations to plot and discuss various agent stories. 
+In this context, stories refer to textual or visual representations of what is expected of an agent, whereas scenarios refer to the implementations of said stories in the form of Jason agents within the MAS.
+
+\section{Initial Approach}
+\label{chap:initialapproach}
+
+During the initial approach, various stories that had been written and designed previously by the project team were to be implemented into a MAS using Jason. 
+As described in \autoref{chap:about}, at the start of development, the rendering engine was able to draw an agent figure onto the screen, which would proceed to mirror any movements of visitors tracked by the motion-capture system. 
+The Jason agent was then supposed to infuse the visual agent with a will of its own, so that it could emancipate itself away from being a mere reflection of the visitor. 
+The agents’ behavior, movements, animations, goals, and reactions all differed depending on the active scenario. \\
+Two of the first stories developed by the project team were the octopus agent and the bat agent. 
+The way in which those stories were brought to paper can be seen in Figure~\ref{fig:fig8_octopus}. 
+As can be seen in the intention part of the figure story, additional features like a visible environment within the virtual space, as well as the use of sound to enhance the experience were originally planned, but not implemented completely within the final product. 
+Before those first two stories were implemented however, it was decided to develop a simpler story for purposes of setting up the environment properly and getting a general look at how agent development in Jason worked within the scope of the project. 
+This simple story became known as the waving agents, featuring two active agents with the goal of causing at least one of the visitors to wave their hand towards the screen. \\
+Throughout development of the waving agents, it became clear that their behavior could be divided into somewhat independent phases. 
+Phase zero usually consists of the donning phase (as described in \autoref{chap:donning}), in which the visitors’ body proportions are estimated by the motion-capture system, to allow the software to track visitors’ movements throughout the designated motion-capture space. 
+After donning is completed, the so called “live” part follows, in which the agent figure would synchronize with the visitor’s position on the other side of the screen and start mirroring the visitors’ movements.
+
+\subsection{Waving Agents}
+\label{chap:waving}
+
+As was mentioned above, the waving agent scenario features two agents and requires two visitors. 
+Each visitor is assigned their agent figure, which becomes apparent to the visitors, as soon as the respective agents figures start mirroring their movements. 
+The end-goal of the scenario consists of getting at least one of the visitors to wave at the screen, towards the agent figures. 
+The origin of the scenario lies within already implemented functionality of the FUBI framework, which made it possible to recognize waving as a gesture performed by motion-captured individuals. 
+Furthermore it was argued that IAs necessarily needed an ultimate goal, so as to be able to act within the Jason MAS – which is why the goal of getting the visitors to wave was defined as such. \\
+In the first phase, after the live part, emancipation occurred and the waving agents start pursuing their scenario-specific goals. 
+During this stage of development, the trigger for agents to stop being “live” and start moving on their own is purely based on time. 
+At first it was decided to have this behavior start exactly two minutes after donning was completed, although this time span was later reduced to a random amount in between 50 and 70 seconds. 
+As soon as both agents are finished with “live”, the first agent figure turns towards the second agent figure and waves at them. 
+If there is not enough space in between the two agents to make the animated gesture certain to be visible, the first agent decides to move away from the other agent on its own, so as to create enough space. 
+After the first agent figure has successfully executed the waving animation, phase one ends and phase two starts. 
+A simple model depicting phase one, using notation similar to that of UML activity diagrams, was created by the project members and can be seen in Figure~\ref{fig:fig9_wave}. 
+The visualization only depicts the process of the first agent’s activities and simplifies the way the agent checked for distance between the two agent figures. \\
+Within phase two, the two agent figures continue by waving their hands at each other, before turning towards the camera and waving towards the visitors as well. 
+In case at least one of the visitors waves back, the figures express joy by jumping up and down, before switching back to live, mirroring the visitors’ actions indefinitely. 
+If the visitors do not wave back, the two agents try three more times by waving towards the camera, before giving up and fading away from sight. 
+The scenario was later extended by an additional goal of getting both visitors to wave back towards the agent figures. \\
+The scenario generally worked well after several iterations. 
+However, problems with the FUBI framework arose early, causing it to be unable to recognize waving visitors consistently. 
+Furthermore, the binary result of either celebration or failure made the scenario very similar to a game in nature. 
+This went against the idea of the installation, as the idea was to distance the experience from games and to promote more natural interaction between visitors and the agent figures. 
+Development on the waving agents was thus stopped, and development on the previously mentioned animal-based agents begun.
+
+\subsection{Octopus Agent}
+\label{chap:octopus}
+
+The octopus agent story was one of the first ones to be implemented as an agent scenario. 
+The general concept can be understood from Figure~\ref{fig:fig8_octopus}, which offers descriptions of both the octopus agent figure, as well as a its behavior and environment. 
+The agent itself can be considered more of an experimental agent, based on the idea of the magic mirror, which was embodied by the screen. 
+The octopus agent is supposed to interact with its respective visitor’s body reflection, for example by squeezing the agent figure’s body into the empty space between the visitor’s arms and chest, or similar openings.
+Different from a magic mirror installation however, the visitor’s body was not visible on the screen, but only the agent figure. \\
+The idea of the octopus agent was ultimately not pursued or developed very far, as it proved too complicated to record fitting animations and use them appropriately. 
+Additionally, the concept itself was very confusing to visitors. 
+Combined with suboptimal agent figure movements and decisions, visitors did not properly understand the mode of interaction. 
+Thus the whole scenario was deemed unsuitable for the given project scope.
+
+\subsection{Bat Agent}
+\label{chap:bat}
+
+The bat agent story focused on an agent with bat-like, animalistic behavior. 
+The core concept of the bat is the ability of the agent figure to switch between standing on the floor and upside down on the ceiling. 
+For example, the bat agent would start off by sleeping upside down on the top of the screen, before waking up and eventually moving down to the floor to find itself on the same level as the visitor. \\
+The agent scenario is focused on various kinds of interactions and different outcomes depending on the visitors’ behavior. 
+It was the most extensively developed agent scenario up to this point, with a large number of iterations, as well as many concepts which were tried out before being removed from the agent scenario again. 
+Different from the waving agents, it is designed for one visitor at a time, although multiple bat agents could be employed for multiple visitors. 
+In the case of multiple bat agents being active at the same time however, they will not interact with each other – the only inter-agent communication that occurs is to prevent the agents from overlapping and occupying the same spot of the screen. \\
+Another noteworthy feature of the bat agent story is that agents are able to show more open hostility in interactions with visitors, for example by attacking or swooping towards them. 
+Such animations are hard to interpret by visitors however, as the missing dimension of the orthogonal projection, in addition to the impossibility of physical interaction between agent figures and visitors made it hard to tell what the agents are aiming at. \\
+Bat agents were the first agent scenario to use emotional scales, such as for example the level of timidity ranging from zero to one hundred. 
+The value of those scale variables would change depending on actions of the visitor, and would influence how the bat agent figure would react to certain events. 
+The waving agents had a similar concept, in which their emotions would simply change from one state to the other – such as either being happy, sad, or neutral. 
+In later agent scenarios, such numerical values are further used to impact other dimensions of the interaction, such as the speed of the agent figure’s animations or the angle in which it would face the visitor. \\
+Furthermore, bat agents have the ability to deploy additional agent figures and give them commands. 
+These agent figures have various roles, such as instructing the visitor during the donning phase, while the bat agent figure was sleeping upside down on the ceiling, or appearing next to the sleeping bat in a similar manner, such as to appear like a group of sleeping bats. \\
+The bat agent scenario was in development significantly longer than previous agent scenarios. 
+However, it was ultimately stopped and abandoned in favor of a different scenario, because the bat agent figure’s behavior was deemed too hard to understand and the upside-down, pre-recorded animations did not turn out the way the project team envisioned them. 
+Additionally, the bat agent’s behavior was deemed too reliant on reactions to visitor actions. 
+The goal was instead to develop an agent that interacted with the visitor, but would also provoke interaction in case the visitor did not act first. 
+This meant that the agent story had to encompass both reactive parts to visitor input, as well as pro-active parts for the agent to pursue their own goals. 
+The agent story introduced in the next chapter focuses more on autonomy and pro-active behavior of the agent figure. \\
+A small part of the bat agent program’s source code can be seen below. 
+It shows the reaction of the bat agent to a certain visitor action under certain circumstances. 
+Most of the bat agent program consisted of similar reactions to visitor input.
+\begin{verbatim}
+// visitors putting their hands together while agent figure 
+// remains on the ground causes bat-like agent figure to go 
+// back to the ceiling
+    +actorstate(ACTOR, STATE) : my_actor(ACTOR) & not animating 
+    & phase(3) & STATE == handstogether & onGround
+        <-  +animating;	           // currently mid-animation
+            -onGround;             // not on ground level
+            switchToIdle;          // stop moving, idle animation
+            !waitForIdle(250,0);   
+            switchToCeiling;       // agent figure to ceiling
+            !waitForIdle(2000,0);	
+            switchToLive;          // mirror visitor movements
+            -animating.            // no longer mid-animation
+\end{verbatim}
+
+\subsection{Sleeper Agent}
+\label{chap:sleeper}
+
+The sleeper agent scenario went through the highest amount of iterations and was eventually used in the final installation of the project. 
+The agent story’s main idea was based on a figure that gets exhausted through movement and wants to go to sleep, to recover, before being able to interact with the visitor again. 
+Similar to the bat agent story, it was designed for one visitor at a time, while utilizing multiple instances of the same agent in the case of multiple concurrent visitors. 
+As can be seen in Figure~\ref{fig:fig10_sleeperState}, the actual agent story and the implementation both took the form of a finite-state machine after several iterations of development. \\
+After three minutes of mirroring the visitor in the live state, the agent figure will emancipate and distance itself, seek the invisible virtual bed within the virtual space, and lie down to sleep. 
+If the visitor joins the agent figure in lying down – either on the ground or on the provided bed (as explained in \autoref{chap:theroom}), the agent would warm up to the visitor, by increasing an internal value called sympathy. 
+This value would increase whenever the agent figure was asleep and the visitor was either detected as lying down, based on specific bones of the body being within a certain vertical range of each other, or as long as the visitor was close enough to the screen. 
+In the same way, if the visitor moved away too far from the screen and was not lying down, it would cause the sympathy value to decrease. \\
+The goal or milestone of the scenario during the iteration displayed in Figure~\ref{fig:fig10_sleeperState}, is to arrive at the dream sequence after the visitor lies down with the agent figure for long enough to reach the upper limit of the sympathy value. 
+This sequence would play pre-recorded audio and offer an ending to the experience, after which interaction with the agent is no longer possible. 
+This was the first time a state with no way to interact and no way to change it was introduced, as it was originally planned to continue the story after this point-of-no-return with a second milestone in mind, similar to the waving agents which change their goal from having at least one visitor waving towards the screen to having both visitors waving their hands at the same time. 
+This second milestone was however never implemented before the whole scenario for the sleeper agent was reworked. \\
+Other noteworthy states are also part of the scenario, which implemented various experimental features, such as changing cameras or environments. 
+During the deep-sleep state, which occurs after the sympathy value is raised high enough, the camera changes to a perspective camera, placed inside of the agent figure’s head – thus granting the visitor sight of what the agent figure would see. 
+Because the virtual space the agent figure resides in is completely empty most of the time, the first thing to appear on the screen in this state is usually nothing but black background. 
+As the agent is live during this phase, mirroring its respective visitor’s movements, it is possible for the visitor to see the agent figures hands or whole body from the perspective of the agent figure, if they move accordingly. 
+Furthermore, if more than one visitor is present and has an agent assigned, it was also possible to see the other agent figure in this state. 
+Differently placed cameras were also experimented with, such as one placed within the agent figure’s hand, or one placed within its knee. 
+Further experimental features include visible environments within the virtual space, such as one filled with mirrors in which the agent figures’ reflections can be seen, although the mirrors cannot directly be interacted with. \\
+The scenario furthermore includes varying animations for the same activities, such as lying down, sleeping, and getting up again.
+Various parameters, such as animation speed or rotation around the agent’s own axis are also changed depending on the situation or the current sympathy value. 
+As mentioned before when explaining the dream sequence, this scenario also incorporates sound, for the most part in the form of spoken language, but also in the form of unintelligible whispering for atmospheric purposes. \\
+Because the story of the sleeper agent was mapped out as a finite-state machine (see Figure~\ref{fig:fig10_sleeperState}), the implementation follows this model as well. 
+Each state of the state machine is implemented as a separate plan, which is triggered whenever the goal of pursuing the respective state as a goal is added. 
+These goals are added via various means, such as finishing a single state’s plan, as a reaction to visitor behavior, or by reaching certain sympathy values. 
+This can also be seen in the agent program code shown below. 
+\begin{verbatim}
+    +sympathy(S) : max_negative_sympathy(MNS) & S <= MNS
+        <-  !!switchToPhase(11);    
+        .drop_desire(adjust_sympathy).
+
+    +!phase(11) : true
+        <-  environment(narcotic);
+            setTimedZoom(0,1);
+            setXRotation(0, 10);
+            playanimation(narcotic_sleep_loop, 1, 1, 1);
+            ?my_actor(ACTOR);
+            ?actorposition(ACTOR,X,Y,Z);
+            -+narcotic_position(X, Y, Z).
+\end{verbatim}
+Commands starting with question marks symbolize test goals, which attempt to retrieve information from the belief base. 
+In this case they are used to initialize variables which are later on stored as a separate belief. \\
+It is important to note, that this implementation and usage of Jason – in the form of a state machine – is not the way the Jason platform was intended to be used. 
+It does not follow the principles of agent programming, such as utilizing delegated goals or agents balancing being goal-driven and reactive. 
+Delegation of goals implies telling an IA what to achieve, but not how to achieve it, so that the IA can pick the appropriate plan to achieve its goal by itself. 
+Because this implementation offered almost no alternative plans for the various states, there was no flexibility available to the IA. 
+Furthermore, the various state-machine-based goals are oftentimes not true goals in the sense they are supposed to be in the context of an agent platform, as they do not describe a concrete state of affairs to be brought about. 
+On the other hand, it could be argued that reaching a certain state within the state machine is also a state of affairs, although a more abstract one. 
+Further guidelines and concepts of Jason and AS which are not represented well in this scenario include responsiveness, as agents would oftentimes completely ignore visitor actions of all kind during certain states, as well as inter-agent communication and cooperation, which is after all one of the major features and selling points of the Jason MAS. \\
+The results of this implementation are accordingly unsatisfactory. 
+As a polar opposite to the bat agent’s behavior, which consists of almost only reactive parts, this incarnation of the sleeping agent almost never directly reacts to the visitor’s actions. 
+Interaction is always very one-sided, with the agent performing in front of the visitor, occasionally verifying the visitor’s position and gestures. 
+Starting with the donning phase, the visitor is instructed by the agent figure, before the agent goes live and allows the visitor to experience the agent figure mirroring their movements. 
+Afterwards, the Jason agent starts telling its story and interaction is further reduced, as the agent is animated most of the time and the visitor’s role is reduced to that of a spectator, with very limited and unclear options for interaction. \\
+The story itself can unfold in a couple of ways, akin to branching paths that all lead to the same end, which is represented by the dream sequence. 
+However, because there is no real interaction between the visitor and the agent figure, it was considered by many visitors to be more similar to watching a movie or a lecture, than to interpersonal interaction. 
+Repeated visitors also noticed how the story will always lead to the same end with not too much variance, as some of the optional states are quite hidden, because of specific pre-conditions which are unclear to onlookers – such as standing up again at specific point in time after lying down. 
+Project members also expressed their wishes for more variance, less predictability, more possible interactions, and most importantly, indeterministic behavior instead of deterministic one.
+This meant, that randomness should play a larger role within the agent scenario, and that the agent should not always choose the same way to act or react under certain conditions. \\
+After consulting with experts on how to continue, it was decided to scrap the current agent program and develop a new one from scratch. 
+Because the general concept of the sleeper agent was kept, animation files and features within the rendering engine could continue to be used, thus reducing the amount of effort the fresh start entailed. 
+However, as the agent program should no longer be based on a finite-state machine, development as well as graph-based visualization of the agent stories had to change drastically.
+
+\section{Final Approach}
+\label{chap:finalapproach}
+
+During the consulting phase with experts from the field of agent development, it was suggested to take a look at other agent development platforms, which might be better suited to the requirements of the project.
+Explicitly, Concurrent MetateM~\cite{Barringer1995} was recommended, which is a multi-agent language similar to Jason, but uses temporal logic to generate agent behavior. 
+It would allow agents to act in less obviously formulaic ways, as plans would be automatically and incrementally constructed based on temporal logic rules within the agent program. 
+This would allow agents more flexibility for varying actions under the same circumstances as well. \\
+However, because of the late stage during the project it was decided to not switch to MetateM, as embedding it into the current environment, learning the appropriate usage of the language and the different way of thinking in regards to temporal logic would take too long for the project to be finished in time. 
+Instead, a new way of implementing agents in Jason was inspired by MetateM, which was referred to as the “Island System” within the project team. 
+It was based on an approach to cause more indeterministic and emergent behavior amongst agents, as was requested before. 
+Agents are supposed to decide on their next actions on their own, instead of only reacting to the visitor, but actions of the visitor would also influence which actions agents could take next, in addition to direct reactions to certain visitor behavior. \\
+The general concept is based on a graph similar to a state machine, but with no direct transitions leading from one state to another. 
+The graph also displays states in the form or ovals, which are considered the name-giving islands within a vast ocean of white background to be navigated by the agent. 
+Islands have pre-conditions attached to them, which must be fulfilled in order for the island to be accessible. 
+If the agent wants to get to a certain island, it might have to cross other islands first, so as to fulfill the goal island’s pre-conditions. 
+Furthermore, if the agent has no specific goal, it considers all islands accessible to it at the time and decides indeterministically – at random – where to go. 
+This approach is closer than the state-machine-based approach to the way Jason is intended to be used, but some elements, such as the random selection amongst available islands, can be considered violations of Jason’s principles. \\
+Various conditions were defined using logical rules in Jason itself, which allows use of rules in the same style as the Prolog programming language. 
+Such rules, examples of which can be seen in the code below, are used as preconditions for the islands and were named based on the way the pre-conditions were visualized, as can be seen in Figure~\ref{fig:fig11_matr}.
+\begin{verbatim}
+    // position - left side
+    b1 :- my_actor(ACTOR) & actorposition(ACTOR, X, Y, Z) & X < -0.5.
+    // right side
+    b2 :- my_actor(ACTOR) & actorposition(ACTOR, X, Y, Z) & X > 0.5.
+\end{verbatim}
+The agent story was once again called “sleeping agent”, with its general behavior once again based on an agent that had to go to sleep after becoming tired. 
+The agent figure generally mirrors the visitor’s movements and accumulates fatigue based on the intensity of the movement. 
+Fatigue is represented by an energy value within the agent program code and is decreasing if the agent figure is in motion, while increasing if the agent figure is resting. 
+If the visitor’s movement got too insignificant, the agent figure starts moving on its own, performing actions like strolling around the room or sitting down on an invisible chair within the virtual room. 
+Such actions would cause the agent to lose energy as well. 
+If the visitor’s movement gets more intense again, the agent returns back to the live state.
+Compared to the game-like installation described in~\cite{bevacqua2015gestural}, in which users had to mirror the virtual agent’s movements and vice versa, otherwise the agent would lose interest and the game was considered lost, in this project’s installation the agent mirrors the visitor’s movements and loses interest if the movement is considered insufficient in terms of activity level, which is calculated using the distance travelled by the visitor’s individual limbs over time. \\
+If the agent’s energy gets too low for it to continue moving, it will seek rest by going to sleep. 
+While sleeping, the visitor’s interactions are once again limited. 
+However, the agent figure’s sleep phase did not last as long as in the previous installments of this agent story. 
+While the agent figure is lying asleep in its virtual, invisible bed, the visitor has the option to wait and observe, or to lie down as well, either on the floor or on their own bed, once again provided within the physical room as explained in \autoref{chap:theroom}. 
+Because the agent will go to sleep multiple times during a single visitor’s experience, the visitor has multiple chances to realize this opportunity. 
+If they lie down, the agent will switch to live, mirroring the visitors movements while lying down, as well as change the camera, also similar to the previous installation, to a perspective camera located within the agents hand. 
+If the visitor decides to get up again, the camera returns to normal again. 
+Furthermore, if the visitor lies down first, the agent figure would follow suit, allowing it to recover energy even if it was not tired yet.\\
+The island-based agent follows three different kinds of goals. 
+The first one is a constant goal – it causes the agent to always seek movement. 
+If the agent is mirroring the visitor, and they move their bodies enough by themselves, the goal is satisfied and the agent does not have to move away from the live state. 
+The second kind of goal is triggered by visitor actions, such as intense movement after the agent figure stopped mirroring the visitor causing the agent to re-synchronize with the visitor. 
+The last kind of goal is triggered by agent-internal conditions, such as the wish to rest as soon energy has reached a certain threshold. \\
+Implementation of the “Island System” was achieved using Jason’s annotation system, to give various plans differing chances of being executed, if multiple ones were possible to be selected.
+Annotations were read by the custom selector function in Java, which utilized random values to pick out of the list of weighted available options. 
+The code below shows an example for two plans with the same goal and the same context, but with different bodies and annotations, which contain the chance of them being picked by the selector function. 
+Accordingly, the first plan has a chance of 30, which is six times the chance of the second plan being chosen.
+\begin{verbatim}
+    @idling[chance(30)]	
+    +!moveAround : movement(M) & M <= 0.5
+        <-  .wait(200);	
+            !moveAround.
+
+    @move[chance(5)]
+    +!moveAround : movement(M) & M <= 0.5
+        <-  .random(R);	
+            ?bound_left(BL);
+            ?bound_right(BR);
+            moveTo(BL + (BR-BL)*R, 0);
+            !waitForIdle(1000,250);	
+            !moveAround.
+\end{verbatim}
+Below, a code snippet for the customized selector function can be seen. It was implemented within a class called RandomOption, which extends the Jason standard Agent class and had to be referenced within the Jason agent code of the supervisor agent whenever a new agent using this selector function was to be created. 
+An example for this kind of agent creation can be seen further below.
+\begin{lstlisting}
+/**
+* Custom selector function chooses one of the options available at random.
+* Reads annotations for weighted randomness, increases chance of being drawn by same factor.
+*/
+public class RandomOption extends Agent {
+	public Option selectOption(List<Option> options) {
+		List<Option> chanced = new ArrayList<>(options);
+		for(Option o : options) {
+			int chance = 1;
+			try {
+				Literal l = o.getPlan().getLabel().getAnnot("chance");
+				chance = Integer.parseInt(l.getTerm(0).toString());
+			}
+			catch(Exception e) {}
+			for(int i = 0; i < chance; i++)
+			chanced.add(o);
+		}
+		double r = Math.random() * chanced.size();
+		return chanced.get((int)r);
+	}
+}
+\end{lstlisting}
+Below, the example for creating an agent within Jason, using the \verb|RandomOption| class explained above.
+\begin{verbatim}
+    .create_agent(sleeper_agent1, "170329_sleeper6.asl",
+     [agentClass("RandomOption")]);
+\end{verbatim}
+It is important to note again, that while this approach to agent development is arguably closer to the original way Jason was intended to be used, it still does not completely align with the principles of Jason and agent-oriented programming. 
+Compared to the previous state-machine-based approach, this way includes both the pro-active pursue of goals, as well as reactiveness to a changing environment, especially in the form of visitor behavior.
+However, inter-agent communication and cooperation once again fell short, as the developed scenario focused more on the interaction between one agent and one visitor, instead of incorporating multiple agents. \\
+The result of this installment is an agent with very unpredictable and oftentimes hard-to-understand behavior. 
+Visitors are oftentimes baffled and confused by what the agents are doing at any given time – as are the members of the project team. 
+Although the agent program does not offer an excessively wide amount of options, the agents display a considerable amount of emergent behavior, which was not premeditated by the developer beforehand. 
+Some ideas for improvements include toning down certain screen effects, like zooming, as well as decreasing the frequency of random actions undertaken by the agent figure. 
+Additionally, if more options were provided for the agent to choose from what to do at any given time, the scope of emergent behavior could be further broadened. \\
+This incarnation of the sleeping agent scenario contains several other, somewhat hidden, features, such as for example a credit roll being displayed on the screen, if visitor stands still and displays no intense movements for at least three minutes. 
+Because visitors generally seem to enjoy the live part of the interaction with the agent figure the most, a way for visitors to stop agents from acting on their own and go back to live, mirroring the visitor, was introduced. 
+As mentioned before, whenever the visitor shows a high enough activity level, the agent would return to them. 
+The simple agent code for this reaction can be seen below.
+\begin{verbatim}
+    @react_fast_go_live
+    +activity_level(AL) & AL > 2 & auto & not sleeping
+        <-  -auto;
+            switchToLive.
+\end{verbatim}
+Some visitors realized this very quickly and started calling the agent figure back by waving their arms around energetically, whenever the agent figure started autonomous actions. 
+Arguably, this can be considered a very unique kind of interaction between the human and the non-human in form of the agent figure, which was to be explored according to the original project statement. 
+
+\section{Visualization and Modelling}
+\label{visualization}
+
+One of the major problems the project team was facing during development of the agent system was communicating and visualizing agent behavior in a way for every project team member to understand and agree on. 
+The project owner had specific visions of how agents were supposed to act and the development team had to understand and implement those visions. 
+As such, communication of these ideas and visions was of vital importance to the project’s success. \\
+At the start, agent stories and descriptions were written down as text, as can be seen in Figure~\ref{fig:fig8_octopus}. 
+Such descriptions included some concrete technical data which could be directly used to adjust parameters within the rendering engine. 
+However, the written descriptions of agent behavior were sometimes rather ambiguous and thus hard to understand or translate into agent program code. 
+What was described was the way the agent’s behavior should appear to the visitor, but not what caused it to act in the way it should. 
+In hindsight, it would have been possible to develop agents from this starting point as well, but it would leave room for a lot of interpretation and creativity by the developers. \\
+Instead, it was decided to hold small project-staff meetings to discuss and agree on possible agent behavior together. 
+Drawing on paper to visualize thoughts and processes to other project members proved to be very successful, as it served both as a means of supporting verbal communication, as well as a form of documentation, which could be used for the process of implementation afterwards. 
+A makeshift modeling concept based on the activity diagram of UML was employed, as it was able to tell the general gist of the story within a single look, while also encompassing all the fine details if necessary. 
+Such drawn maps would sometimes be digitalized as seen in Figure~\ref{fig:fig9_wave}. \\
+These makeshift visualizations of agent behavior were much easier to convert into agent program code, as they provided insight into possible ways how the interaction between the visitors and the virtual agent figures was envisioned to be like. 
+Similar to user stories in traditional development, the diagram allowed development to focus on a certain chain of events, but at the same time made it clear, if alternative paths were supposed to exist. \\
+As development went on and various agent stories were discarded in favor of new ones, the diagrams got more complex as well – an example can be seen in Figure~\ref{fig:fig10_sleeperState}. 
+At the same time, the visualized agent behavior became less abstract and more akin to a finite-state machine. 
+As was described in \autoref{chap:sleeper}, converting the state machine into agent program code was rather straightforward, as every state would be implemented as a single plan attached to the goal of finishing that state. 
+As the resulting code was no longer following some of the principles of agent programming, Jason’s intended usage and best practice, it was decided to start the development of the agent again from scratch. 
+The new iteration was supposed to move away from the finite-state machine and instead employ a model closer to the original vision of an agent system, while also enabling the desired indeterministic behavior of agents. \\
+After the paradigm shift towards the “Island system”, agent behavior was at first visualized in a similar fashion to the state machines again. 
+The new diagrams showed unconnected states on a blank background, similar to isolated islands floating in an ocean – hence the name of the system. 
+As the agent story developed, such a visualization got confusing to read very quickly, as the addition of pre-conditions, in some cases even post-conditions, made it hard to comprehend the intended agent behavior as a whole. 
+The graphs were thus exchanged for separate matrices for both pre-conditions and agent behavior within certain contexts, a digitalized form of which can be seen in Figure~\ref{fig:fig11_matr}. 
+This way of presenting agent stories was also possible to convert into agent program code without too much effort. 
+By using logical rules based on the aforementioned matrices as pre-conditions within plan contexts (context referring to the condition for a plan being eligible at a certain point in time, as explained in \autoref{chap:syntax}), readability was improved and plan heads could be adopted directly from the matrix-based description of agent behavior. \\
+To summarize – it was a challenge to find a fitting solution to the communication problem that worked well for all parties involved. 
+Text-based descriptions of agent stories were preferred by non-developers, but proved hard to implement. 
+On the other hand, representations closer to actual agent program logic were hard to comprehend but easy to convert into code. 
+As was mentioned at the start of the chapter, it might have been possible to work with text descriptions as well, especially if they were to focus on the experience from the standpoint of a visitor, akin to user stories.
+Multiple stories, representing various possible interactions with the agent figure, might have helped to develop the agent system in a more traditional way. 
+Furthermore, it is important to note that the chosen way of visualization has an actual impact on the development and way of thinking of agent behavior, as can be seen in the example of agent program code devolving into a finite-state machine over the course of this project.
+
+\chapter{Discussion and Conclusion}
+\label{disc}
+
+This chapter offers a short summary, discussion and reflection in regards to the development of an interactive agent system in the context of the INTRA SPACE project, as well as some concluding remarks. 
+However first off, methods of testing and evaluating the agent system, as well as problems and solutions in general are presented and discussed. 
+In this context, \emph{testing} judges whether or not the agents perform what is expected of them, whereas \emph{evaluation} focuses on the quality achieved in regards to the original research project goal – the exploration of interaction between humans and virtual agents.  
+
+\section{Testing and Evaluation}
+\label{testing}
+
+In general, both testing and evaluating the developed agent system were rather limited in scope and could not be performed in a way necessary for a project of this kind. 
+One of the main reasons for this was the fact that the complete installation needed to be running for practical testing to be conducted, which was not always the case. 
+As this made active testing and debugging difficult – especially at the early stages of development – a simple, custom-made Java application was used to simulate UDP responses from the rendering engine, to enable quickly available ways of both testing and debugging the Jason agent programs, as well as the Jason environment and network communication Java classes. 
+In the later stages of the project, the installation was in use more frequently and the number of visitors increased, thus enabling pragmatic testing of the agent system more regularly. \\
+Another problem was the lack of error messages within the Jason platform. 
+Whenever agents stopped working, either by crashing, by not responding anymore, or by displaying erroneous behavior, the underlying reason was not easy to find or comprehend. 
+This problem was solved for the most part by utilizing extensive logging via the Jason agent platform, which showed all agent logs in real-time within a separate window. \\
+Evaluation of the system was also problematic, as the subjects testing the system and experiencing the interaction with the agent figure were project team members for the most part. 
+Being aware of both agent behavior and goals made it possible to test for errors, but made it more difficult to evaluate the form of interaction between the visitors and the virtual agent figures. 
+Proper evaluation was thus limited to cases in which outside visitors interacted with the agent system. 
+Because of the finite number of visitors and the ambiguity of feedback, the task of evaluating the system regularly turned out to be quite challenging. \\
+Results of the system’s evaluation at the end of the project, based upon the feedback and comments of visitors, imply a high variance in the way the installation was experienced. 
+Many visitors claimed to have realized the agent figure as a social presence and were able to have meaningful interactions, whereas other visitors saw the interaction rather as a form of entertainment, akin to a game or narrative experience. 
+Consequently, it could be said that the project goal of exploring, formulating, and deconstructing the ways of interaction between humans and non-humans in the form of virtual agents were met, albeit in ways which were probably not originally envisioned.
+
+\section{Problems, Challenges, and Solutions}
+\label{problems}
+
+To summarize, the general challenges discussed in this work revolve around the following points:
+\begin{itemize}
+	\item Developing and embedding an agent system within a dynamic environment
+	\item Finding an agent story and behavior that works well for the given goal of exploring interaction 
+	\item Proper Implementation of IAs, following the principles of general agent programming, BDI, AS, and Jason 
+	\item Communication within the project team
+\end{itemize}
+The first point, equaling the research question of this work, is answered by the processes described over the course of \autoref{chap:implementation}. 
+Development consisted of an iterative process, which was seemingly reset whenever an agent story was scrapped in favor of a new one. 
+However, experience from previous installments would carry over, thus enabling the creation of more sophisticated agent scenarios with every iteration. 
+The iterative process and regular discussions within the project team, as well as the inclusion of experts in relevant fields during such meetings, enabled a fruitful way of developing the required functionality within a dynamic requirement. 
+It is important to mention that other agent system languages and frameworks might have suited the task better, if the final requirements were apparent at the start. 
+However, such a massive change later on in the project was no longer possible due to resource constraints.\\
+In regards to fitting agent stories and behavior, a fair number of points can be made, as to what constitutes as enabling the desired forms of interaction between agents and visitors. 
+First and foremost, during the final stages of the project it became apparent that the instantaneous feedback during the live phase seemed to engage visitors the most, as it was clear what was happening as long as the agent mirrored their movements. 
+Whenever the agent took control over the figure, feedback was often too slow to be understood as such. 
+It was thus considered to be important to incorporate quick reactions to visitor interaction within the agent stories. 
+If the agent only acts in a predetermined way and does not really interact with visitor, its behavior becomes very obvious and predictable to repeated visitors and onlookers, thus minimizing interest, engagement, and interaction. 
+To remedy this problem, indeterminism and the almost always existing possibility of instant interaction were introduced into the agents’ behavior. \\
+The problem of proper implementation ties into the other problems discussed in this work, as following the principles and guidelines of the BDI architecture, AS, and Jason more properly would have certainly produced different results than the ones achieved over the course of this project.
+On the other hand, the purposeful breaking of some rules enabled the implementation of the “Island system”, as described in \autoref{chap:finalapproach}. 
+However, other core concepts, such as inter-agent cooperation, were still not followed appropriately and might have enhanced the interaction between visitors and virtual agent figures even further. 
+The way custom action feedback was handled, as described in \autoref{chap:outputdata}, can also be seen as a violation of Jason’s best practice, and finding a way to properly receive feedback while still being able to produce the necessary results would have helped in producing more reliable agent programs. 
+Different approaches, using either different agent platforms or other implementations of artificial intelligence, such as neural networks or extensive scripts, might have also been worth pursuing and would have offered differing solutions to the ones described in this work. \\
+The last of the points listed above – communication within the project team – played a significant role and had an impact, either directly or indirectly, on all areas of development. 
+It was important to communicate both the imagined functionality and behavior of the agents, but also what was possible within the scope of the project in regards to cost requirements of various implementations.
+In order to maximize mutual understanding of what was expected and what was possible, graphs and visualization were utilized – both analog and digital. 
+Communication of agent stories, plans, and behavior worked well using graphs, especially when communicating face to face while creating them. 
+The resulting diagrams furthermore enabled a faster development and testing process. 
+However, they also impacted the way agent behavior was thought about and implemented, as can be seen by the negative example of finite-state-machine-based agents described in \autoref{chap:sleeper}. \\
+Further problems and challenges which appeared during the course of this project, which are not directly related to the process of agent development, include the donning stage explained in \autoref{chap:donning}, which went through several iterations and experiments together with the agent system, before arriving at the solution of both audio-based and visual instructions at the same time. 
+Although the installation was planned to be a completely autonomous one at the start, this goal was never reached, as it was considered crucial to explain the donning process to new visitors in addition to constant maintenance of the installation. 
+Difficulties in regards to motion capture and gesture recognition also impacted agent development, as they limited the scope of gestures and interaction the agents were able to perceive. 
+A solution to parts of this problem was to move away from using the FUBI framework and implement custom scripts from scratch with similar functionality within the rendering engine.
+
+\section{Conclusion}
+\label{conclusion}
+
+In conclusion, it can be said that the developed agent system did not reach the level which was expected of it during the initial vision of the project in many aspects. 
+However, it provided the required functionality of agents to be communicated with and was successfully embedded into the already existing installation. 
+Visitors of the installation expressed surprise, intrigue, confusion, and many other unique experiences after interacting with the agents. 
+Some were fascinated by the agents mirroring their actions, others wanted to touch and interact with the agents more deeply, while some even enjoyed watching the agents act on their own. 
+Many visitors were furthermore also eager to suggest various applicable fields, in which a similar installation, requiring no special equipment on behalf of the visitor, could be used, such as entertainment, education, or therapy. 
+
+
+% Remove following line for the final thesis.
+%\input{intro.tex} % A short introduction to LaTeX.
+
+\backmatter
+
+% Use an optional list of figures.
+\listoffigures % Starred version, i.e., \listoffigures*, removes the toc entry.
+
+% Use an optional list of tables.
+\cleardoublepage % Start list of tables on the next empty right hand page.
+\listoftables % Starred version, i.e., \listoftables*, removes the toc entry.
+
+% Use an optional list of alogrithms.
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+
+% Add an index.
+\printindex
+
+% Add a glossary.
+\printglossaries
+
+% Add a bibliography.
+\bibliographystyle{alpha}
+\bibliography{intro}
+
+\end{document}
