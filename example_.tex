@@ -208,18 +208,35 @@ Development of the agent system took place in a period of about six months, usin
 Implementation was based on independent stories, which were to be told by the agent figures’ actions. 
 Stories would sometimes feature branching paths depending on visitor behavior, or would not follow a time line at all, but rather be purely reactive in nature. 
 Early agent stories were mostly based either on animalistic behavior, such as that of a bat or an octopus, or on goals to be reached – for example getting the visitor to perform a certain action, such as waving towards the agent. 
-Some of the stories are explained in detail in \autoref{chap:Implementation}. \\
+Some of the stories are explained in detail in \autoref{chap:implementation}. \\
 Pre-recorded motions from the motion-capture software CapturyLive were used as basic building blocks for agent behaviour. 
 These motions could either be of continuous nature, such as walking or standing animation cycles, or isolated actions, such as hand gestures. 
 Certain actions would leave the agent in a different state then before. 
 For example, sitting down on the floor or getting up, would switch between the states of standing and sitting, thus enabling the agent to perform different actions from before. 
-Because of graphic depictions of such features, stories for the agent system eventually transformed into state machines – a topic which is further discussed in \autoref{chap:Sleeper agent}.
-
+Because of graphic depictions of such features, stories for the agent system eventually transformed into state machines – a topic which is further discussed in \autoref{chap:sleeper}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{fig1_overview}
-	\caption{Schematic plan of final setup (Source: Technical Report by Christian Freude)}
+	\caption{Schematic plan of final setup (taken from the technical report about INTRA SPACE, by Christian Freude)}
 	\label{fig:fig1_overview}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig2}
+	\caption{Picture of the installation (Picture taken by Günter Richard Wett)}
+	\label{fig:fig2_installation}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig3}
+	\caption{Picture of the agent figure mirroring the visitor’s movements (Picture taken by Günter Richard Wett)}
+	\label{fig:fig3_action}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig4}
+	\caption{Various models used in the project. From left to right: Bob with hat, Old man, Vivienne, Bob, Carla}
+	\label{fig:fig4_models}
 \end{figure}
 
 \chapter{Related Work}
@@ -288,7 +305,7 @@ It offers speech-act based inter-agent communication, as well as annotations on 
 Users can customize features such as trust functions, selection functions, and internal actions. 
 The environment, in which the agents act, can also be implemented and customized in Java. 
 It is considered easy to learn and has good scalability, user friendly GUI features, good performance, and high stability. 
-Finally, it is free and open source. More details on Jason, as well as an explanation why it was chosen for the project, can be found in Chapter \autoref{chap:Jason}. \\
+Finally, it is free and open source. More details on Jason, as well as an explanation why it was chosen for the project, can be found in Chapter \autoref{chap:jason}. \\
 An example for relevant agent systems implementations using Jason can be found in~\cite{ranathunga2011interfacing}, in which Jason is used for an agent platform to act within the online game Second Life and has to rely on unreliable sensor data. 
 The game Second Life is generally often used as a platform for virtual agents and agent systems to act within (see also~\cite{bogdanovych2010authentic}). 
 Another example is the system described in~\cite{boissier2013multi}, in which Jason is used in conjunction with Moise for agent organization and CArtAgO for shared environments. 
@@ -322,7 +339,7 @@ They employ plot graphs using events, temporal and causal links, beliefs, etc. t
 A summarizing work regarding interactive narrative research can be found in~\cite{riedl2012interactive}, which describes its uses in entertainment, education, and training. 
 They describe interactive narrative as a digital interactive experience with user influence, which creates a dramatic storyline. 
 However, users must believe that their actions can significantly alter the direction or outcome of the story, meaning they must receive feedback to their actions and be able to comprehend the consequences, as opposed to being shown scripted stories which do not involve them. 
-This problem was also encountered during this work’s project (see \autoref{chap:Sleeper agent}).
+This problem was also encountered during this work’s project (see \autoref{chap:sleeper}).
 
 \chapter{The System}
 \label{chap:thesystem}
@@ -332,6 +349,12 @@ In this chapter, the spaces’ separate entities and their connections are furth
 In Figure~\ref{fig:fig5_informationflow}, the flow of data and information within the system is shown. 
 The main focus lies on the agent system which is running independently inside the Render Node, containing a simulated environment and the individual agents. 
 Wrappers and interfaces for communication between entities are not shown in the depiction.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig5}
+	\caption{Simplified schematic overview of information flow within the installation.}
+	\label{fig:fig5_informationflow}
+\end{figure}
 
 \section{Overview}
 \label{chap:overview}
@@ -372,7 +395,13 @@ The motion-capture space was laid out with black flooring, for the purpose of sh
 Roughly in the middle of the flooring was a spot marked with a subtle X-symbol, which served the purpose of showing visitors where to stand during the donning phase (see \autoref{chap:donning}), because the motion-capture software required new persons to stand within a predefined position in the room at the start, so as to accurately locate and capture them. 
 Leaving the black flooring would cause some cameras to lose the visitor’s image, thus increasing the likelihood of problems in capturing their motion data. 
 During the final installation, a “bed” akin to an extremely low table covered in pelt and a larger piece of felt fabric, functioning as a potential blanket, were sometimes placed into the motion-capture space prior to the arrival of visitors, which can be seen in Figure~\ref{fig:fig7_mocapspace}. 
-As the final installation used the sleeping agent (see \autoref{chap:Sleeper agent}), these objects could be used as a part of the interaction with said agent.
+As the final installation used the sleeping agent (see \autoref{chap:sleeper}), these objects could be used as a part of the interaction with said agent.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig6}
+	\caption{View onto the motion-capture space and the screen (Picture taken by Günter Richard Wett)}
+	\label{fig:fig7_mocapspace}
+\end{figure}
 
 \section{Donning}
 \label{chap:donning}
@@ -393,6 +422,19 @@ Shoulders, elbows, and hands would be roughly on the same level under optimal co
 After assuming such a pose, visitors are asked to move their upper bodies and turn around on the spot, before having to move their lower bodies and perform stretches and similar motions. 
 Results of the donning process vary greatly and are dependent on various factors, including lighting conditions, the color of worn clothing, time since the last system calibration was performed, as well as the speed in which the aforementioned motions were performed. 
 Most of these factors could be contained by various methods, but unpredictable visitor behavior always represented a risk for problems occurring in the process of donning.
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.5465\columnwidth}
+		\centering
+		\includegraphics[width=\textwidth]{fig7-1}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.439\columnwidth}
+		\centering
+		\includegraphics[width=\textwidth]{fig7-2}
+	\end{subfigure}
+	\caption{Visitors with their assigned skeletons drawn onto them}
+	\label{fig:fig6_skeletons} 
+\end{figure}
 
 \section{Jason}
 \label{chap:jason}
@@ -405,7 +447,7 @@ It offers a platform for both developing and executing agent systems, either loc
 Jason was chosen because of low complexity and being easy to learn. 
 Furthermore, it fit the project’s requirements and allowed customization in critical areas. 
 It was also recommended by experts in the field of artificial intelligence development. 
-As is further explained in \autoref{chap:problems}, in hindsight, other platforms and approaches might have worked as well, or even better, for the task that was at hand.
+As is further explained in \autoref{problems}, in hindsight, other platforms and approaches might have worked as well, or even better, for the task that was at hand.
 
 \subsection{Agents}
 \label{chap:agents}
@@ -424,7 +466,12 @@ In the case of this project however, agents only exist and act within a virtual 
 The agents are thus not directly able to interact with the physical world, while perceiving both spaces. 
 For the sake of the abstract model shown in Figure~\ref{fig:fig71_agentinteraction} however, there is no distinction necessary between the physical and the virtual space. 
 Agents are thus defined as the combination of an agent program and an architecture~\cite{russell2016artificial}. 
-
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig7-3}
+	\caption{Abstract model for agent-environment interaction (Source:~\cite[p.~35]{russell2016artificial})}
+	\label{fig:fig71_agentinteraction}
+\end{figure}
 
 \subsection{Multi-agent Systems}
 \label{chap:mas}
@@ -538,7 +585,6 @@ The third plan for \verb|+!eat| does not have a body at all, which means that th
 It thus serves as a termination condition for the recursive functionality of the \verb|!eat| goal. \\
 In conclusion, the example code above would cause the agent to \verb|eat_food| five times, before stopping and printing out a message. 
 For this to happen, it would need to start by adding the belief \verb|alive| to its belief-base, for example in the same way as in the first code example.
-
 
 \section{Input Data}
 \label{chap:inputdata}
@@ -665,6 +711,18 @@ This simple story became known as the waving agents, featuring two active agents
 Throughout development of the waving agents, it became clear that their behavior could be divided into somewhat independent phases. 
 Phase zero usually consists of the donning phase (as described in \autoref{chap:donning}), in which the visitors’ body proportions are estimated by the motion-capture system, to allow the software to track visitors’ movements throughout the designated motion-capture space. 
 After donning is completed, the so called “live” part follows, in which the agent figure would synchronize with the visitor’s position on the other side of the screen and start mirroring the visitors’ movements.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig8}
+	\caption{Octopus agent story, written by Christina Jauernik}
+	\label{fig:fig8_octopus}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig9}
+	\caption{Waving agent model, Phase 1, digitalized by Simon Oberhammer}
+	\label{fig:fig9_wave}
+\end{figure}
 
 \subsection{Waving Agents}
 \label{chap:waving}
@@ -683,7 +741,7 @@ After the first agent figure has successfully executed the waving animation, pha
 A simple model depicting phase one, using notation similar to that of UML activity diagrams, was created by the project members and can be seen in Figure~\ref{fig:fig9_wave}. 
 The visualization only depicts the process of the first agent’s activities and simplifies the way the agent checked for distance between the two agent figures. \\
 Within phase two, the two agent figures continue by waving their hands at each other, before turning towards the camera and waving towards the visitors as well. 
-In case at least one of the visitors waves back, the figures express joy by jumping up and down, before switching back to live, mirroring the visitors’ actions indefinitely. 
+In case at least one of the visitors waves back, the figures express joy by clapping their hands, before switching back to live, mirroring the visitors’ actions indefinitely. 
 If the visitors do not wave back, the two agents try three more times by waving towards the camera, before giving up and fading away from sight. 
 The scenario was later extended by an additional goal of getting both visitors to wave back towards the agent figures. \\
 The scenario generally worked well after several iterations. 
@@ -740,7 +798,7 @@ Most of the bat agent program consisted of similar reactions to visitor input.
     & phase(3) & STATE == handstogether & onGround
         <-  +animating;	           // currently mid-animation
             -onGround;             // not on ground level
-            switchToIdle;          // stop moving, idle animation
+            switchToIdle;          // stop moving, go idle
             !waitForIdle(250,0);   
             switchToCeiling;       // agent figure to ceiling
             !waitForIdle(2000,0);	
@@ -813,6 +871,12 @@ This meant, that randomness should play a larger role within the agent scenario,
 After consulting with experts on how to continue, it was decided to scrap the current agent program and develop a new one from scratch. 
 Because the general concept of the sleeper agent was kept, animation files and features within the rendering engine could continue to be used, thus reducing the amount of effort the fresh start entailed. 
 However, as the agent program should no longer be based on a finite-state machine, development as well as graph-based visualization of the agent stories had to change drastically.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig10}
+	\caption{Sleeping agent state machine, hand-drawn during discussion}
+	\label{fig:fig10_sleeperState}
+\end{figure}
 
 \section{Final Approach}
 \label{chap:finalapproach}
@@ -833,13 +897,13 @@ Furthermore, if the agent has no specific goal, it considers all islands accessi
 This approach is closer than the state-machine-based approach to the way Jason is intended to be used, but some elements, such as the random selection amongst available islands, can be considered violations of Jason’s principles. \\
 Various conditions were defined using logical rules in Jason itself, which allows use of rules in the same style as the Prolog programming language. 
 Such rules, examples of which can be seen in the code below, are used as preconditions for the islands and were named based on the way the pre-conditions were visualized, as can be seen in Figure~\ref{fig:fig11_matr}.
-\begin{verbatim}
+\small\begin{verbatim}
     // position - left side
     b1 :- my_actor(ACTOR) & actorposition(ACTOR, X, Y, Z) & X < -0.5.
     // right side
     b2 :- my_actor(ACTOR) & actorposition(ACTOR, X, Y, Z) & X > 0.5.
 \end{verbatim}
-The agent story was once again called “sleeping agent”, with its general behavior once again based on an agent that had to go to sleep after becoming tired. 
+\normalsize The agent story was once again called “sleeping agent”, with its general behavior once again based on an agent that had to go to sleep after becoming tired. 
 The agent figure generally mirrors the visitor’s movements and accumulates fatigue based on the intensity of the movement. 
 Fatigue is represented by an energy value within the agent program code and is decreasing if the agent figure is in motion, while increasing if the agent figure is resting. 
 If the visitor’s movement got too insignificant, the agent figure starts moving on its own, performing actions like strolling around the room or sitting down on an invisible chair within the virtual room. 
@@ -928,6 +992,12 @@ The simple agent code for this reaction can be seen below.
 \end{verbatim}
 Some visitors realized this very quickly and started calling the agent figure back by waving their arms around energetically, whenever the agent figure started autonomous actions. 
 Arguably, this can be considered a very unique kind of interaction between the human and the non-human in form of the agent figure, which was to be explored according to the original project statement. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{fig11}
+	\caption{Sleeping agent island diagram, by Simon Oberhammer}
+	\label{fig:fig11_matr}
+\end{figure}
 
 \section{Visualization and Modelling}
 \label{visualization}
@@ -1041,17 +1111,1561 @@ Many visitors were furthermore also eager to suggest various applicable fields, 
 %\input{intro.tex} % A short introduction to LaTeX.
 
 \backmatter
+\chapter{Appendix}
+Source code for some of the agents described in this work can be found in this appendix.
+Note that some parts of the source code have been omitted – for example if they were a common base among all agents, like plans used to wait for certain states.
+
+\section{Waving Agent 1}
+{\ttfamily\scriptsize\raggedright
+wave\_agent1.asl
+
+// === INITIAL BELIEFS ===
+
+attitude(normal).                   // describes the current mental attitude of the agent, eg normal, sad, happy, etc.
+
+// === RULES ===
+
+// returns true, if the distance (=difference) between A and B is less than X\\
+distance\_under(A,B,X)
+    :- (A-B) < X \& (A-B) > (-X).
+
+// === INITIAL GOALS ===
+
+// === PLANS ===
+
++phase(X) : true <- !phase(X).
+-phase(X) : true <- .drop\_desire(phase(X)).
+
+// plan for phase 1: go live for \~{}60 seconds, then wait for agent B to do the same.\\
+// Then wave 3 times at agent B. (waiting \~{}20 secs each time).\\
+// Afterwards, proceed to phase 2.\\
++!phase(1) : true
+                    <-  !liveFor(50, 20);     
+                        !waitForAgentB;
+                        !exchangeInformation;
+                        ?other\_agent(OTHER\_AGENT);
+                        !waveTo(OTHER\_AGENT);
+                        !waitForIdle;
+                        !liveFor(50, 10);     
+                        !waveTo(OTHER\_AGENT);
+                        !waitForIdle;
+                        !liveFor(50, 10);     
+                        !waveTo(OTHER\_AGENT);
+                        !waitForIdle;
+                        switchToLive;
+                        !waitForLive;
+                        -agentB\_ready[\_];
+                        +phase(2);
+                        -phase(1).
+
+// plan for phase 2: go idle for a second, then wave to the camera.\\
+// then wait for a reaction from the actor (see !waitForSingleWave)\\
++!phase(2) : true
+                    <-  .print("Entered phase 2.");
+                        .send(wave\_agent2, achieve, initphase(2));
+                        switchToIdle;
+                        !waitForIdle;
+                        -+wavesToCamera(0);
+                        !waveToCamera(1);
+                        !waitForIdle;
+                        !waitForSingleWave.
+
+// wave into the camera (position assumed to be at 0,0,-3) using the given animation id\\
++!waveToCamera(ID) : true
+                    <-  ?wavesToCamera(N);
+                        -+wavesToCamera(N+1);
+                        ?my\_agent(AGENT);
+                        ?agentposition(AGENT, X, Y, Z);
+                        if(camerapos(CX,CZ))
+                        \{
+                           moveTo(X,Z,CX,CZ); 
+                        \}
+                        else
+                        \{
+                            moveTo(X,Z,0,-3); 
+                        \}
+                        !waitForIdle(500,500);
+                        playanimation(wave,ID).
+
+
+// if an actor waves back, clap, let both agents wave into the camera \\
+// and wait for both actors to wave back (!waitForDoubleWave) \\
++!waitForSingleWave : actorWaved(\_, \_)
+                    <-  playanimation(clap,1);
+                        .send(wave\_agent2, achieve, clap);
+                        !waitForIdle(500,1000);
+                        .send(wave\_agent2, achieve, waveToCamera(1));
+                        -+wavesToCamera(0);
+                        !waveToCamera(1);
+                        !waitForIdle;
+                        !waitForDoubleWave.
+
+// if the waiting time reaches 5 seconds, talk to b, teach to wave and then try again \\
++!waitForSingleWave : timeout\_sw(T) \& T > 50 \& wavesToCamera(N) \& N <=3
+                    <-  !talkToB;
+                        !waitForIdle(500,1000);
+                        !teachToWave;
+                        !waitForIdle(500,1000);
+                        !waveToCamera(1);
+                        !waitForIdle;
+                        -timeout\_sw(\_);
+                        !waitForSingleWave.
+
+// waiting process for a reaction from an actor \\
++!waitForSingleWave : timeout\_sw(T) \& wavesToCamera(N) \& N <=3
+                    <-  -+timeout\_sw(T+1);
+                        .wait(100);
+                        !waitForSingleWave.
+
++!waitForSingleWave : wavesToCamera(N) \& N <= 3 \& not timeout\_sw(\_) \& wavesToCamera(N) \& N <=3
+                    <-  +timeout\_sw(1);
+                        .wait(100);
+                        !waitForSingleWave.
+
+// if the agent gets no reactions after the 4th wave, he gets sad and stops trying\\
++!waitForSingleWave : wavesToCamera(N) \& N > 3
+                    <-  .print("I'm sad now. No one waves back to me...");
+                        -+attitude(sad);
+                        switchToIdle;
+                        !waitForIdle;
+                        fade;
+                        -phase(2).
+
+// if both actors wave back -> success (phase 2 complete)\\
++!waitForDoubleWave : my\_actor(ACTOR) \& other\_actor(ACTORB) \&
+                        actorWaved(ACTOR, \_) \& actorWaved(ACTORB, \_)
+                    <-  .print("finished phase 2");
+                        !celebrate;
+                        -phase(2).
+
+// if the waiting time reaches 5 seconds (50 * 100 ms), wave angrier\\
++!waitForDoubleWave : timeout\_dw(T) \& T > 50 \& wavesToCamera(N) \& N <=3
+                    <-  .send(wave\_agent2, achieve, waveToCamera(2));
+                        !waveToCamera(2);
+                        !waitForIdle;
+                        -timeout\_dw(\_);
+                        !waitForDoubleWave.
+
+// waiting process for a reaction from both actors\\
++!waitForDoubleWave : timeout\_dw(T) \& wavesToCamera(N) \& N <=3
+                    <-  -+timeout\_dw(T+1);
+                        .wait(100);
+                        !waitForDoubleWave.
+
++!waitForDoubleWave : wavesToCamera(N) \& N <= 3 \& not timeout\_dw(\_) \& wavesToCamera(N) \& N <=3
+                    <-  +timeout\_dw(1);
+                        .wait(100);
+                        !waitForDoubleWave.
+
+// if the agent gets no reactions after the 4th wave, he gets sad and stops trying\\
++!waitForDoubleWave : wavesToCamera(N) \& N > 3
+                    <-  .print("I'm sad now. They dont wave back at us...");
+                        -+attitude(sad);
+                        .send(wave\_agent2, achieve, sad);
+                        fade;
+                        -phase(2).
+
++!talkToB : true
+                    <-  .send(wave\_agent2, achieve, talkToA);
+                        ?my\_agent(AGENT);
+                        ?other\_agent(AGENTB);
+                        ?agentposition(AGENT, X, Y, Z);
+                        ?agentposition(AGENTB, XB, YB, ZB);
+                        moveTo(X,Z, XB,ZB);
+                        !waitForIdle;
+                        playanimation(talk, 1).
+
++!teachToWave : true
+                    <-  .send(wave\_agent2, achieve, lookAtA);
+                        ?my\_agent(AGENT);
+                        ?other\_agent(AGENTB);
+                        ?agentposition(AGENT, X, Y, Z);
+                        ?agentposition(AGENTB, XB, YB, ZB);
+                        moveTo(X,Z, XB,ZB);
+                        !waitForIdle;
+                        playanimation(teachToWave, 1);
+                        .wait(2000);        
+                        .send(wave\_agent2, achieve, teachToWave).
+
+// exchanges information about actors and agents with the other wave\_agent\\
++!exchangeInformation : my\_actor(ACTOR) \& my\_agent(AGENT)
+                    <-  .send(wave\_agent2, tell, other\_actor(ACTOR));
+                        .send(wave\_agent2, tell, other\_agent(AGENT));
+                        .send(wave\_agent2, askOne, my\_agent(\_), AgentB);
+                        +agentb(AgentB);
+                        ?agentb(my\_agent(OTHER\_AGENT));
+                        +other\_agent(OTHER\_AGENT);
+                        -agentb(\_);
+                        .send(wave\_agent2, askOne, my\_actor(\_), ActorB);
+                        +actorb(ActorB);
+                        ?actorb(my\_actor(OTHER\_ACTOR));
+                        +other\_actor(OTHER\_ACTOR);
+                        -actorb(\_).
+
+// waits until belief agentB\_ready is achieved (when B has been live for \~{}60 sec)\\
++!waitForAgentB : not agentB\_ready
+                    <-  .wait(250);
+                        !waitForAgentB.
+
++!waitForAgentB : agentB\_ready .
+
+// tries to perform a waving animation towards the other agent.\\
+// if the agents are too close together and 3 seconds pass without them separating,\\
+// the agent decides to move away from the other agent before the waving animation \\
++!waveTo(TARGET) :  other\_agent(TARGET) \&
+                    my\_agent(AGENT) \&
+                    agentposition(AGENT, XA, YA, ZA) \&
+                    agentposition(TARGET, XB, YB, ZB) \&
+                    not distance\_under(XA,XB,1.1)
+                    <-  -wave\_try(\_);
+                        moveTo(XA, ZA, XB, ZB);
+                        !waitForIdle(2000,1000);
+                        waveTo(TARGET, 1).
+
++!waveTo(TARGET) :  other\_agent(TARGET) \& wave\_try(N) \& N >= 3
+                    <-  -+wave\_try(N+1);
+                        ?agentposition(TARGET, XB, YB, ZB);
+                        .print("Im moving away...");
+                        ?my\_agent(AGENT);
+                        ?agentposition(AGENT, XA, YA, ZA);
+                        if(XA == XB)
+                        \{
+                            if(cameraborder(CB1, CB2) \& XA+2 >= CB2-0.5)
+                            \{
+                                moveTo(XA-2, ZA);     
+                            \}
+                            else
+                            \{
+                                moveTo(XA+2, ZA);     
+                            \}
+                        \}
+                        else
+                        \{
+                            if(cameraborder(CB1, CB2) \& (XA+(XA-XB) >= CB2-0.5 | XA+(XA-XB) <= CB1+0.5))
+                            \{
+                                moveTo(XA-(XA-XB), ZA);     
+                            \}
+                            else
+                            \{
+                                moveTo(XA+(XA-XB), ZA);     
+                            \}
+                        \}
+                        !waitForIdle(2000,1000);
+                        !waveTo(TARGET).
+
++!waveTo(TARGET) :  other\_agent(TARGET) \& wave\_try(N) \& N < 3
+                    <-  -+wave\_try(N+1);
+                        .wait(1000);
+                        !waveTo(TARGET).
+
++!waveTo(TARGET) :  other\_agent(TARGET)
+                    <-  .print("I'm too close to wave at ", TARGET);
+                        +wave\_try(1);
+                        .wait(1000);
+                        !waveTo(TARGET).
+
+// if not in a phase, and actorscaling is finished, enter phase 1\\
++actorscaling(ACTOR,VALUE) : my\_actor(ACTOR) \& VALUE == 1 \& not phase(\_)
+                    <-  +phase(1).
+
+// if the other actor starts waving while in phase 1, celebrate and skip to phase 2.\\
++actorstate(ACTOR, STATE) : other\_actor(ACTOR) \& STATE == wave \& agentB\_ready \& phase(1)
+                    <- 	!celebrate;
+                        -phase(1);
+                        +phase(2);
+                        .drop\_desire(phase(1)).
+
+// logs waves received from actors for 3 seconds, phase 2 only\\
++actorstate(ACTOR, STATE) : STATE == wave \& phase(2)
+                    <-  .drop\_desire(countDownActorWaved(ACTOR));
+                        +actorWaved(ACTOR);
+                        !!countDownActorWaved(ACTOR).
+
++!countDownActorWaved(ACTOR) : true
+                    <-  .wait(3000);
+                        -actorWaved(ACTOR).
+
+// change attitude to happy, play celebration animation and tell B to do the same\\
++!celebrate : true
+                    <-  .print("yaay");
+                        -+attitude(happy);
+                        .send(wave\_agent2, achieve, celebrate);
+                        playanimation(cheer,1);
+                        !waitForIdle;
+                        switchToLive;
+                        !waitForLive.
+                        
+}
+
+\normalsize
+\section{Waving Agent 2}
+{\ttfamily\scriptsize\raggedright
+wave\_agent2.asl
+
+// === INITIAL BELIEFS ===
+
+wavesFromA(0).                      // counts the number of perceived waves from agent A\\
+attitude(normal).                   // describes the current mental attitude of the agent, eg normal, sad, happy, etc.
+
+// === RULES ===
+    :- (A-B) < X \& (A-B) > (-X).
+
+// === INITIAL GOALS ===
+
+// === PLANS ===
+
++phase(X) : true <- !phase(X).
+-phase(X) : true <- .drop\_desire(phase(X)).
+
+// plan for phase 1: go live for \~{}60 sec, tell A that I'm ready. rest is reactive.\\
++!phase(1) : true
+                    <-  -+wavesFromA(0);
+                        !liveFor(50,20);     
+                        .send(wave\_agent1, tell, agentB\_ready).
+
+// plan for phase 2: (completely controlled by agent 1, agent 2 only has to react)\\
++!phase(2) : true
+                    <-  .print("Entered phase 2.");
+                        .drop\_desire(react);
+                        .drop\_desire(wave\_back).
+
+// if not in a phase, and actorscaling is finished, enter phase 1\\
++actorscaling(ACTOR,VALUE) : my\_actor(ACTOR) \& VALUE == 1 \& not phase(\_)
+                    <-  +phase(1).
+
+// whenever agent A waves at me (agent B), increase the counter (phase1 only)\\
++wave(A,B) : my\_agent(B) \& other\_agent(A) \& phase(1)
+                    <-  ?wavesFromA(COUNT);
+                        -+wavesFromA(COUNT + 1).
+
+// if the counter is less then 2, do nothing\\
++wavesFromA(COUNT) : COUNT < 2
+                    <-  .print("Agent A waved at me ", COUNT, " times.").
+
+// if the counter equals 2, look at the other agent\\
++wavesFromA(COUNT) : COUNT == 2
+                    <-  .print("Agent A waved at me ", COUNT, " times. (looking)");
+                        !react.
++!react : phase(1)
+                    <-  ?other\_agent(AGENTA);
+                        ?agentposition(AGENTA, XA, YA, ZA);
+                        ?my\_agent(AGENTB);
+                        ?agentposition(AGENTB, XB, YB, ZB);
+                        lookAt(XA, YA * 2, ZA, true);
+                        moveTo(XB, ZB, XA, ZA);
+                        !waitForIdle(500,1000);
+                        playanimation(headscratch,1);
+                        !waitForIdle(500,500);
+                        switchToLive.
+
+// if the counter is 3 or more, wave back at agent A\\
++wavesFromA(COUNT) : COUNT >= 3
+                    <-  .print("Agent A waved at me ", COUNT, " times. (waving back)");
+                        !waveBack.
+
++!waveBack : phase(1)
+                    <-  lookAt(0,0,0,false);
+                        ?other\_agent(AGENTA);
+                        ?agentposition(AGENTA, X, Y, Z);
+                        !waveTo(AGENTA);
+                        !waitForIdle(500,500);
+                        switchToLive.
+
+// tries to perform a waving animation towards the other agent.\\
+// if the agents are too close together on the screen and 3 seconds pass,\\
+// agent decides to move away from the other agent and wave afterwards.\\
++!waveTo(TARGET) :  other\_agent(TARGET) \&
+                    my\_agent(AGENT) \&
+                    agentposition(AGENT, XA, YA, ZA) \&
+                    agentposition(TARGET, XB, YB, ZB) \&
+                    not distance\_under(XA,XB,1.1)
+                    <-  -wave\_try(\_);
+                        moveTo(XA, ZA, XB, ZB); 
+                        !waitForIdle(2000,1000);
+                        waveTo(TARGET, 1).
+
++!waveTo(TARGET) :  other\_agent(TARGET) \& wave\_try(N) \& N >= 3
+                    <-  -+wave\_try(N+1);
+                        ?agentposition(TARGET, XB, YB, ZB);
+                        .print("Im moving away...");
+                        ?my\_agent(AGENT);
+                        ?agentposition(AGENT, XA, YA, ZA);
+                        if(XA == XB)
+                        \{
+                            moveTo(XA+1, ZA);    
+                        \}
+                        else
+                        \{
+                            moveTo(XA+(XA-XB), ZA);  
+                        \}
+                        !waitForIdle(2000,1000);
+                        !waveTo(TARGET).
+
++!waveTo(TARGET) :  other\_agent(TARGET) \& wave\_try(N) \& N < 3
+                    <-  -+wave\_try(N+1);
+                        .wait(1000);
+                        !waveTo(TARGET).
+
++!waveTo(TARGET) :  other\_agent(TARGET)
+                    <-  .print("I'm too close to wave at ", TARGET);
+                        +wave\_try(1);
+                        .wait(1000);
+                        !waveTo(TARGET).
+
++!initphase(2) : not phase(2)
+                    <-  +phase(2);
+                        -phase(1).
+
++!initphase(2): phase(2)
+                    <-  .print("Agent A wants me to init phase 2, but I am already in phase 2 ???").
+
++!celebrate : true
+                    <-  .print("yaay");
+                        -+attitude(happy);
+                        playanimation(cheer,1);
+                        !waitForIdle;
+                        switchToLive;
+                        !waitForLive.
+
++!clap : true
+                    <-  playanimation(clap,1);
+                        !waitForIdle;
+                        switchToLive.
+
++!sad : true
+                    <-  .print("I'm sad now. They dont wave back at us...");
+                        -+attitude(sad);
+                        fade; 
+                        -phase(2).
+
++!waveToCamera(ID) : true
+                    <-  ?my\_agent(AGENT);
+                        ?agentposition(AGENT, X, Y, Z);
+                        if(camerapos(CX,CZ))
+                        \{
+                           moveTo(X,Z,CX,CZ);             
+                        \}
+                        else
+                        \{
+                            moveTo(X,Z,0,-3);       
+                        \}
+                        !waitForIdle;
+                        playanimation(wave,ID);
+                        !waitForIdle;
+                        switchToLive.
+
++!lookAtA : true
+                    <-  ?my\_agent(AGENTB);
+                        ?other\_agent(AGENTA);
+                        ?agentposition(AGENTA, XA, YA, ZA);
+                        ?agentposition(AGENTB, XB, YB, ZB);
+                        moveTo(XB,ZB, XA,ZA).
+
++!talkToA : true
+                    <-  ?my\_agent(AGENTB);
+                        ?other\_agent(AGENTA);
+                        ?agentposition(AGENTA, XA, YA, ZA);
+                        ?agentposition(AGENTB, XB, YB, ZB);
+                        moveTo(XB,ZB, XA,ZA);
+                        !waitForIdle(1500,500);
+                        playanimation(talk, 1).
+
++!teachToWave : true
+                    <-  ?my\_agent(AGENTB);
+                        ?other\_agent(AGENTA);
+                        ?agentposition(AGENTA, XA, YA, ZA);
+                        ?agentposition(AGENTB, XB, YB, ZB);
+                        moveTo(XB,ZB, XA,ZA);
+                        !waitForIdle(1500,500);
+                        playanimation(teachToWave, 1).
+                        
+}
+
+\normalsize
+\section{Bat Agent}
+{\ttfamily\scriptsize\raggedright
+bat\_agent\_v3.asl
+
+// === INITIAL BELIEFS ===
+
+phase(1).
+animating.
+
+// === INITIAL GOALS ===
+
+// === PLANS ===
+
++phase(X) : true <- !phase(X).
+-phase(X) : true <- .drop\_desire(phase(X)).
+
++actorscaling(ACTOR, VALUE) : my\_actor(ACTOR) \& phase(1) \& VALUE > 0 \& VALUE < 1 \& initiated
+        <-  -phase(1);
+            +phase(2).
+
++actorscaling(ACTOR, VALUE) : my\_actor(ACTOR) \& phase(2) \& VALUE == 1
+        <-  -phase(2);
+            +phase(3).
+
++!phase(1) : true
+        <-  .print("init phase 1 (waiting for visitor)");
+            .create\_agent(shadow\_agent10, "shadowAgent.asl");
+            .send(shadow\_agent10, achieve, phase(1));
+            if(camerapos(CX,CZ))
+            \{
+               moveTo(-1,0,CX,CZ);             
+            \}
+            else
+            \{
+                moveTo(-1,0,0,-3);           
+            \}
+            !waitForIdle(1000,100);
+            +initiated;
+            !!waitForVisitor.
+
++!phase(2) : true
+        <-  .print("init phase 2 (donning)");
+            .send(shadow\_agent10, achieve, phase(2)).
+
++!phase(3) : true
+        <-  .drop\_desire(waitForVisitor);
+            .print("init phase 3 (live)");
+            .send(shadow\_agent10, achieve, die);
+            switchToIdle;
+            !waitForIdle(1000,250);
+            switchToLive;
+            -animating.
+
+// Print black holes on arms and feet, scaling with distance to screen\\
++actordistancetoscreen(ACTOR, DISTANCE) : my\_actor(ACTOR) \& phase(3)
+    <-  printSprite(black1, 100, lefthand, 0.5, 0.5, DISTANCE/400).
+
+// Handstogether causes the bat to come down to the ground. \\
+// it will stay there for a maximum of 30s or until hands are put together again.\\
+// after going to the ground, it will ignore the command to go down again for 30s\\
++actorstate(ACTOR, STATE) : my\_actor(ACTOR) \& not animating \& phase(3) \& STATE == handstogether \& not onGround \& not stayOnCeiling
+    <-  +animating;
+        +onGround;
+        switchToIdle;
+        !waitForIdle(250,0);
+        switchToGround;
+        !waitForIdle(2000,0);
+        switchToCamera(CameraLeftForeArm, 3);
+        .wait(3000);
+        switchToLive;
+        -animating;
+        +stayOnCeiling;
+        !!getBackToCeiling(30).
+
+// handstogether while on ground causes bat to go back to ceiling\\
++actorstate(ACTOR, STATE) : my\_actor(ACTOR) \& not animating \& phase(3) \& STATE == handstogether \& onGround
+    <-  +animating;
+        -onGround;
+        switchToIdle;
+        !waitForIdle(250,0);
+        switchToCeiling;
+        !waitForIdle(2000,0);
+        switchToCamera(CameraFront, 3);
+        .wait(3000);
+        switchToLive;
+        -animating.
+
+// causes the bat to go back to ceiling after TIME seconds\\
++!getBackToCeiling(TIME) : true
+    <-  .wait(TIME * 1000);
+        if(not animating \& onGround)
+        \{
+            +animating;
+            -onGround;
+            switchToIdle;
+            !waitForIdle(250,0);
+            switchToCeiling;
+            !waitForIdle(2000,500);
+            switchToCamera(CameraFront, 3);
+            .wait(3000);
+            switchToLive;
+            -animating;
+        \} .
+
+// after coming down, the bat will not react to commands to come down for 60 seconds\\
++stayOnCeiling : true
+    <-  .wait(60000);
+        -stayOnCeiling.
+
+// plays waiting animations ("sleeping cocoon") in pseudo random order\\
++!waitForVisitor : true
+        <-  .random(RANDOM);
+            if(RANDOM > 0.66)
+            \{
+                if(last\_animation(NAME, TIMES) \& NAME == hanging\_cocoon1)
+                \{
+                    if(TIMES < 2)
+                    \{
+                        -+last\_animation(hanging\_cocoon1, TIMES+1);
+                        playanimation(hanging\_cocoon, 1);
+                    \}
+                \}
+                else
+                \{
+                    -+last\_animation(hanging\_cocoon1, 1);
+                    playanimation(hanging\_cocoon, 1);
+                \}
+            \}
+            else
+            \{
+            if(RANDOM > 0.33)
+            \{
+                if(last\_animation(NAME, TIMES) \& NAME == hanging\_cocoon2)
+                \{
+                    if(TIMES < 2)
+                    \{
+                        -+last\_animation(hanging\_cocoon2, TIMES+1);
+                        playanimation(hanging, 2);
+                    \}
+                \}
+                else
+                \{
+                    -+last\_animation(hanging\_cocoon2, 1);
+                    playanimation(hanging, 2);
+                \}
+            \}
+            else
+            \{
+                if(last\_animation(NAME, TIMES) \& NAME == hanging\_cocoon3)
+                \{
+                    if(TIMES < 2)
+                    \{
+                        -+last\_animation(hanging\_cocoon3, TIMES+1);
+                        playanimation(hanging, 3);
+                    \}
+                \}
+                else
+                \{
+                    -+last\_animation(hanging\_cocoon3, 1);
+                    playanimation(hanging, 3);
+                \}
+            \}
+            \}
+            .wait(11000);      
+            !waitForVisitor.
+            
+}
+
+\normalsize
+\section{Offset Agent (Used by Sleeper Agent)}
+{\ttfamily\scriptsize\raggedright
+170307\_sleeperOffset.asl
+
++!die : true
+    <-  .my\_name(NAME);
+        killOffset;
+        .kill\_agent(NAME).
+
++!run : true
+    <-  .print("starting up!");
+        .random(RAND);
+        .wait(1000 + RAND * 3000);
+        switchToSwapping;
+        +swapping;
+        playanimation(prepare\_for\_sleep, 1, 1, 1);
+        +running.
+
++!walkOut : running \& swapping
+    <-  .drop\_desire(walkAround);
+        switchToSwapping;
+        -swapping;
+        .random(RAND);
+        if(RAND > 0.5)
+        \{
+            moveTo(-20,0);
+        \}
+        else
+        \{
+            moveTo(20,0);
+        \}
+        .
+
++!walkOut : running \& not swapping
+    <-  .drop\_desire(walkAround);
+        .random(RAND);
+        if(RAND > 0.5)
+        \{
+            moveTo(-20,0);
+        \}
+        else
+        \{
+            moveTo(20,0);
+        \}
+        .
+
++!walkOut : not running
+    <-  .wait(\{+running\});
+        !walkOut.
+
++!walkIn : true
+    <-  .random(RAND);
+        moveTo(-2 + RAND*4, 0).
+
++!walkAround : not running
+    <-  .wait(\{+running\});
+        !walkAround.
+
++!walkAround : running
+    <-  .random(RAND);
+        moveTo(-2 + RAND*4, 1);
+        .random(RAND2);
+        .wait(3000 + RAND2 * 5000);
+        !walkAround.
+        
+}
+
+\normalsize
+\section{Sleeper Agent}
+{\ttfamily\scriptsize\raggedright
+170329\_sleeper6.asl
+
+t\_action\_interval(500).     // time between actions
+
+t\_welcome1(3000).
+t\_thankyou1(2000).
+t\_welcome2(18000).
+t\_welcome3(12000).
+t\_welcome4(7000).\\
+t\_random\_min(4000).         // time in between spoken sentences (minimum)\\
+t\_random\_max(12000).        // time in between spoken sentences (maximum)\\
+
+speed\_dontex(1.4).        // general duration multiplier for donning textures\\
+t\_dontex001(7000).
+t\_dontex002(6500).
+t\_dontex1(5000).
+t\_dontex2(3000).
+t\_dontex3(6500).
+t\_dontex4(6500).
+t\_dontex5(5000).
+t\_dontex6(9000).
+t\_dontex7(20000).
+t\_dontex8(7000).
+t\_dontex9(7000).
+t\_dontex10(7000).
+t\_dontex11(5000).
+t\_dontex12(1000000).
+
+sympathy(50).
+energy(150).
+movement(0).
+activity\_level(0).
+min\_movement\_walking(0.5).
+
+bodymotion\_multi(1).        // multiplier for bodymotion value added to activity level\\
+movement\_multi(1).          // multiplier for movement value added to activity level\\
+
+activity\_level\_th1(10).     // activity level threshold for small energy reduction\\
+activity\_level\_th2(30).     // activity level threshold for strong energy reduction\\
+small\_energy\_cost(0.3).
+strong\_energy\_cost(1.0).
+
+bound\_left(-2).             // bounds to the left side (world coordinates)\\
+bound\_right(2).             // bounds to the right side (world coordinates)\\
+
+wait\_time(250).             // waiting time between movement adjustments in ms\\
+delta\_movement(0.1).        // delta for movement value, deducted with every adjustment\\
+
+t\_min\_live(2000).
+t\_before\_emancipation(180000).\\
+bm\_min\_start(4).        // bodymotion value to start emancipation\\
+m\_min\_start(6).         // movement value to start emancipation\\
+
+max\_distance\_to\_objects(1.2).
+
+t\_deep\_sleep(120000).    // duration of deep sleep phase\\
+
+t\_before\_credits(180).  // time in seconds to stand still before credits roll\\
+
+// === RULES ===
+
+    :- (A-B) < X \& (A-B) > (-X).
+
+// standing\\
+a1 :- not a2 \& not a3 \& not a4.     \\          
+// walking\\
+a2 :- moving.     \\                             
+// sitting\\
+a3 :- my\_actor(ACTOR) \& actorstate(ACTOR, waistlow) \& not actorstate(ACTOR, waistdown).\\
+// lying\\
+a4 :- my\_actor(ACTOR) \& actorstate(ACTOR, waistdown).\\
+// hands up\\
+a5 :- my\_actor(ACTOR) \& actorstate(ACTOR, handsup).\\
+// hands front\\
+a6 :- my\_actor(ACTOR) \& actorstate(ACTOR, handsfront).\\
+
+// position - left side\\
+b1 :- my\_actor(ACTOR) \& actorposition(ACTOR, X, Y, Z) \& X < -0.5.\\
+// right side\\
+b2 :- my\_actor(ACTOR) \& actorposition(ACTOR, X, Y, Z) \& X > 0.5.\\
+// front side\\
+b3 :- my\_actor(ACTOR) \& actorposition(ACTOR, X, Y, Z) \& Z > 0.5.\\
+// back side\\
+b4 :- my\_actor(ACTOR) \& actorposition(ACTOR, X, Y, Z) \& Z < -0.5.\\
+// center\\
+b5 :- not b1 \& not b2 \& not b3 \& not b4.\\
+// close to bed\\
+b6 :- objectpositon(bedlie, X, Y, \_, \_) \& max\_distance\_to\_objects(MD) \& my\_agent(AGENT) \& agentposition(AGENT, AX, \_, AY)
+        \& distance\_under(AX, Y, MD) \& distance\_under(AY, Y, MD).\\
+// close to seat\\
+b7 :- objectpositon(bedsit, X, Y, \_, \_) \& max\_distance\_to\_objects(MD) \& my\_agent(AGENT) \& agentposition(AGENT, AX, \_, AY)
+        \& distance\_under(AX, Y, MD) \& distance\_under(AY, Y, MD).
+
+// sleep states\\
+c1 :- energy(E) \& E >= 90.
+c2 :- energy(E) \& E < 90 \& E >= 50.
+c3 :- energy(E) \& E < 50 \& E >= 20.
+c4 :- energy(E) \& E < 20.
+c5 :- sleeping.
+c6 :- wakingUp.
+
+// sympathy\\
+d1 :- sympathy(S) \& S > 70.
+d2 :- sympathy(S) \& S <= 70 \& S >40.
+d3 :- sympathy(S) \& S <= 40 \& S >10.
+d4 :- sympathy(S) \& S <=10.
+
+
+// === GOALS ===
+
+!start.
+
+// === PLANS ===
+
++!report : my\_agent(AGENT) \& sympathy(S) \& energy(E) \& movement(M) \& activity\_level(AL) \& bodymotion(AGENT, BM)
+    <-  .print("REPORT: Sympathy: ", S, " energy: ", E, " movement: ", M, " activity level: ", AL, " bodymotion: ", BM);
+        .wait(5000);
+        !!report.
+
++!report : my\_agent(AGENT) \& not(sympathy(S) \& energy(E) \& movement(M) \& activity\_level(AL) \& bodymotion(AGENT, BM))
+    <-  .print("REPORT failed to gather data. trying again.");
+        .wait(5000);
+        !!report.
+
++!adjust\_values : my\_agent(AGENT) \& movement(M) \& activity\_level(AL) \& bodymotion(AGENT, BM) \& wait\_time(WT) \& bodymotion\_multi(BMM) \& movement\_multi(MM)
+    <-  -+activity\_level(BM * BMM + M * MM);
+        !adjust\_energy;
+        .wait(WT);
+        !!adjust\_values.
+
++!adjust\_values : my\_agent(AGENT) \& not (energy(E) \& movement(M) \& activity\_level(AL) \& bodymotion(AGENT, BM)) \& wait\_time(WT)
+    <-  .print("failed to adjust values. trying again");
+        .wait(WT);
+        !!adjust\_values.
+
+@very\_active\_live[atomic]
++!adjust\_energy : activity\_level(AL) \& energy(E) \& activity\_level\_th1(ALT1) \& activity\_level\_th2(ALT2) \& small\_energy\_cost(SMEC)
+    \& strong\_energy\_cost(STEC) \& AL >= ALT2 \& my\_agent(AGENT) \& agentstate(AGENT, live)
+    <-  -+energy(E-STEC).
+
+@less\_active\_live[atomic]
++!adjust\_energy : activity\_level(AL) \& energy(E) \& activity\_level\_th1(ALT1) \& activity\_level\_th2(ALT2) \& small\_energy\_cost(SMEC)
+    \& strong\_energy\_cost(STEC) \& AL < ALT2 \& AL >= ALT1 \& my\_agent(AGENT) \& agentstate(AGENT, live)
+    <-  -+energy(E-SMEC).
+
+@not\_active\_live
++!adjust\_energy : activity\_level(AL) \& energy(E) \& activity\_level\_th1(ALT1) \& activity\_level\_th2(ALT2) \& small\_energy\_cost(SMEC)
+    \& strong\_energy\_cost(STEC) \& AL < ALT1 \& my\_agent(AGENT) \& agentstate(AGENT, live) .
+
+@very\_active\_notlive[atomic]
++!adjust\_energy : my\_agent(AGENT) \& energy(E) \& not agentstate(AGENT, live) \& bodymotion(AGENT, BM) \& bodymotion\_multi(BMM)
+    \& activity\_level\_th1(ALT1) \& activity\_level\_th2(ALT2) \& strong\_energy\_cost(STEC) \& BM * BMM >= ALT2
+    <-  -+energy(E-STEC).
+
+@less\_active\_notlive[atomic]
++!adjust\_energy : my\_agent(AGENT) \& energy(E) \& not agentstate(AGENT, live) \& bodymotion(AGENT, BM) \& bodymotion\_multi(BMM)
+    \& activity\_level\_th1(ALT1) \& activity\_level\_th2(ALT2) \& small\_energy\_cost(SMEC) \& BM * BMM < ALT2 \& BM * BMM >= ALT1
+    <-  -+energy(E-SMEC).
+
+@not\_active\_notlive[atomic]
++!adjust\_energy : my\_agent(AGENT) \& not agentstate(AGENT, live) \& bodymotion(AGENT, BM) \& bodymotion\_multi(BMM)
+    \& activity\_level\_th1(ALT1) \& BM * BMM < ALT1 .
+
+@energy\_not\_negative[atomic]
++energy(E) : E < 0
+    <- -+energy(0).
+
++energy(E) : E < 10 \& E > 0 \& objectpositon(bedlie, X, Y, \_, \_)
+    <-  .print("I am very tired").
+
++energy(E) : E < 50 \& E > 20 \& not livedelay
+    <-  +livedelay;
+        live\_delay(3).
+
++energy(E) : (E > 50 | E < 20) \& livedelay
+    <-  -livedelay;
+        live\_delay(0).
+
++!start : true
+    <-  .wait(250);
+        ?my\_actor(ACTOR);
+        +welcoming;
+        if(my\_agent(agent0))
+        \{
+            !!playWelcomeAudio2;
+            !!spawnOffset(1001, -1.5, 0);
+            !!spawnOffset(1002, 1.5, 0);
+            switchToSwapping;
+            +swapping;
+        \}
+        .wait(my\_actor(ACTOR) \& actorscaling(ACTOR, VALUE) \& VALUE >= 1);
+        if(swapping)
+        \{
+            switchToSwapping;
+            -swapping;
+        \}
+        !!standbyOffsets;
+        -welcoming;
+        !goLive;
+        ?actorposition(ACTOR,X,Y,Z);
+        +lastposition(X,Z);
+        !!checkMovement;
+        !!adjust\_values;
+        !!report;
+        +cfc(0);
+        !!checkForCredits;
+        ?t\_before\_emancipation(TBE);
+        .wait(TBE);
+        !!killOffsets;
+        +ec(0);
+        !start\_emancipation.
+
++!checkForCredits : activity\_level(AL) \& AL > 0.3
+    <-  -+cfc(0);
+        .wait(1000);
+        !checkForCredits.
+
++!checkForCredits : activity\_level(AL) \& AL <= 0.3 \& cfc(CFC) \& t\_before\_credits(TBC) \& CFC < TBC
+    <-  -+cfc(CFC+1);
+        .wait(1000);
+        !checkForCredits.
+
+@go\_credits[atomic]
++!checkForCredits : activity\_level(AL) \& AL <= 0.3 \& cfc(CFC) \& t\_before\_credits(TBC) \& CFC >= TBC
+    <-  -phase(\_);
+        .drop\_desire(doSomething);
+        ?objectposition(bedsit, X, Y, DX, DY);
+        moveTo(X, Y, DX, DY);
+        !waitForIdle(1000,0);
+        playanimation(sit\_down\_bed, 1);
+        queueanimation(sit\_on\_bed, 1,1,1);
+        displayTexture(Credits, 60, 0,-1,0,1);
+        .wait(60000);
+        playanimation(sit\_up\_bed, 1);
+        !waitForIdle(1000,500);
+        switchToLive;
+        !!playWelcomeAudio2;
+        !!spawnOffset(1001, -1.5, 0);
+        !!spawnOffset(1002, 1.5, 0);
+        if(not swapping)
+        \{
+            switchToSwapping;
+            +swapping;
+        \}
+        .wait(10000);
+        .wait(activity\_level(AL) \& AL > 2);
+        switchToSwapping;
+        -swapping;
+        +phase(sleep).
+
++!start\_emancipation : my\_agent(AGENT) \& ((bodymotion(AGENT, BM) \& bm\_min\_start(BMS) \& BM > BMS) | (movement(M) \& m\_min\_start(MMS) \& M > MMS)) \& ec(EC) \& EC < 10
+    <-  .print("actor too active. delaying emancipation.");
+        -+ec(EC+1);
+        .wait(3000);
+        !start\_emancipation.
+
++!start\_emancipation : my\_agent(AGENT) \& ((bodymotion(AGENT, BM) \& bm\_min\_start(BMS) \& BM <= BMS \& movement(M) \& m\_min\_start(MMS) \& M <= MMS) | (ec(EC) \& EC >= 10))
+    <-  +phase(sleep).
+
+@movement\_update[atomic]
++!checkMovement : lastposition(LX,LZ) \& my\_actor(ACTOR) \& actorposition(ACTOR, X, Y, Z)
+    <-  ?movement(M);
+        if(LX > X)
+        \{
+            -+movement(M+(LX-X));
+        \}
+        else
+        \{
+            -+movement(M+(X-LX));
+        \}
+        ?movement(M2);
+        ?delta\_movement(D);
+        if(LZ > Z)
+        \{
+            -+movement(M2+(LZ-Z) - D);
+        \}
+        else
+        \{
+            -+movement(M2+(Z-LZ) - D);
+        \}
+        -+lastposition(X,Z);
+        ?movement(M3);
+        ?min\_movement\_walking(MM);
+        if(M3-M > MM)
+        \{
+            +moving;
+            if(M3 - M > 3)
+            \{
+                -+movement(M+3);
+            \}
+        \}
+        else
+        \{
+            -moving;
+        \}
+        !!reCheckMovement.
+
++!reCheckMovement : true
+    <-  ?wait\_time(W);
+        .wait(W);
+        !!checkMovement.
+
+@movement\_not\_negative[dynamic]
++movement(M) : M < 0
+    <-  -+movement(0).
+
+@movement\_not\_too\_high[dynamic]
++movement(M) : M > 50
+    <-  -+movement(40).
+
+@energy\_not\_too\_high[dynamic]
++energy(E) : E > 150
+    <-  -+energy(150).
+
++phase(P) : true
+    <-  .print("entered phase : ", P);
+        !!doSomething.
+
+-!doSomething : true
+    <-  .print("SOMETHING TERRIBLE HAPEND");
+        .wait(500);
+        !doSomething.
+
+@standing
++!doSomething : a1 \& c3 \& my\_agent(AGENT) \& not agentstate(AGENT, idle) \& activity\_level(AL) \& AL < 1
+    <-  switchToIdle;
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@react\_fast\_go\_live
++activity\_level(AL) \& AL > 2 \& auto \& not sleeping
+    <-  -auto;
+        switchToLive.
+
+@walk\_left
++!doSomething : a1 \& b2 \& c1 \& not sleeping \& activity\_level(AL) \& AL < 0.5
+    <-  +auto;
+        .random(RAND);
+        moveTo(-2+RAND, 0);
+        !waitForIdle(2000,1000);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@walk\_right
++!doSomething : a1 \& b1 \& c1 \& not sleeping \& activity\_level(AL) \& AL < 0.5
+    <-  +auto;
+        .random(RAND);
+        moveTo(2-RAND, 0);
+        !waitForIdle(2000,1000);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@seat
++!doSomething : (a1 | a2) \& b7 \& (c2|c3) \& objectposition(bedsit, X, Y, DX, DY) \& not sleeping
+    <-  +sitting;
+        .print("sitting");
+        moveTo(X, Y, DX, DY);
+        !waitForIdle(1000,0);
+        playanimation(sit\_down\_bed, 1);
+        queueanimation(sit\_on\_bed, 1,1,1);
+        ?t\_action\_interval(TAI);
+        .random(RAND);
+        .wait(TAI * (RAND+1) * 10);
+        playanimation(sit\_up\_bed, 1);
+        !waitForIdle(1000,500);
+        -sitting;
+        !doSomething.
+
+@bed
++!doSomething : (a1 | a2) \& b6 \& (c2|c3|c4) \& objectposition(bedlie, X, Y, DX, DY) \& not sleeping
+    <-  +sleeping;
+        moveTo(X, Y, DX, DY);
+        !waitForIdle(1000,0);
+        playanimation(lie\_down\_bed, 1);
+        queueanimation(lie\_on\_bed, 1,1,1);
+        ?t\_action\_interval(TAI);
+        .random(RAND);
+        .wait(TAI * (RAND+1) * 10);
+        playanimation(lie\_up\_bed, 1);
+        !waitForIdle(1000,500);
+        -sleeping;
+        !doSomething.
+
+@stroll\_around
++!doSomething : a1 \& (c1|c2) \& not sleeping \& activity\_level(AL) \& AL < 2
+    <-  +auto;
+        !moveAround;
+        !doSomething.
+
+@get\_up
++!doSomething : (not a4 \& not a3) \& c1 \& sleeping
+    <-  -sleeping;
+        playanimation(deep\_get\_up, 1);
+        !waitForIdle(1000, 0);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@default\_live[chance(3)]
++!doSomething : my\_agent(AGENT) \& agentstate(AGENT, idle) \& activity\_level(AL) \& AL > 2 \& not sleeping \& not a4
+    <-  -auto;
+        switchToLive;
+        ?t\_action\_interval(TAI);
+        ?t\_min\_live(TML);
+        .wait(TAI+TML);
+        !doSomething.
+
+@default\_live\_lying
++!doSomething : my\_agent(AGENT) \& agentstate(AGENT, idle) \& a4 \& objectposition(bedlie, X, Y, DX, DY) \& b6
+    <-  +sleeping;
+        moveTo(X, Y, DX, DY);
+        !waitForIdle(1000,0);
+        playanimation(lie\_down\_bed, 1);
+        queueanimation(lie\_on\_bed, 1,1,1);
+        !blendin;
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@default\_live\_lying\_somewhere\_else
++!doSomething : my\_agent(AGENT) \& agentstate(AGENT, idle) \& a4 \& my\_actor(ACTOR) \& actorposition(ACTOR, X, Y, Z) \& not b6
+    <-  +sleeping;
+        moveTo(X, Z);
+        !waitForIdle(1000,0);
+        playanimation(lie\_down, 1);
+        queueanimation(sleep\_loop, 1,1,1);
+        !blendin;
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@default\_live\_sleeping
++!doSomething : my\_agent(AGENT) \& activity\_level(AL) \& AL > 3 \& sleeping \& b6
+    <-  -sleeping;
+        -auto;
+        +wakingUp;
+        playanimation(lie\_up\_bed, 1);
+        !waitForIdle(1000,250);
+        switchToLive;
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        -wakingUp;
+        !doSomething.
+
+@do\_nothing[chance(2)]
++!doSomething : true
+    <-  ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
++actorstate(ACTOR, waistdown) : my\_actor(ACTOR) \& not sleeping
+    <-  +sleeping.
+
++actorstate(ACTOR, waistdown) : my\_actor(ACTOR) \& sleeping
+    <-  !blendin.
+
+-actorstate(ACTOR, waistdown) : my\_actor(ACTOR) \& sleeping
+    <-  -sleeping;
+        !blendout.
+
++!blendin : not blendedin
+    <-  +blendedin;
+        blend\_in(upper\_body, 3);
+        blend\_in(lower\_body, 3).
+
++!blendin : blendedin .
+
++!blendout : not blendedin .
+
++!blendout : blendedin
+    <-  -blendedin;
+        blend\_out(upper\_body, 3);
+        blend\_out(lower\_body, 3).
+
+
+@walk\_slow
++!doSomething : b4 \& (c3 | c4) \& not slow
+    <-  +slow;
+        movespeed(0.5);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@walk\_normal
++!doSomething : (c1 | c2) \& slow
+    <-  -slow;
+        movespeed(1);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@deep\_sleep
++!doSomething : a4 \& (c1 | c2) \& activity\_level(AL) \& AL < 1
+    <-  -auto;
+        .print("starting deep sleep!");
+        !blendout;
+        +deepsleep;
+        switchToCamera(CameraHand, 3);
+        switchToLive;
+        ?t\_deep\_sleep(TDS);
+        .wait(TDS);
+        .wait(activity\_level(AL2) \& AL2 < 1);
+        switchToCamera(CameraFront, 3);
+        switchToSwapping;
+        .wait(5000);
+        !doSomething.
+
+@narcotic\_sleep
++!doSomething : a4 \& b4 \& (c3 | c4) \& not b6
+    <-  !blendout;
+        environment(narcotic);
+        playanimation(narcotic\_sleep\_loop, 1, 1, 1);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@narcotic\_sleep\_bed
++!doSomething : a4 \& b4 \& (c3 | c4) \& b6
+    <-  !blendout;
+        environment(narcotic);
+        playanimation(narcotic\_sleep\_loop, 2, 1, 1);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@zoom\_out
++!doSomething : a1 \& b4 \& not zoom(-3)
+    <-  -+zoom(-3);
+        setTimedZoom(-3, 4);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@zoom\_in
++!doSomething : a1 \& b3 \& not zoom(0)
+    <-  -+zoom(0);
+        setTimedZoom(0, 4);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@zoom\_in\_less
++!doSomething : a1 \& b5 \& not zoom(-1.5)
+    <-  -+zoom(-1.5);
+        setTimedZoom(-1.5, 4);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@unsettled\_sleep
++!doSomething : a4 \& (c1 | c2) \& activity\_level(AL) \& AL >= 8 \& not b6
+    <-  playanimation(unsettled\_sleep\_loop, 1, 1, 1);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@unsettled\_sleep\_bed
++!doSomething : a4 \& (c1 | c2) \& activity\_level(AL) \& AL >= 8 \& b6
+    <-  playanimation(unsettled\_sleep\_loop, 2, 1, 1);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
+@fall\_asleep
++!doSomething : energy(E) \& E < 10 \& objectposition(bedlie, X, Y, DX, DY)
+    <-  +sleeping;
+        moveTo(X, Y, DX, DY);
+        !waitForIdle(1000,0);
+        playanimation(lie\_down\_bed, 1);
+        queueanimation(lie\_on\_bed, 1,1,1);
+        ?t\_action\_interval(TAI);
+        .wait(TAI);
+        !doSomething.
+
++!playWelcomeAudio2 : my\_actor(ACTOR) \& actorscaling(ACTOR, AS) \& AS > 0
+    <-  .print("skipping welcome audio").
+
++!playWelcomeAudio2 : my\_actor(ACTOR) \& ((actorscaling(ACTOR, AS) \& AS <= 0) | not actorscaling(ACTOR, \_))
+    <-  playsound(explain1);
+        .wait(60000 * 7);
+        !playWelcomeAudio2.
+
++!playWelcomeAudio : my\_actor(ACTOR) \& actorscaling(ACTOR, AS) \& AS >=1
+    <-  .print("skipping welcome audio because scaling already finished").
+
++!playWelcomeAudio : my\_actor(ACTOR) \& ((actorscaling(ACTOR, AS) \& AS < 1) | not actorscaling(ACTOR, \_))
+    <-  playsound(welcome1);
+        ?t\_welcome1(T);
+        .wait(T);
+        playsound(welcome2);
+        +lastsound(welcome2);
+        ?t\_welcome2(T2);
+        .wait(T2);
+        !waitRandomTime;
+        !welcomeAudioLoop.
+
++!welcomeAudioLoop : welcoming
+    <-  .random(RAND);
+        !playWelcome(RAND).
+
++!welcomeAudioLoop : not welcoming.
+
++!playWelcome(R) : R > 0.6 \& not lastsound(welcome4)
+    <-  playsound(welcome4);
+        -+lastsound(welcome4);
+        ?t\_welcome4(T);
+        .wait(T);
+        !waitRandomTime;
+        !welcomeAudioLoop.
+
++!playWelcome(R) : R > 0.3 \& not lastsound(welcome3)
+    <-  playsound(welcome3);
+        -+lastsound(welcome3);
+        ?t\_welcome3(T);
+        .wait(T);
+        !waitRandomTime;
+        !welcomeAudioLoop.
+
++!playWelcome(R) : not lastsound(welcome2)
+    <-  playsound(welcome1);
+        -+lastsound(welcome1);
+        ?t\_welcome1(T1);
+        .wait(T1);
+        playsound(welcome2);
+        -+lastsound(welcome2);
+        ?t\_welcome2(T);
+        .wait(T);
+        !waitRandomTime;
+        !welcomeAudioLoop.
+
++!playWelcome(R) : true
+    <-  .wait(100);
+        !welcomeAudioLoop.
+
++startintrodonning : welcoming
+    <-  -welcoming;
+        playsound(null, 1);
+        if(swapping)
+        \{
+            switchToSwapping;
+            -swapping;
+        \}
+        !!standbyOffsets;
+        ?t\_thankyou1(T);
+        .wait(T);
+        +donning;
+        !new\_donning.
+
++!new\_donning : true
+    <-  moveTo(5,0);
+        ?speed\_dontex(SDT);
+        ?t\_dontex001(DT001);
+        ?t\_dontex002(DT002);
+        ?t\_dontex1(DT1);
+        ?t\_dontex2(DT2);
+        ?t\_dontex3(DT3);
+        ?t\_dontex4(DT4);
+        ?t\_dontex5(DT5);
+        ?t\_dontex6(DT6);
+        ?t\_dontex7(DT7);
+        ?t\_dontex8(DT8);
+        ?t\_dontex9(DT9);
+        ?t\_dontex10(DT10);
+        ?t\_dontex11(DT11);
+        ?t\_dontex12(DT12);
+        displayTexture(donning001, DT001*SDT/1000);
+        .wait(DT001*SDT);
+        displayTexture(donning002, DT002*SDT/1000);
+        .wait(DT002*SDT);
+        displayTexture(donning01, DT1*SDT/1000);
+        .wait(DT1*SDT);
+        displayTexture(donning02, DT2*SDT/1000);
+        .wait(DT2*SDT);
+        displayTexture(donning03, DT3*SDT/1000);
+        .wait(DT3*SDT);
+        displayTexture(donning04, DT4*SDT/1000);
+        .wait(DT4*SDT);
+        displayTexture(donning05, DT5*SDT/1000);
+        .wait(DT5*SDT);
+        displayTexture(donning06, DT6*SDT/1000);
+        .wait(DT6*SDT);
+        displayTexture(donning07, DT7*SDT/1000);
+        ?camerapos(CX,CZ);
+        moveTo(-1,0, CX, CZ);
+        !waitForIdle(2000,500);
+        playanimation(donning\_shadow, 1);
+        .wait(DT7*SDT);
+        !waitForIdle(2000,1000);
+        moveTo(5,0);
+        displayTexture(donning08, DT8*SDT/1000);
+        .wait(DT8*SDT);
+        displayTexture(donning09, DT9*SDT/1000);
+        .wait(DT9*SDT);
+        displayTexture(donning10, DT10*SDT/1000);
+        .wait(DT10*SDT);
+        displayTexture(donning11, DT11*SDT/1000);
+        .wait(DT11*SDT);
+        displayTexture(donning12, DT12*SDT/1000);
+        .wait(my\_actor(ACTOR) \& actorscaling(ACTOR, VALUE) \& VALUE > 0);
+        displayTexture(donning12, 0.1);\\
+        // start scaling here\\
+        .
+
++actorscaling(ACTOR, AS) : my\_actor(ACTOR) \& donning \& AS >= 1
+    <-  -donning;
+        playsound(thankyou3, 1).
+
++actorscaling(ACTOR, AS) : my\_actor(ACTOR) \& donning \& AS >= 0.5 \& not verygood
+    <-  +verygood;
+        playsound(verygood1, 1).
+
++!goLive : my\_actor(ACTOR) \& actorscaling(ACTOR, AS) \& AS < 1
+   <-  .print("goLive reached, but scaling not finished. restarting.");
+       !start.
+
++!goLive : my\_actor(ACTOR) \& actorscaling(ACTOR, AS) \& AS >= 1
+    <-  switchToLive.
+
+@stop\_in\_motion
++!moveAround : movement(M) \& M > 0.5 .
+
+@leerlauf[chance(30)]
++!moveAround : movement(M) \& M <= 0.5
+    <-  .wait(200);
+        !moveAround.
+
+@move[chance(5)]
++!moveAround : movement(M) \& M <= 0.5
+    <-  .random(R);
+        ?bound\_left(BL);
+        ?bound\_right(BR);
+        moveTo(BL + (BR-BL)*R, 0);
+        !waitForIdle(1000,250);
+        !moveAround.
+
+@lookIntoCam[chance(3)]
++!moveAround : movement(M) \& M <= 0.5
+    <-  !lookIntoCamera;
+        .random(R2);
+        !waitForIdle(1000, 500 + R2 * 1000);
+        !moveAround.
+
+@stopRandomly[chance(1)]
++!moveAround : movement(M) \& M <= 0.5 .
+
++!waitRandomTime : true
+    <-  ?t\_random\_min(TRMIN);
+        ?t\_random\_max(TRMAX);
+        .random(RAND);
+        .print("waiting: ", TRMIN + (TRMAX-TRMIN)*RAND, " ms.");
+        .wait(TRMIN + (TRMAX-TRMIN)*RAND).
+
++!spawnOffset(NR, X, Y) : true
+        <-  ?my\_agent(AGENT);
+            spawnOffset(NR, X, Y, 1);
+            .concat("sleeperOffset", NR, AGNAME);
+            +active\_agent(AGNAME);
+            .create\_agent(AGNAME, "170307\_sleeperOffset.asl");
+            .send(AGNAME, achieve, run);
+            .print("created agent: ", AGNAME).
+
++!killOffsets : active\_agent(AGNAME)
+    <-  -active\_agent(AGNAME);
+        !!killOffsets;
+        .wait(20000);
+        .send(AGNAME, achieve, die).
+
++!killOffsets : not active\_agent(\_).
+
++!standbyOffsets : active\_agent(AGNAME) \& not standby\_agent(AGNAME)
+    <-  .send(AGNAME, achieve, walkOut);
+        +standby\_agent(AGNAME);
+        !!standbyOffsets.
+
++!standbyOffsets : not (active\_agent(AGNAME) \& not standby\_agent(AGNAME)).
+
++!walkInOffsets : active\_agent(AGNAME) \& standby\_agent(AGNAME)
+    <-  .send(AGNAME, achieve, walkIn);
+        -standby\_agent(AGNAME);
+        !!walkInOffsets.
+
++!walkInOffsets : not (active\_agent(AGNAME) \& standby\_agent(AGNAME)).
+
++!walkAroundOffsets : active\_agent(AGNAME) \& not walking\_agent(AGNAME)
+    <-  .send(AGNAME, achieve, walkAround);
+        +walking\_agent(AGNAME);
+        !!walkAroundOffsets.
+
++!walkAroundOffsets : not (active\_agent(AGNAME) \& not walking\_agent(AGNAME)).
+
++sleeping : true
+    <-  !rest.
+
++!rest : not sleeping .
+
++!rest : sleeping \& energy(E)
+    <-  -+energy(E+1);
+        .wait(500);
+        !!rest.
+
+// === NOT AGENT SPECIFIC PLANS ===
+
++!lookIntoCamera : camerapos(CX,CZ) \& my\_actor(ACTOR)
+    <-  ?agentposition(AGENT, X, Y, Z);
+        moveTo(X,Z, CX,CZ);
+        !waitForIdle(1000,500).
+
++!lookIntoCamera : not camerapos(\_, \_) \& my\_actor(ACTOR)
+    <-  ?agentposition(AGENT, X, Y, Z);
+        moveTo(X,Z, 0,-3);
+        !waitForIdle(1000,500).
+
+// default waitForIdle = wait 1/2 second, then wait until agent is idle, then wait another 1/4 second\\
++!waitForIdle : true
+    <-  .wait(500);
+        if(my\_agent(AGENT) \& not agentstate(AGENT, idle))
+        \{
+            .wait(my\_agent(AGENT) \& agentstate(AGENT, idle));
+        \}
+        .wait(250).
+
++!waitForIdle(N,M) : true
+    <-  .wait(N);
+        if(my\_agent(AGENT) \& not agentstate(AGENT, idle))
+        \{
+            .wait(my\_agent(AGENT) \& agentstate(AGENT, idle));
+        \}
+        .wait(M).
+        
+}
+
 
 % Use an optional list of figures.
 \listoffigures % Starred version, i.e., \listoffigures*, removes the toc entry.
 
 % Use an optional list of tables.
-\cleardoublepage % Start list of tables on the next empty right hand page.
-\listoftables % Starred version, i.e., \listoftables*, removes the toc entry.
+%\cleardoublepage % Start list of tables on the next empty right hand page.
+%\listoftables % Starred version, i.e., \listoftables*, removes the toc entry.
 
 % Use an optional list of alogrithms.
-\listofalgorithms
-\addcontentsline{toc}{chapter}{List of Algorithms}
+%\listofalgorithms
+%\addcontentsline{toc}{chapter}{List of Algorithms}
 
 % Add an index.
 \printindex
