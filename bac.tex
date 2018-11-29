@@ -20,6 +20,13 @@
 \usepackage[usenames,dvipsnames,table]{xcolor} % Allows the definition and use of colors. This package has to be included before tikz.
 \usepackage{nag}       % Issues warnings when best practices in writing LaTeX documents are violated.
 \usepackage{todonotes} % Provides tooltip-like todo notes.
+%\usepackage{natbib}
+
+\usepackage{catoptions}
+
+\usepackage{listings}
+\usepackage{color}
+
 \usepackage{hyperref}  % Enables cross linking in the electronic document version. This package has to be included second to last.
 \usepackage[acronym,toc]{glossaries} % Enables the generation of glossaries and lists fo acronyms. This package has to be included last.
 
@@ -27,7 +34,6 @@
 \newcommand{\authorname}{Tom Tucek} % The author name without titles.
 \newcommand{\thesistitle}{INTRA SPACE Agent} % The title of the thesis. The English version should be used, if it exists.
 
-\usepackage{catoptions}
 \makeatletter
 \def\figureautorefname{figure}
 \def\tableautorefname{table}
@@ -84,7 +90,7 @@
 
 
 % For bachelor and master theses:
-\setfirstassistant{Projektass. (FWF) Dipl.-Ing. }{Christian Freude}{BSc}{male}
+\setfirstassistant{Projektass. (FWF) Dipl.-Ing.}{Christian Freude}{BSc}{male}
 %\setsecondassistant{Pretitle}{Forename Surname}{Posttitle}{male}
 %\setthirdassistant{Pretitle}{Forename Surname}{Posttitle}{male}
 
@@ -125,8 +131,6 @@
 %\setfirstreviewerdata{Affiliation, Country}
 %\setsecondreviewerdata{Affiliation, Country}
 
-\usepackage{listings}
-\usepackage{color}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -169,7 +173,7 @@
 
 Ich möchte hiermit allen Projektmitgliedern von INTRA SPACE danken, welche mir erlaubten, mich an ihrem Streben nach Wissen zu beteiligen.
 Mein besonderer Dank gilt dem Team innerhalb des Raumes in welchem alles stattfand – Christina Jauernik, Simon Oberhammer, Martin Perktold und Christian Freude. 
-Letzterer, welcher mich nicht nur während der Entwicklung unterstützte, sondern auch mein Schreiben an dieser Arbeit mit konstruktiver Kritik und gütigem Beistand förderte, stellt einen der Hauptgründe dar, dass dieses Werk fertiggestellt wurde. \\
+Letzterer, welcher mich nicht nur während der Entwicklung unterstützte, sondern auch mein Schreiben an dieser Arbeit mit Geduld, konstruktiver Kritik und gütigem Beistand förderte, stellt einen der Hauptgründe dar, dass dieses Werk fertiggestellt wurde. \\
 Ich möchte weiters sowohl Professor Wolfgang Tschapeller und Esther Balfe danken, wessen Wirken an diesem Projekt mich zu neuen Sichtweisen im Rahmen der Wissenschaft führte. 
 Weiterer Dank gilt Professor Michael Wimmer, welcher mir die Gelegenheit bat, an diesem Projekt zu arbeiten und diese Arbeit an seinem Institut zu schreiben. \\
 Danke an Professor Michael Thielscher, welcher unserem Team dabei half, mit Agenten Entwicklung anzufangen und uns den Weg geleitete. 
@@ -197,7 +201,7 @@ Special thanks to my father, for his constant willingness to assist me in everyt
 
 Diese Arbeit behandelt und beschreibt die Entwicklung und Einbettung eines Agenten-Systems in eine künstlerische Einrichtung. 
 Das System ist dafür verantwortlich, virtuelle Figuren auf einer Leinwand zu kontrollieren, um somit Besuchern der Einrichtung die Interaktion mit jenen Figuren zu ermöglichen. 
-Das Benehmen der Agenten basiert auf zuvor vom Projekt-Team gestalteten Stories und soll darauf optimiert sein, sowohl gut von Besuchern aufgefasst zu werden, als auch dem Projekt Team zu erlauben, an der Interaktion zwischen Menschen und Nicht-Menschen zu forschen. \\
+Das Verhalten der Agenten basiert auf zuvor vom Projekt-Team gestalteten Stories und soll darauf optimiert sein, sowohl von Besuchern gut wahrgenommen zu werden, als auch dem Projekt Team zu erlauben, an der Interaktion zwischen Menschen und Nicht-Menschen zu forschen. \\
 Die Implementierung des Agenten Systems wurde mittels Jason wahrgenommen, eines Java-basierten Interpreters der Agenten-Programmiersprache AgentSpeak. 
 Es wurden unterschiedliche Agenten-Szenarien über den Verlauf des Projektes entwickelt und mittels verschiedener Herangehensweisen implementiert. 
 Ein iterativer und dynamischer Entwicklungsprozess wurde verfolgt, während regelmäßige Meetings der Projektmitglieder stattfanden, bei welchen Fortschritt und Ideen mit Unterstützung von Visualisierungen diskutiert wurden. 
@@ -246,8 +250,8 @@ This allowed users to realize agents as a social presence and interact with them
 
 \newglossaryentry{agent figure}
 {
-  name={agent}{figure},
-  text={agent}{figure},
+  name={Agent figure},
+  text={agent figure},
   description={Also virtual agentfigure or virtual figure. Refers to the agent-controlled figure on the screen}
 }
 
@@ -311,7 +315,7 @@ The two most notable computers were called the “Render Node” and the “Capt
 First of which was connected to the projector and responsible for agents appearing on screen, as well as hosting the agent system. 
 The second PC called “Captury Node” was connected to the cameras tracking the \gls{visitor} within the motion-capture space.
 This machine was responsible for processing live picture data fed to it via Ethernet, discerning relevant information, such as the tracked person’s position and movements, and finally sending the pre-processed data to the “Render Node”. \\
-The installation before the introduction of \gls{ai} was comparable to~\cite{10.1007/978-3-319-09767-1_7} with the agent on the screen mirroring the \gls{visitor}'s movements in real time. 
+The installation before the introduction of \gls{ai} was comparable to~\cite{10.1007/978-3-319-09767-1_7}, with the agent on the screen mirroring the \gls{visitor}'s movements in real time. 
 After a short “donning” phase (explained further in \Autoref{chap:donning}), the \gls{visitor}’s movements were entirely recreated by the \gls{agent figure} on the screen (see Figure~\ref{fig:fig3_action}). 
 As seen in Figure~\ref{fig:fig2_installation} and Figure~\ref{fig:fig3_action}, \glspl{agent figure} were not rendered in a photorealistic way during the final phases of the project, but instead were chosen to be represented by monochromatic, sexually ambiguous models. 
 There were several models in use, as can be seen in Figure~\ref{fig:fig4_models}, and a common characteristic was the high polygon count for the figures faces and hands, while their bodies were made of a noticeably lesser amount of polygons.\\

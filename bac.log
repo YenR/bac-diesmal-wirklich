@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.20)  30 NOV 2018 00:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.20)  30 NOV 2018 07:16
 entering extended mode
 **./bac.tex
 (bac.tex
@@ -1105,6 +1105,43 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 \c@@todonotes@numberoftodonotes=\count292
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\catoptions\catoptions.sty"
+\m@one=\count293
+\z@pt=\dimen299
+Package: catoptions 2014/08/29 v0.2.7h Securing catcodes and parsing options (A
+M)
+\cpt@csvdepth=\count294
+\cpt@optdepth=\count295
+\cpt@cnta=\count296
+\indrisdepth=\count297
+\cpt@foreachdepth=\count298
+\cpt@exprcnt=\count299
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count300
+\lst@gtempboxa=\box51
+\lst@token=\toks50
+\lst@length=\count301
+\lst@currlwidth=\dimen300
+\lst@column=\count302
+\lst@pos=\count303
+\lst@lostspace=\dimen301
+\lst@width=\dimen302
+\lst@newlines=\count304
+\lst@lineno=\count305
+\lst@maxwidth=\dimen303
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count306
+\lst@skipnumbers=\count307
+\lst@framebox=\box52
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
 
@@ -1151,16 +1188,16 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen299
-\Hy@linkcounter=\count293
-\Hy@pagecounter=\count294
+\@linkdim=\dimen304
+\Hy@linkcounter=\count308
+\Hy@pagecounter=\count309
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count295
+\Hy@SavedSpaceFactor=\count310
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1174,17 +1211,17 @@ Package hyperref Info: Plain pages OFF on input line 4550.
 Package hyperref Info: Backreferencing OFF on input line 4555.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4788.
-\c@Hy@tempcnt=\count296
+\c@Hy@tempcnt=\count311
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5141.
-\XeTeXLinkMargin=\dimen300
-\Fld@menulength=\count297
-\Field@Width=\dimen301
-\Fld@charsize=\dimen302
+\XeTeXLinkMargin=\dimen305
+\Fld@menulength=\count312
+\Field@Width=\dimen306
+\Fld@charsize=\dimen307
 Package hyperref Info: Hyper figures OFF on input line 6396.
 Package hyperref Info: Link nesting OFF on input line 6401.
 Package hyperref Info: Hyper index ON on input line 6404.
@@ -1194,22 +1231,22 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6421.
 Package hyperref Info: PDF/A mode OFF on input line 6426.
 LaTeX Info: Redefining \ref on input line 6466.
 LaTeX Info: Redefining \pageref on input line 6470.
-\Hy@abspage=\count298
-\c@Item=\count299
-\c@Hfootnote=\count300
+\Hy@abspage=\count313
+\c@Item=\count314
+\c@Hfootnote=\count315
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\memhfixc.sty"
 Package: memhfixc 2013/05/30 v1.17 nameref/hyperref package fixes for memoir cl
 ass
-\c@memhycontfloat=\count301
-\c@Hpagenote=\count302
+\c@memhycontfloat=\count316
+\c@Hpagenote=\count317
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2018/09/30 v6.88a Hyperref driver for pdfTeX
-\Fld@listcount=\count303
-\c@bookmark@seq@number=\count304
+\Fld@listcount=\count318
+\c@bookmark@seq@number=\count319
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1223,8 +1260,8 @@ Package: glossaries 2018/07/23 v4.41 (NLCT)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\mfirstuc\mfirstuc.sty"
 Package: mfirstuc 2017/11/14 v2.06 (NLCT)
-\@glsmfirst=\toks50
-\@glsmrest=\toks51
+\@glsmfirst=\toks51
+\@glsmrest=\toks52
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
@@ -1239,7 +1276,7 @@ Package: datatool-base 2018/04/16 v2.30 (NLCT)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\substr\substr.sty"
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count305
+\c@su@anzahl=\count320
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\datatool\datatool-fp.sty"
 Package: datatool-fp 2018/04/16 v2.30 (NLCT)
@@ -1250,19 +1287,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
 Package: defpattern 1994/10/12
-\actioncount=\count306
+\actioncount=\count321
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
 Package: fp-basic 1996/05/13
-\FP@xs=\count307
-\FP@xia=\count308
-\FP@xib=\count309
-\FP@xfa=\count310
-\FP@xfb=\count311
-\FP@rega=\count312
-\FP@regb=\count313
-\FP@regs=\count314
-\FP@times=\count315
+\FP@xs=\count322
+\FP@xia=\count323
+\FP@xib=\count324
+\FP@xfa=\count325
+\FP@xfb=\count326
+\FP@rega=\count327
+\FP@regb=\count328
+\FP@regs=\count329
+\FP@times=\count330
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
 Package: fp-addons 1995/03/15
@@ -1281,7 +1318,7 @@ Package: fp-pas 1994/08/29
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
 Package: fp-random 1995/02/23
-\FPseed=\count316
+\FPseed=\count331
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
 Package: fp-eqn 1995/04/03
@@ -1292,15 +1329,15 @@ Package: fp-upn 1996/10/21
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
 Package: fp-eval 1995/04/03
 )))
-\@dtl@toks=\toks52
-\@dtl@tmpcount=\count317
+\@dtl@toks=\toks53
+\@dtl@tmpcount=\count332
 \dtl@tmplength=\skip296
-\dtl@sortresult=\count318
-\@dtl@numgrpsepcount=\count319
-\@dtl@datatype=\count320
-\dtl@codeA=\count321
-\dtl@codeB=\count322
-\@dtl@foreach@level=\count323
+\dtl@sortresult=\count333
+\@dtl@numgrpsepcount=\count334
+\@dtl@datatype=\count335
+\dtl@codeA=\count336
+\dtl@codeB=\count337
+\@dtl@foreach@level=\count338
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\base\glossaries-compatible-3
 07.sty"
@@ -1320,8 +1357,8 @@ File: glossaries-german.ldf 2014/11/23 v1.0
 df"
 File: glossaries-english.ldf 2014/11/23 v1.0
 )
-\gls@level=\count324
-\@gls@tmpb=\toks53
+\gls@level=\count339
+\@gls@tmpb=\toks54
 \gls@tmplen=\skip297
 
 
@@ -1331,10 +1368,10 @@ Package glossaries Warning: Overriding \printglossary on input line 5740.
 Package glossaries Warning: Overriding `theglossary' environment on input line 
 6330.
 
-\glskeylisttok=\toks54
-\glslabeltok=\toks55
-\glsshorttok=\toks56
-\glslongtok=\toks57
+\glskeylisttok=\toks55
+\glslabeltok=\toks56
+\glsshorttok=\toks57
+\glslongtok=\toks58
 ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypernav.sty
 "
 Package: glossary-hypernav 2018/07/23 v4.41 (NLCT)
@@ -1350,17 +1387,17 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip300
 \LTpre=\skip301
 \LTpost=\skip302
-\LTchunksize=\count325
-\LTcapwidth=\dimen303
-\LT@head=\box51
-\LT@firsthead=\box52
-\LT@foot=\box53
-\LT@lastfoot=\box54
-\LT@cols=\count326
-\LT@rows=\count327
-\c@LT@tables=\count328
-\c@LT@chunks=\count329
-\LT@p@ftn=\toks58
+\LTchunksize=\count340
+\LTcapwidth=\dimen308
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@cols=\count341
+\LT@rows=\count342
+\c@LT@tables=\count343
+\c@LT@chunks=\count344
+\LT@p@ftn=\toks59
 )
 \glsdescwidth=\skip303
 \glspagelistwidth=\skip304
@@ -1370,39 +1407,27 @@ Package: glossary-super 2018/07/23 v4.41 (NLCT)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count330
-\ST@wd=\dimen304
+\c@tracingst=\count345
+\ST@wd=\dimen309
 \ST@rightskip=\skip305
 \ST@leftskip=\skip306
 \ST@parfillskip=\skip307
-\ST@pageleft=\dimen305
-\ST@headht=\dimen306
-\ST@tailht=\dimen307
-\ST@pagesofar=\dimen308
-\ST@pboxht=\dimen309
-\ST@lineht=\dimen310
-\ST@stretchht=\dimen311
-\ST@prevht=\dimen312
-\ST@toadd=\dimen313
-\ST@dimen=\dimen314
-\ST@pbox=\box55
+\ST@pageleft=\dimen310
+\ST@headht=\dimen311
+\ST@tailht=\dimen312
+\ST@pagesofar=\dimen313
+\ST@pboxht=\dimen314
+\ST@lineht=\dimen315
+\ST@stretchht=\dimen316
+\ST@prevht=\dimen317
+\ST@toadd=\dimen318
+\ST@dimen=\dimen319
+\ST@pbox=\box57
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.sty"
 Package: glossary-tree 2018/07/23 v4.41 (NLCT)
 \glstreeindent=\skip308
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\catoptions\catoptions.sty"
-\m@one=\count331
-\z@pt=\dimen315
-Package: catoptions 2014/08/29 v0.2.7h Securing catcodes and parsing options (A
-M)
-\cpt@csvdepth=\count332
-\cpt@optdepth=\count333
-\cpt@cnta=\count334
-\indrisdepth=\count335
-\cpt@foreachdepth=\count336
-\cpt@exprcnt=\count337
-)
 \bac@idxfile=\write5
 \openout5 = `bac.idx'.
 
@@ -1412,56 +1437,31 @@ Writing index file bac.idx
 \glo@main@file=\write7
 \openout7 = `bac.glo'.
 
-Package glossaries Info: Writing glossary file bac.glo on input line 76.
+Package glossaries Info: Writing glossary file bac.glo on input line 82.
 \glo@acronym@file=\write8
 \openout8 = `bac.acn'.
 
-Package glossaries Info: Writing glossary file bac.acn on input line 76.
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count338
-\lst@gtempboxa=\box56
-\lst@token=\toks59
-\lst@length=\count339
-\lst@currlwidth=\dimen316
-\lst@column=\count340
-\lst@pos=\count341
-\lst@lostspace=\dimen317
-\lst@width=\dimen318
-\lst@newlines=\count342
-\lst@lineno=\count343
-\lst@maxwidth=\dimen319
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count344
-\lst@skipnumbers=\count345
-\lst@framebox=\box57
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2018/09/02 1.7 listings configuration
-))
-Package: listings 2018/09/02 1.7 (Carsten Heinz)
-
+Package glossaries Info: Writing glossary file bac.acn on input line 82.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 ) (bac.aux)
 \openout1 = `bac.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 153.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 157.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1526,7 +1526,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \microtypecontext on input line 153.
+LaTeX Info: Redefining \microtypecontext on input line 157.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1553,8 +1553,9 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
+\c@lstlisting=\count352
 \AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 153.
+Package hyperref Info: Link coloring OFF on input line 157.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1562,20 +1563,19 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count352
+\c@section@level=\count353
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 153.
-LaTeX Info: Redefining \ref on input line 153.
-LaTeX Info: Redefining \pageref on input line 153.
-LaTeX Info: Redefining \nameref on input line 153.
+LaTeX Info: Redefining \nameref on input line 157.
+LaTeX Info: Redefining \ref on input line 157.
+LaTeX Info: Redefining \pageref on input line 157.
+LaTeX Info: Redefining \nameref on input line 157.
 (bac.out) (bac.out)
 \@outlinefile=\write9
 \openout9 = `bac.out'.
 
  (bac.glsdefs)
-\c@lstlisting=\count353
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -1608,7 +1608,7 @@ LaTeX Info: Redefining \nameref on input line 153.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 161.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 165.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
@@ -1618,77 +1618,77 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 161.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 165.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 161.
+(Font)              scaled to size 10.40245pt on input line 165.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 28.49991pt on input line 161.
+(Font)              scaled to size 28.49991pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <30> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 161.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 28.49991pt on input line 161.
+(Font)              scaled to size 28.49991pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.99994pt on input line 161.
+(Font)              scaled to size 18.99994pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 161.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.99994pt on input line 161.
+(Font)              scaled to size 18.99994pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.14995pt on input line 161.
+(Font)              scaled to size 16.14995pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 161.
+(Font)              scaled to size 11.39996pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 161.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 16.14995pt on input line 161.
+(Font)              scaled to size 16.14995pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.29996pt on input line 161.
+(Font)              scaled to size 13.29996pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 161.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.29996pt on input line 161.
+(Font)              scaled to size 13.29996pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.44997pt on input line 161.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 161.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 161.
+(Font)              scaled to size 10.44997pt on input line 165.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 165.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 165.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 161.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 165.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 161
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 165
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 161
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 165
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11> on input line 161.
+(Font)              <11> on input line 165.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.69997> on input line 161.
+(Font)              <7.69997> on input line 165.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.5> on input line 161.
-LaTeX Font Info:    Try loading font information for U+msa on input line 161.
+(Font)              <5.5> on input line 165.
+LaTeX Font Info:    Try loading font information for U+msa on input line 165.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1696,7 +1696,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 161.
+LaTeX Font Info:    Try loading font information for U+msb on input line 165.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1707,20 +1707,20 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 <graphics/TU_INF_header.pdf, id=146, 512.91624pt x 47.17625pt>
 File: graphics/TU_INF_header.pdf Graphic file (type pdf)
 <use graphics/TU_INF_header.pdf>
-Package pdftex.def Info: graphics/TU_INF_header.pdf  used on input line 161.
+Package pdftex.def Info: graphics/TU_INF_header.pdf  used on input line 165.
 (pdftex.def)             Requested size: 512.915pt x 47.17612pt.
 <graphics/TU_INF_Logo_gray.pdf, id=147, 171.64125pt x 46.1725pt>
 File: graphics/TU_INF_Logo_gray.pdf Graphic file (type pdf)
 <use graphics/TU_INF_Logo_gray.pdf>
-Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 161.
+Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 165.
 
 (pdftex.def)             Requested size: 171.64081pt x 46.17236pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 161.
+(Font)              <10.95> on input line 165.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 161.
+(Font)              <8> on input line 165.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 161.
+(Font)              <6> on input line 165.
  [1
 
 \openout6 = `bac.ist'.
@@ -1764,14 +1764,14 @@ NF_header.pdf> <./graphics/TU_INF_Logo_gray.pdf>] [2
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.31494pt on input line 162.
+(Font)              scaled to size 7.31494pt on input line 166.
 File: graphics/TU_INF_header.pdf Graphic file (type pdf)
 <use graphics/TU_INF_header.pdf>
-Package pdftex.def Info: graphics/TU_INF_header.pdf  used on input line 162.
+Package pdftex.def Info: graphics/TU_INF_header.pdf  used on input line 166.
 (pdftex.def)             Requested size: 512.915pt x 47.17612pt.
 File: graphics/TU_INF_Logo_gray.pdf Graphic file (type pdf)
 <use graphics/TU_INF_Logo_gray.pdf>
-Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 162.
+Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 166.
 
 (pdftex.def)             Requested size: 171.64081pt x 46.17236pt.
  [3
@@ -1813,33 +1813,33 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
  [2]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 323.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 327.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 323.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 327.
 <graphics/fig1_overview.png, id=332, 420.06938pt x 538.26094pt>
 File: graphics/fig1_overview.png Graphic file (type png)
 <use graphics/fig1_overview.png>
-Package pdftex.def Info: graphics/fig1_overview.png  used on input line 342.
+Package pdftex.def Info: graphics/fig1_overview.png  used on input line 346.
 (pdftex.def)             Requested size: 418.25368pt x 535.93529pt.
 <graphics/fig2.png, id=333, 1039.63406pt x 691.83469pt>
 File: graphics/fig2.png Graphic file (type png)
 <use graphics/fig2.png>
-Package pdftex.def Info: graphics/fig2.png  used on input line 348.
+Package pdftex.def Info: graphics/fig2.png  used on input line 352.
 (pdftex.def)             Requested size: 418.25368pt x 278.323pt.
 <graphics/fig3.png, id=335, 1038.88126pt x 705.38531pt>
 File: graphics/fig3.png Graphic file (type png)
 <use graphics/fig3.png>
-Package pdftex.def Info: graphics/fig3.png  used on input line 354.
+Package pdftex.def Info: graphics/fig3.png  used on input line 358.
 (pdftex.def)             Requested size: 418.25368pt x 283.97888pt.
 <graphics/fig4.jpg, id=340, 4914.36pt x 2358.8125pt>
 File: graphics/fig4.jpg Graphic file (type jpg)
 <use graphics/fig4.jpg>
-Package pdftex.def Info: graphics/fig4.jpg  used on input line 360.
+Package pdftex.def Info: graphics/fig4.jpg  used on input line 364.
 (pdftex.def)             Requested size: 418.25368pt x 200.73036pt.
 
 
@@ -1867,7 +1867,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <graphics/fig5.png, id=494, 1087.06125pt x 645.41125pt>
 File: graphics/fig5.png Graphic file (type png)
 <use graphics/fig5.png>
-Package pdftex.def Info: graphics/fig5.png  used on input line 477.
+Package pdftex.def Info: graphics/fig5.png  used on input line 481.
 (pdftex.def)             Requested size: 418.25368pt x 248.33145pt.
 
 
@@ -1877,7 +1877,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <graphics/fig6.png, id=542, 1040.38687pt x 696.35156pt>
 File: graphics/fig6.png Graphic file (type png)
 <use graphics/fig6.png>
-Package pdftex.def Info: graphics/fig6.png  used on input line 524.
+Package pdftex.def Info: graphics/fig6.png  used on input line 528.
 (pdftex.def)             Requested size: 418.25368pt x 279.93825pt.
  [14 <./graphics/fig5.png>]
 
@@ -1886,12 +1886,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <graphics/fig7-1.jpg, id=562, 451.6875pt x 569.12625pt>
 File: graphics/fig7-1.jpg Graphic file (type jpg)
 <use graphics/fig7-1.jpg>
-Package pdftex.def Info: graphics/fig7-1.jpg  used on input line 552.
+Package pdftex.def Info: graphics/fig7-1.jpg  used on input line 556.
 (pdftex.def)             Requested size: 228.57292pt x 288.01004pt.
 <graphics/fig7-2.jpg, id=563, 298.11375pt x 466.74374pt>
 File: graphics/fig7-2.jpg Graphic file (type jpg)
 <use graphics/fig7-2.jpg>
-Package pdftex.def Info: graphics/fig7-2.jpg  used on input line 556.
+Package pdftex.def Info: graphics/fig7-2.jpg  used on input line 560.
 (pdftex.def)             Requested size: 183.61142pt x 287.46945pt.
 [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1901,7 +1901,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <graphics/fig7-3.png, id=606, 538.26094pt x 307.1475pt>
 File: graphics/fig7-3.png Graphic file (type png)
 <use graphics/fig7-3.png>
-Package pdftex.def Info: graphics/fig7-3.png  used on input line 594.
+Package pdftex.def Info: graphics/fig7-3.png  used on input line 598.
 (pdftex.def)             Requested size: 418.25368pt x 238.66954pt.
 
 
@@ -1912,7 +1912,7 @@ Underfull \vbox (badness 6001) has occurred while \output is active []
 
  [18]
 [19 <./graphics/fig7-3.png>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 643.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 647.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1935,12 +1935,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <graphics/fig8.png, id=754, 563.10374pt x 280.04625pt>
 File: graphics/fig8.png Graphic file (type png)
 <use graphics/fig8.png>
-Package pdftex.def Info: graphics/fig8.png  used on input line 839.
+Package pdftex.def Info: graphics/fig8.png  used on input line 843.
 (pdftex.def)             Requested size: 418.25368pt x 208.00868pt.
 <graphics/fig9.png, id=755, 457.71pt x 426.09187pt>
 File: graphics/fig9.png Graphic file (type png)
 <use graphics/fig9.png>
-Package pdftex.def Info: graphics/fig9.png  used on input line 845.
+Package pdftex.def Info: graphics/fig9.png  used on input line 849.
 (pdftex.def)             Requested size: 418.25368pt x 389.37611pt.
  [27
 
@@ -1955,7 +1955,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <graphics/fig10.jpg, id=907, 1053.9375pt x 700.6175pt>
 File: graphics/fig10.jpg Graphic file (type jpg)
 <use graphics/fig10.jpg>
-Package pdftex.def Info: graphics/fig10.jpg  used on input line 999.
+Package pdftex.def Info: graphics/fig10.jpg  used on input line 1003.
 (pdftex.def)             Requested size: 418.25368pt x 278.03978pt.
  [33]
 
@@ -1971,7 +1971,7 @@ Underfull \vbox (badness 2042) has occurred while \output is active []
 <graphics/fig11.png, id=1010, 621.82312pt x 357.58594pt>
 File: graphics/fig11.png Graphic file (type png)
 <use graphics/fig11.png>
-Package pdftex.def Info: graphics/fig11.png  used on input line 1120.
+Package pdftex.def Info: graphics/fig11.png  used on input line 1124.
 (pdftex.def)             Requested size: 418.25368pt x 240.5198pt.
  [39 <./graphics/fig11.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2022,20 +2022,20 @@ No complaints by nag.
 \tf@lof=\write12
 \openout12 = `bac.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2803.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2803.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2807.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2807.
 (bac.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2803.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2803.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2807.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2807.
 
 Package rerunfilecheck Info: File `bac.out' has not changed.
 (rerunfilecheck)             Checksum: 317E6DD94A435F1FABA7C55E3C323DBB;2084.
  ) 
 Here is how much of TeX's memory you used:
- 36822 strings out of 492965
- 646563 string characters out of 3135727
- 1065621 words of memory out of 3000000
- 39637 multiletter control sequences out of 15000+200000
+ 37459 strings out of 492965
+ 670897 string characters out of 3135727
+ 1075693 words of memory out of 3000000
+ 40274 multiletter control sequences out of 15000+200000
  120933 words of font info for 158 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,94p,1971b,1921s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2053,9 +2053,9 @@ blic/lm/lmri8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb
 s/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
 helvetic/uhvr8a.pfb>
-Output written on bac.pdf (84 pages, 9476746 bytes).
+Output written on bac.pdf (84 pages, 9477470 bytes).
 PDF statistics:
- 1423 PDF objects out of 1440 (max. 8388607)
+ 1427 PDF objects out of 1440 (max. 8388607)
  225 named destinations out of 1000 (max. 500000)
  30576 words of extra memory for PDF output out of 35830 (max. 10000000)
 
