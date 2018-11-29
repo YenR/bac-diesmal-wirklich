@@ -1,7 +1,7 @@
 This is makeindex, version 2.15 [MiKTeX 2.9.6880 64-bit] (kpathsea + Thai support).
 Scanning style file ./example_.ist.............................done (29 attributes redefined, 0 ignored).
-Scanning input file example_.glo....done (270 entries accepted, 0 rejected).
-Sorting entries.....done (2607 comparisons).
-Generating output file example_.gls....done (36 lines written, 0 warnings).
+Scanning input file example_.glo....done (289 entries accepted, 0 rejected).
+Sorting entries.....done (2534 comparisons).
+Generating output file example_.gls....done (45 lines written, 0 warnings).
 Output written in example_.gls.
 Transcript written in example_.glg.
