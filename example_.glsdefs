@@ -238,36 +238,6 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{bpnn}{}%
-{%
-\gls@defglossaryentry{bpnn}%
-{%
-name={BPNN},%
-sort={BPNN},%
-type={acronym},%
-first={Back-Propagation Neural Networks\glsspace (BPNN)},%
-firstplural={Back-Propagation Neural Networkss\glsspace (BPNNs)},%
-text={BPNN},%
-plural={BPNNs},%
-description={Back-Propagation Neural Networks},%
-descriptionplural={Back-Propagation Neural Networks\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={Back-Propagation Neural Networks},%
-longplural={Back-Propagation Neural Networkss},%
-short={BPNN},%
-shortplural={BPNNs},%
-counter={page},%
-parent={},%
-%
-}%
-}%
 \ifglsentryexists{fubi}{}%
 {%
 \gls@defglossaryentry{fubi}%
@@ -358,96 +328,6 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{udp}{}%
-{%
-\gls@defglossaryentry{udp}%
-{%
-name={UDP},%
-sort={UDP},%
-type={acronym},%
-first={User Datagram Protocol\glsspace (UDP)},%
-firstplural={User Datagram Protocols\glsspace (UDPs)},%
-text={UDP},%
-plural={UDPs},%
-description={User Datagram Protocol},%
-descriptionplural={User Datagram Protocol\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={User Datagram Protocol},%
-longplural={User Datagram Protocols},%
-short={UDP},%
-shortplural={UDPs},%
-counter={page},%
-parent={},%
-%
-}%
-}%
-\ifglsentryexists{udp}{}%
-{%
-\gls@defglossaryentry{udp}%
-{%
-name={UDP},%
-sort={UDP},%
-type={acronym},%
-first={User Datagram Protocol\glsspace (UDP)},%
-firstplural={User Datagram Protocols\glsspace (UDPs)},%
-text={UDP},%
-plural={UDPs},%
-description={User Datagram Protocol},%
-descriptionplural={User Datagram Protocol\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={User Datagram Protocol},%
-longplural={User Datagram Protocols},%
-short={UDP},%
-shortplural={UDPs},%
-counter={page},%
-parent={},%
-%
-}%
-}%
-\ifglsentryexists{udp}{}%
-{%
-\gls@defglossaryentry{udp}%
-{%
-name={UDP},%
-sort={UDP},%
-type={acronym},%
-first={User Datagram Protocol\glsspace (UDP)},%
-firstplural={User Datagram Protocols\glsspace (UDPs)},%
-text={UDP},%
-plural={UDPs},%
-description={User Datagram Protocol},%
-descriptionplural={User Datagram Protocol\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={User Datagram Protocol},%
-longplural={User Datagram Protocols},%
-short={UDP},%
-shortplural={UDPs},%
-counter={page},%
-parent={},%
-%
-}%
-}%
 \ifglsentryexists{agent figure}{}%
 {%
 \gls@defglossaryentry{agent figure}%
@@ -478,19 +358,19 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{Jason agent}{}%
+\ifglsentryexists{jason agent}{}%
 {%
-\gls@defglossaryentry{Jason agent}%
+\gls@defglossaryentry{jason agent}%
 {%
-name={jasonagent},%
-sort={jasonagent},%
+name={Jason agent},%
+sort={Jason agent},%
 type={main},%
-first={jasonagent},%
-firstplural={jasonagents},%
-text={jasonagent},%
-plural={jasonagents},%
-description={The agent program controlling the agent figure.},%
-descriptionplural={The agent program controlling the agent figure.},%
+first={Jason agent},%
+firstplural={Jason agents},%
+text={Jason agent},%
+plural={Jason agents},%
+description={The agent program controlling the \gls {agent figure}.},%
+descriptionplural={The agent program controlling the \gls {agent figure}.},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -521,36 +401,6 @@ text={visitor},%
 plural={visitors},%
 description={Active user of the INTRA SPACE installation.},%
 descriptionplural={Active user of the INTRA SPACE installation.},%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
-counter={page},%
-parent={},%
-%
-}%
-}%
-\ifglsentryexists{screen}{}%
-{%
-\gls@defglossaryentry{screen}%
-{%
-name={screen},%
-sort={screen},%
-type={main},%
-first={screen},%
-firstplural={screens},%
-text={screen},%
-plural={screens},%
-description={Refers to the mid-air suspended canvas used as a screen for the installation. Functions as a window to the virtual space of the agent figures. Illuminated from the back by a projector.},%
-descriptionplural={Refers to the mid-air suspended canvas used as a screen for the installation. Functions as a window to the virtual space of the agent figures. Illuminated from the back by a projector.},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
