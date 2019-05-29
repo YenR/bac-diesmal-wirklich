@@ -1,0 +1,480 @@
+\ifglsentryexists{ia}{}%
+{%
+\gls@defglossaryentry{ia}%
+{%
+name={IA},%
+sort={IA},%
+type={acronym},%
+first={Intelligent Agent\glsspace (IA)},%
+firstplural={Intelligent Agents\glsspace (IAs)},%
+text={IA},%
+plural={IAs},%
+description={Intelligent Agent},%
+descriptionplural={Intelligent Agent\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Intelligent Agent},%
+longplural={Intelligent Agents},%
+short={IA},%
+shortplural={IAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bson}{}%
+{%
+\gls@defglossaryentry{bson}%
+{%
+name={BSON},%
+sort={BSON},%
+type={acronym},%
+first={Binary \gls {json}\glsspace (BSON)},%
+firstplural={Binary \gls {json}s\glsspace (BSONs)},%
+text={BSON},%
+plural={BSONs},%
+description={Binary \gls {json}},%
+descriptionplural={Binary \gls {json}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Binary \gls {json}},%
+longplural={Binary \gls {json}s},%
+short={BSON},%
+shortplural={BSONs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{json}{}%
+{%
+\gls@defglossaryentry{json}%
+{%
+name={JSON},%
+sort={JSON},%
+type={acronym},%
+first={JavaScript Object Notation\glsspace (JSON)},%
+firstplural={JavaScript Object Notations\glsspace (JSONs)},%
+text={JSON},%
+plural={JSONs},%
+description={JavaScript Object Notation},%
+descriptionplural={JavaScript Object Notation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JavaScript Object Notation},%
+longplural={JavaScript Object Notations},%
+short={JSON},%
+shortplural={JSONs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{as}{}%
+{%
+\gls@defglossaryentry{as}%
+{%
+name={AS},%
+sort={AS},%
+type={acronym},%
+first={AgentSpeak\glsspace (AS)},%
+firstplural={AgentSpeaks\glsspace (ASs)},%
+text={AS},%
+plural={ASs},%
+description={AgentSpeak},%
+descriptionplural={AgentSpeak\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={AgentSpeak},%
+longplural={AgentSpeaks},%
+short={AS},%
+shortplural={ASs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mas}{}%
+{%
+\gls@defglossaryentry{mas}%
+{%
+name={MAS},%
+sort={MAS},%
+type={acronym},%
+first={Multi-agent system\glsspace (MAS)},%
+firstplural={Multi-agent systems\glsspace (MASs)},%
+text={MAS},%
+plural={MASs},%
+description={Multi-agent system},%
+descriptionplural={Multi-agent system\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Multi-agent system},%
+longplural={Multi-agent systems},%
+short={MAS},%
+shortplural={MASs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{fwf}{}%
+{%
+\gls@defglossaryentry{fwf}%
+{%
+name={FWF},%
+sort={FWF},%
+type={acronym},%
+first={Fonds zur F\IeC {\"o}rderung der wissenschaftlichen Forschung (Austrian Science Fund)\glsspace (FWF)},%
+firstplural={Fonds zur F\IeC {\"o}rderung der wissenschaftlichen Forschung (Austrian Science Fund)s\glsspace (FWFs)},%
+text={FWF},%
+plural={FWFs},%
+description={Fonds zur Förderung der wissenschaftlichen Forschung (Austrian Science Fund)},%
+descriptionplural={Fonds zur Förderung der wissenschaftlichen Forschung (Austrian Science Fund)\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Fonds zur F\IeC {\"o}rderung der wissenschaftlichen Forschung (Austrian Science Fund)},%
+longplural={Fonds zur F\IeC {\"o}rderung der wissenschaftlichen Forschung (Austrian Science Fund)s},%
+short={FWF},%
+shortplural={FWFs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ai}{}%
+{%
+\gls@defglossaryentry{ai}%
+{%
+name={AI},%
+sort={AI},%
+type={acronym},%
+first={Artificial Intelligence\glsspace (AI)},%
+firstplural={Artificial Intelligences\glsspace (AIs)},%
+text={AI},%
+plural={AIs},%
+description={Artificial Intelligence},%
+descriptionplural={Artificial Intelligence\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Artificial Intelligence},%
+longplural={Artificial Intelligences},%
+short={AI},%
+shortplural={AIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cartago}{}%
+{%
+\gls@defglossaryentry{cartago}%
+{%
+name={CArtAgO},%
+sort={CArtAgO},%
+type={acronym},%
+first={Common ARTifact infrastructure for AGents Open environments\glsspace (CArtAgO)},%
+firstplural={Common ARTifact infrastructure for AGents Open environmentss\glsspace (CArtAgOs)},%
+text={CArtAgO},%
+plural={CArtAgOs},%
+description={Common ARTifact infrastructure for AGents Open environments},%
+descriptionplural={Common ARTifact infrastructure for AGents Open environments\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Common ARTifact infrastructure for AGents Open environments},%
+longplural={Common ARTifact infrastructure for AGents Open environmentss},%
+short={CArtAgO},%
+shortplural={CArtAgOs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{fubi}{}%
+{%
+\gls@defglossaryentry{fubi}%
+{%
+name={FUBI},%
+sort={FUBI},%
+type={acronym},%
+first={Full Body Interaction Framework\glsspace (FUBI)},%
+firstplural={Full Body Interaction Frameworks\glsspace (FUBIs)},%
+text={FUBI},%
+plural={FUBIs},%
+description={Full Body Interaction Framework},%
+descriptionplural={Full Body Interaction Framework\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Full Body Interaction Framework},%
+longplural={Full Body Interaction Frameworks},%
+short={FUBI},%
+shortplural={FUBIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bdi}{}%
+{%
+\gls@defglossaryentry{bdi}%
+{%
+name={BDI},%
+sort={BDI},%
+type={acronym},%
+first={Belief-Desire-Intention\glsspace (BDI)},%
+firstplural={Belief-Desire-Intentions\glsspace (BDIs)},%
+text={BDI},%
+plural={BDIs},%
+description={Belief-Desire-Intention},%
+descriptionplural={Belief-Desire-Intention\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Belief-Desire-Intention},%
+longplural={Belief-Desire-Intentions},%
+short={BDI},%
+shortplural={BDIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{udp}{}%
+{%
+\gls@defglossaryentry{udp}%
+{%
+name={UDP},%
+sort={UDP},%
+type={acronym},%
+first={User Datagram Protocol\glsspace (UDP)},%
+firstplural={User Datagram Protocols\glsspace (UDPs)},%
+text={UDP},%
+plural={UDPs},%
+description={User Datagram Protocol},%
+descriptionplural={User Datagram Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={User Datagram Protocol},%
+longplural={User Datagram Protocols},%
+short={UDP},%
+shortplural={UDPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{agent figure}{}%
+{%
+\gls@defglossaryentry{agent figure}%
+{%
+name={{agent}{figure}},%
+sort={{agent}{figure}},%
+type={main},%
+first={{agent}{figure}},%
+firstplural={{agent}{figure}s},%
+text={{agent}{figure}},%
+plural={{agent}{figure}s},%
+description={Also virtual agent-figure. Refers to the agent controlled figure on the screen},%
+descriptionplural={Also virtual agent-figure. Refers to the agent controlled figure on the screen},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{jason agent}{}%
+{%
+\gls@defglossaryentry{jason agent}%
+{%
+name={Jason agent},%
+sort={Jason agent},%
+type={main},%
+first={Jason agent},%
+firstplural={Jason agents},%
+text={Jason agent},%
+plural={Jason agents},%
+description={The agent program controlling the \gls {agent figure}},%
+descriptionplural={The agent program controlling the \gls {agent figure}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{visitor}{}%
+{%
+\gls@defglossaryentry{visitor}%
+{%
+name={Visitor},%
+sort={Visitor},%
+type={main},%
+first={Visitor},%
+firstplural={Visitors},%
+text={Visitor},%
+plural={Visitors},%
+description={Active user of the INTRA SPACE installation},%
+descriptionplural={Active user of the INTRA SPACE installation},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{live}{}%
+{%
+\gls@defglossaryentry{live}%
+{%
+name={Live},%
+sort={Live},%
+type={main},%
+first={Live},%
+firstplural={Lives},%
+text={Live},%
+plural={Lives},%
+description={Also live state or live phase. Refers to the state, in which the \gls {agent figure} mirrors the movements of the \gls {visitor} it was assigned to},%
+descriptionplural={Also live state or live phase. Refers to the state, in which the \gls {agent figure} mirrors the movements of the \gls {visitor} it was assigned to},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{island system}{}%
+{%
+\gls@defglossaryentry{island system}%
+{%
+name={island-system},%
+sort={island-system},%
+type={main},%
+first={island-system},%
+firstplural={island-systems},%
+text={island-system},%
+plural={island-systems},%
+description={A concept similar to finite-state machines, used to visualize and model \glspl {jason agent}. Described more closely in \Autoref {chap:finalapproach}},%
+descriptionplural={A concept similar to finite-state machines, used to visualize and model \glspl {jason agent}. Described more closely in \Autoref {chap:finalapproach}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

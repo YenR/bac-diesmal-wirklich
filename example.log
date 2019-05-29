@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.20)  20 NOV 2018 17:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.20)  3 DEC 2018 20:07
 entering extended mode
 **./example.tex
 (example.tex
@@ -1808,11 +1808,14 @@ File: graphics/TU_INF_Logo_gray.pdf Graphic file (type pdf)
 Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 175.
 
 (pdftex.def)             Requested size: 94.10643pt x 25.31462pt.
- [8]
+
+
+LaTeX Warning: Citation `Turing1936' on page 8 undefined on input line 220.
+
+[8]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 241.
 
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
@@ -1820,15 +1823,14 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
  [9]
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 287.
- [10]) [11] [12
+ [10]) [11]
+[12
 
-]
-(example.lof) [13] [14
+] (example.lof) [13] [14
 
 ] (example.lot) [15] [16
 
-] (example.loa) (example.ind
-[17] [18
+] (example.loa) (example.ind [17] [18
 
 ] [19
 
@@ -1847,6 +1849,9 @@ LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
 
 ]
 bibitemlist
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
 ) [25]
 No complaints by nag.
 \tf@toc=\write11
@@ -1868,12 +1873,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: 2B4266389EFB252A7A8A8FBD78695012;1198.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 33434 strings out of 492965
- 601067 string characters out of 3135727
- 817110 words of memory out of 3000000
- 36441 multiletter control sequences out of 15000+200000
+ 33432 strings out of 492965
+ 600904 string characters out of 3135727
+ 817074 words of memory out of 3000000
+ 36440 multiletter control sequences out of 15000+200000
  143038 words of font info for 150 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,94p,1975b,957s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1898,9 +1907,9 @@ blic/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb
 les/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
 w/helvetic/uhvr8a.pfb>
-Output written on example.pdf (41 pages, 410179 bytes).
+Output written on example.pdf (41 pages, 408886 bytes).
 PDF statistics:
- 549 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
+ 547 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
  33991 words of extra memory for PDF output out of 35830 (max. 10000000)
 

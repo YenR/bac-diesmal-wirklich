@@ -1,7 +1,7 @@
 This is makeindex, version 2.15 [MiKTeX 2.9.6880 64-bit] (kpathsea + Thai support).
 Scanning style file ./bac.ist.............................done (29 attributes redefined, 0 ignored).
-Scanning input file bac.glo....done (292 entries accepted, 0 rejected).
-Sorting entries.....done (2868 comparisons).
-Generating output file bac.gls....done (47 lines written, 0 warnings).
+Scanning input file bac.glo....done (288 entries accepted, 0 rejected).
+Sorting entries......done (3014 comparisons).
+Generating output file bac.gls....done (44 lines written, 0 warnings).
 Output written in bac.gls.
 Transcript written in bac.glg.

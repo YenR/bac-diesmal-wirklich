@@ -332,15 +332,15 @@ parent={},%
 {%
 \gls@defglossaryentry{agent figure}%
 {%
-name={{agent}{figure}},%
-sort={{agent}{figure}},%
+name={agent figure},%
+sort={agent figure},%
 type={main},%
-first={{agent}{figure}},%
-firstplural={{agent}{figure}s},%
-text={{agent}{figure}},%
-plural={{agent}{figure}s},%
-description={Also virtual agent-figure. Refers to the agent controlled figure on the screen},%
-descriptionplural={Also virtual agent-figure. Refers to the agent controlled figure on the screen},%
+first={agent figure},%
+firstplural={agent figures},%
+text={agent figure},%
+plural={agent figures},%
+description={Also virtual agentfigure or virtual figure. Refers to the agent-controlled figure on the screen},%
+descriptionplural={Also virtual agentfigure or virtual figure. Refers to the agent-controlled figure on the screen},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -392,13 +392,13 @@ parent={},%
 {%
 \gls@defglossaryentry{visitor}%
 {%
-name={Visitor},%
-sort={Visitor},%
+name={visitor},%
+sort={visitor},%
 type={main},%
-first={Visitor},%
-firstplural={Visitors},%
-text={Visitor},%
-plural={Visitors},%
+first={visitor},%
+firstplural={visitors},%
+text={visitor},%
+plural={visitors},%
 description={Active user of the INTRA SPACE installation},%
 descriptionplural={Active user of the INTRA SPACE installation},%
 symbol={\relax },%
@@ -422,13 +422,13 @@ parent={},%
 {%
 \gls@defglossaryentry{live}%
 {%
-name={Live},%
-sort={Live},%
+name={live},%
+sort={live},%
 type={main},%
-first={Live},%
-firstplural={Lives},%
-text={Live},%
-plural={Lives},%
+first={live},%
+firstplural={lives},%
+text={live},%
+plural={lives},%
 description={Also live state or live phase. Refers to the state, in which the \gls {agent figure} mirrors the movements of the \gls {visitor} it was assigned to},%
 descriptionplural={Also live state or live phase. Refers to the state, in which the \gls {agent figure} mirrors the movements of the \gls {visitor} it was assigned to},%
 symbol={\relax },%
@@ -452,13 +452,13 @@ parent={},%
 {%
 \gls@defglossaryentry{island system}%
 {%
-name={island-system},%
-sort={island-system},%
+name={island system},%
+sort={island system},%
 type={main},%
-first={island-system},%
-firstplural={island-systems},%
-text={island-system},%
-plural={island-systems},%
+first={island system},%
+firstplural={island systems},%
+text={island system},%
+plural={island systems},%
 description={A concept similar to finite-state machines, used to visualize and model \glspl {jason agent}. Described more closely in \Autoref {chap:finalapproach}},%
 descriptionplural={A concept similar to finite-state machines, used to visualize and model \glspl {jason agent}. Described more closely in \Autoref {chap:finalapproach}},%
 symbol={\relax },%

@@ -22,7 +22,7 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Simplified schematic overview of information flow within the installation.\relax }}{14}{figure.caption.11}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces View onto the motion-capture space and the screen (Picture taken by G\IeC {\"u}nter Richard Wett)\relax }}{16}{figure.caption.12}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Some \glspl {visitor} with their assigned skeletons drawn onto them.\relax }}{17}{figure.caption.13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \Glspl {visitor} with their assigned skeletons drawn onto them.\relax }}{17}{figure.caption.13}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Abstract model for agent-environment interaction. (Source:~\cite [p.~35]{russell2016artificial}.)\relax }}{19}{figure.caption.14}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Octopus agent story, written by Christina Jauernik.\relax }}{28}{figure.caption.16}
